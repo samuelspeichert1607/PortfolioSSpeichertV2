@@ -1,0 +1,13 @@
+C:\Users\Devilclown1607\Desktop\Cégep Ste-Foy\Programmation de jeux vidéo\TP3\TP3Etu\TP3Etu\bin\Debug\TP3ProfGame.exe.config
+C:\Users\Devilclown1607\Desktop\Cégep Ste-Foy\Programmation de jeux vidéo\TP3\TP3Etu\TP3Etu\bin\Debug\TP3ProfGame.exe
+C:\Users\Devilclown1607\Desktop\Cégep Ste-Foy\Programmation de jeux vidéo\TP3\TP3Etu\TP3Etu\bin\Debug\TP3ProfGame.pdb
+C:\Users\Devilclown1607\Desktop\Cégep Ste-Foy\Programmation de jeux vidéo\TP3\TP3Etu\TP3Etu\obj\Debug\TP3ProfGame.FormJeuPrincipal.resources
+C:\Users\Devilclown1607\Desktop\Cégep Ste-Foy\Programmation de jeux vidéo\TP3\TP3Etu\TP3Etu\obj\Debug\TP3ProfGame.Properties.Resources.resources
+C:\Users\Devilclown1607\Desktop\Cégep Ste-Foy\Programmation de jeux vidéo\TP3\TP3Etu\TP3Etu\obj\Debug\TP3Etu.csproj.GenerateResource.Cache
+C:\Users\Devilclown1607\Desktop\Cégep Ste-Foy\Programmation de jeux vidéo\TP3\TP3Etu\TP3Etu\obj\Debug\TP3ProfGame.exe
+C:\Users\Devilclown1607\Desktop\Cégep Ste-Foy\Programmation de jeux vidéo\TP3\TP3Etu\TP3Etu\obj\Debug\TP3ProfGame.pdb
+C:\Users\Devilclown1607\Desktop\Cégep Ste-Foy\Programmation de jeux vidéo\TP3\TP3Etu\TP3Etu\obj\Debug\TP3ProfGame.FormOptions.resources
+C:\Users\Devilclown1607\Desktop\Cégep Ste-Foy\Programmation de jeux vidéo\TP3\TP3Etu\TP3Etu\obj\Debug\TP3Etu.csprojResolveAssemblyReference.cache
+C:\Users\Devilclown1607\Desktop\Cégep Ste-Foy\Programmation de jeux vidéo\TP3 - BACKUP\TP3Etu\TP3Etu\bin\Debug\TP3ProfGame.exe.config
+C:\Users\Devilclown1607\Desktop\Cégep Ste-Foy\Programmation de jeux vidéo\TP3 - BACKUP\TP3Etu\TP3Etu\obj\Debug\TP3ProfGame.exe
+C:\Users\Devilclown1607\Desktop\Cégep Ste-Foy\Programmation de jeux vidéo\TP3 - BACKUP\TP3Etu\TP3Etu\obj\Debug\TP3ProfGame.pdb

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TP1</name>
+    </assembly>
+    <members>
+        <!-- Commentaire XML incorrect ignoré pour le membre "M:ProgrammationJeuxVideo1.TP1.Run" -->
+        <!-- Commentaire XML incorrect ignoré pour le membre "M:ProgrammationJeuxVideo1.TP1.MessageAuRevoir" -->
+        <!-- Commentaire XML incorrect ignoré pour le membre "M:ProgrammationJeuxVideo1.TP1.AfficherEcranAccueil" -->
+        <!-- Commentaire XML incorrect ignoré pour le membre "M:ProgrammationJeuxVideo1.TP1.DemanderJoueurSiQuitterJeu" -->
+        <!-- Commentaire XML incorrect ignoré pour le membre "M:ProgrammationJeuxVideo1.TP1.JouerPartie" -->
+        <!-- Commentaire XML incorrect ignoré pour le membre "M:ProgrammationJeuxVideo1.TP1.JouerTour(System.String,System.String,System.Int32,System.Boolean)" -->
+        <!-- Commentaire XML incorrect ignoré pour le membre "M:ProgrammationJeuxVideo1.TP1.ChoisirCombinaisonATrouver" -->
+        <!-- Commentaire XML incorrect ignoré pour le membre "M:ProgrammationJeuxVideo1.TP1.CompterNombreLettresCorrectes(System.String,System.String,System.Boolean)" -->
+        <!-- Commentaire XML incorrect ignoré pour le membre "M:ProgrammationJeuxVideo1.TP1.CompterNombreLettresBienPlacees(System.String,System.String,System.Boolean)" -->
+        <!-- Commentaire XML incorrect ignoré pour le membre "M:ProgrammationJeuxVideo1.TP1.AfficherEcranFinPartieGagnee" -->
+        <!-- Commentaire XML incorrect ignoré pour le membre "M:ProgrammationJeuxVideo1.TP1.AfficherEcranFinPartiePerdue(System.String)" -->
+        <!-- Commentaire XML incorrect ignoré pour le membre "M:ProgrammationJeuxVideo1.TP1.ValiderCombinaison(System.String)" -->
+    </members>
+</doc>

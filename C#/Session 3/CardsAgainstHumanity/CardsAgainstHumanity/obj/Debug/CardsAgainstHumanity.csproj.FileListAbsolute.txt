@@ -1,0 +1,11 @@
+D:\Cegep Ste-Foy\Algoritmes et structures de données II\Étape 2\TP3\CardsAgainstHumanity\CardsAgainstHumanity\bin\Debug\CardsAgainstHumanity.exe.config
+D:\Cegep Ste-Foy\Système d'exploitation et réseaux II\Étape 3\CardsAgainstHumanity\CardsAgainstHumanity\bin\Debug\CardsAgainstHumanity.exe.config
+D:\Cegep Ste-Foy\Système d'exploitation et réseaux II\Étape 3\CardsAgainstHumanity\CardsAgainstHumanity\bin\Debug\CardsAgainstHumanity.exe
+D:\Cegep Ste-Foy\Système d'exploitation et réseaux II\Étape 3\CardsAgainstHumanity\CardsAgainstHumanity\bin\Debug\CardsAgainstHumanity.pdb
+D:\Cegep Ste-Foy\Système d'exploitation et réseaux II\Étape 3\CardsAgainstHumanity\CardsAgainstHumanity\obj\Debug\CardsAgainstHumanity.csprojResolveAssemblyReference.cache
+D:\Cegep Ste-Foy\Système d'exploitation et réseaux II\Étape 3\CardsAgainstHumanity\CardsAgainstHumanity\obj\Debug\CardsAgainstHumanity.Properties.Resources.resources
+D:\Cegep Ste-Foy\Système d'exploitation et réseaux II\Étape 3\CardsAgainstHumanity\CardsAgainstHumanity\obj\Debug\CardsAgainstHumanity.csproj.GenerateResource.Cache
+D:\Cegep Ste-Foy\Système d'exploitation et réseaux II\Étape 3\CardsAgainstHumanity\CardsAgainstHumanity\obj\Debug\CardsAgainstHumanity.exe
+D:\Cegep Ste-Foy\Système d'exploitation et réseaux II\Étape 3\CardsAgainstHumanity\CardsAgainstHumanity\obj\Debug\CardsAgainstHumanity.pdb
+D:\Cegep Ste-Foy\Système d'exploitation et réseaux II\Étape 3\CardsAgainstHumanity\CardsAgainstHumanity\obj\Debug\CardsAgainstHumanity.FormConnection.resources
+D:\Cegep Ste-Foy\Système d'exploitation et réseaux II\Étape 3\CardsAgainstHumanity\CardsAgainstHumanity\obj\Debug\CardsAgainstHumanity.FormPrincipal.resources

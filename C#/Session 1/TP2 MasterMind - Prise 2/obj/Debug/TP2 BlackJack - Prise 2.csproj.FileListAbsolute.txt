@@ -1,0 +1,27 @@
+c:\users\devilclown1607\documents\visual studio 2013\Projects\TP2 Master Lettres - Prise 2\TP2 Master Lettres - Prise 2\bin\Debug\TP2 Master Lettres - Prise 2.exe.config
+c:\users\devilclown1607\documents\visual studio 2013\Projects\TP2 Master Lettres - Prise 2\TP2 Master Lettres - Prise 2\bin\Debug\TP2 Master Lettres - Prise 2.exe
+c:\users\devilclown1607\documents\visual studio 2013\Projects\TP2 Master Lettres - Prise 2\TP2 Master Lettres - Prise 2\bin\Debug\TP2 Master Lettres - Prise 2.pdb
+c:\users\devilclown1607\documents\visual studio 2013\Projects\TP2 Master Lettres - Prise 2\TP2 Master Lettres - Prise 2\obj\Debug\TP2 BlackJack - Prise 2.csprojResolveAssemblyReference.cache
+c:\users\devilclown1607\documents\visual studio 2013\Projects\TP2 Master Lettres - Prise 2\TP2 Master Lettres - Prise 2\obj\Debug\TP2_Master_Lettres___Prise_2.Form1.resources
+c:\users\devilclown1607\documents\visual studio 2013\Projects\TP2 Master Lettres - Prise 2\TP2 Master Lettres - Prise 2\obj\Debug\TP2_Master_Lettres___Prise_2.Properties.Resources.resources
+c:\users\devilclown1607\documents\visual studio 2013\Projects\TP2 Master Lettres - Prise 2\TP2 Master Lettres - Prise 2\obj\Debug\TP2 BlackJack - Prise 2.csproj.GenerateResource.Cache
+c:\users\devilclown1607\documents\visual studio 2013\Projects\TP2 Master Lettres - Prise 2\TP2 Master Lettres - Prise 2\obj\Debug\TP2 Master Lettres - Prise 2.exe
+c:\users\devilclown1607\documents\visual studio 2013\Projects\TP2 Master Lettres - Prise 2\TP2 Master Lettres - Prise 2\obj\Debug\TP2 Master Lettres - Prise 2.pdb
+C:\Users\Devilclown1607\Documents\Visual Studio 2013\Projects\TP2 MasterMind - Prise 2\TP2 MasterMind - Prise 2\bin\Debug\TP2 Master Lettres - Prise 2.exe.config
+C:\Users\Devilclown1607\Documents\Visual Studio 2013\Projects\TP2 MasterMind - Prise 2\TP2 MasterMind - Prise 2\bin\Debug\TP2 Master Lettres - Prise 2.exe
+C:\Users\Devilclown1607\Documents\Visual Studio 2013\Projects\TP2 MasterMind - Prise 2\TP2 MasterMind - Prise 2\bin\Debug\TP2 Master Lettres - Prise 2.pdb
+C:\Users\Devilclown1607\Documents\Visual Studio 2013\Projects\TP2 MasterMind - Prise 2\TP2 MasterMind - Prise 2\obj\Debug\TP2_Master_Lettres___Prise_2.Form1.resources
+C:\Users\Devilclown1607\Documents\Visual Studio 2013\Projects\TP2 MasterMind - Prise 2\TP2 MasterMind - Prise 2\obj\Debug\TP2_Master_Lettres___Prise_2.Properties.Resources.resources
+C:\Users\Devilclown1607\Documents\Visual Studio 2013\Projects\TP2 MasterMind - Prise 2\TP2 MasterMind - Prise 2\obj\Debug\TP2 BlackJack - Prise 2.csproj.GenerateResource.Cache
+C:\Users\Devilclown1607\Documents\Visual Studio 2013\Projects\TP2 MasterMind - Prise 2\TP2 MasterMind - Prise 2\obj\Debug\TP2 Master Lettres - Prise 2.exe
+C:\Users\Devilclown1607\Documents\Visual Studio 2013\Projects\TP2 MasterMind - Prise 2\TP2 MasterMind - Prise 2\obj\Debug\TP2 Master Lettres - Prise 2.pdb
+C:\Users\Devilclown1607\Documents\Visual Studio 2013\Projects\TP2 MasterMind - Prise 2\TP2 MasterMind - Prise 2\obj\Debug\TP2 BlackJack - Prise 2.csprojResolveAssemblyReference.cache
+D:\Cegep Ste-Foy\Portfolio\C#\TP2 MasterMind - Prise 2\bin\Debug\TP2 Master Lettres - Prise 2.exe.config
+D:\Cegep Ste-Foy\Portfolio\C#\TP2 MasterMind - Prise 2\obj\Debug\TP2 Master Lettres - Prise 2.exe
+D:\Cegep Ste-Foy\Portfolio\C#\TP2 MasterMind - Prise 2\obj\Debug\TP2 Master Lettres - Prise 2.pdb
+D:\Cegep Ste-Foy\Portfolio\C#\TP2 MasterMind - Prise 2\bin\Debug\TP2 Master Lettres - Prise 2.exe
+D:\Cegep Ste-Foy\Portfolio\C#\TP2 MasterMind - Prise 2\bin\Debug\TP2 Master Lettres - Prise 2.pdb
+D:\Cegep Ste-Foy\Portfolio\C#\TP2 MasterMind - Prise 2\obj\Debug\TP2 BlackJack - Prise 2.csprojResolveAssemblyReference.cache
+D:\Cegep Ste-Foy\Portfolio\C#\TP2 MasterMind - Prise 2\obj\Debug\TP2_Master_Lettres___Prise_2.Form1.resources
+D:\Cegep Ste-Foy\Portfolio\C#\TP2 MasterMind - Prise 2\obj\Debug\TP2_Master_Lettres___Prise_2.Properties.Resources.resources
+D:\Cegep Ste-Foy\Portfolio\C#\TP2 MasterMind - Prise 2\obj\Debug\TP2 BlackJack - Prise 2.csproj.GenerateResource.Cache

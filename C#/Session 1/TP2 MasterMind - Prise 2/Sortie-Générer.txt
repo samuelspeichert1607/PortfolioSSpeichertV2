@@ -1,0 +1,6 @@
+﻿1>------ Début de la génération : Projet : TP2 BlackJack - Prise 2, Configuration : Debug Any CPU ------
+1>C:\Users\Devilclown1607\Documents\Visual Studio 2013\Projects\TP2 MasterMind - Prise 2\TP2 MasterMind - Prise 2\Form1.cs(30,13,30,29): warning CS0414: Le champ 'TP2_Master_Lettres___Prise_2.Form1.nbJeuxSimultanes' est assigné, mais sa valeur n'est jamais utilisée
+1>C:\Users\Devilclown1607\Documents\Visual Studio 2013\Projects\TP2 MasterMind - Prise 2\TP2 MasterMind - Prise 2\Form1.cs(31,13,31,19): warning CS0414: Le champ 'TP2_Master_Lettres___Prise_2.Form1.valeur' est assigné, mais sa valeur n'est jamais utilisée
+1>C:\Users\Devilclown1607\Documents\Visual Studio 2013\Projects\TP2 MasterMind - Prise 2\TP2 MasterMind - Prise 2\Form1.cs(32,13,32,20): warning CS0414: Le champ 'TP2_Master_Lettres___Prise_2.Form1.couleur' est assigné, mais sa valeur n'est jamais utilisée
+1>  TP2 BlackJack - Prise 2 -> C:\Users\Devilclown1607\Documents\Visual Studio 2013\Projects\TP2 MasterMind - Prise 2\TP2 MasterMind - Prise 2\bin\Debug\TP2 Master Lettres - Prise 2.exe
+========== Génération : 1 a réussi, 0 a échoué, 0 mis à jour, 0 a été ignoré ==========

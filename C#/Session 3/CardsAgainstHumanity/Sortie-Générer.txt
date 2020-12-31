@@ -1,0 +1,4 @@
+﻿1>------ Début de la génération : Projet : CardsAgainstHumanity, Configuration : Debug Any CPU ------
+1>D:\Cegep Ste-Foy\Système d'exploitation et réseaux II\Étape 3\CardsAgainstHumanity\CardsAgainstHumanity\Card.cs(23,16,23,22): warning CS0414: Le champ 'CardsAgainstHumanity.Card.ownwer' est assigné, mais sa valeur n'est jamais utilisée
+1>  CardsAgainstHumanity -> D:\Cegep Ste-Foy\Système d'exploitation et réseaux II\Étape 3\CardsAgainstHumanity\CardsAgainstHumanity\bin\Debug\CardsAgainstHumanity.exe
+========== Génération : 1 a réussi, 0 a échoué, 0 mis à jour, 0 a été ignoré ==========
