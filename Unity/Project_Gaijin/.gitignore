@@ -1,0 +1,91 @@
+
+/[Ll]ibrary/assetDatabase3
+
+
+#Unity Temp Files
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Aa]ssets/AssetStoreTools*
+sysinfo.txt
+*.pidb.meta
+/[Aa]ssets/InitTestScene*
+
+# Visual Studio Temp Files
+/.vs/
+/[Ee]xportedObj/
+.consulo/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+
+
+#Generated code
+/[Aa]ssets/Generated
+/[Aa]ssets/Generated.meta
+
+# Build results
+/[Bb]uild/
+
+# Debug files 
+/[Dd]ebug/*
+
+#Tests results
+/TestReports/
+
+#Generated Reports
+/[Pp]ublic/
+
+#DLL and EXE are still commited
+!*.exe
+!*.dll
+
+# NuGet Packages Directory
+packages
+
+# Do not include vscode debugging in repo
+.vscode/chrome
+.vscode/settings.json
+.vscode/iisexpress.json
+
+# report files from converting an old project file to a newer
+# Visual Studio version.
+_UpgradeReport_Files/
+UpgradeLog*.XML
+
+# Windows Store app package directory
+AppPackages/
+
+# ReSharper is a .NET coding add-in
+_ReSharper*
+
+# NCrunch
+_NCrunch_*/
+nCrunchTemp_*
+*.ncrunch*
+.*crunch*.local.xml
+
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+
+# Visual C++ cache files
+ipch/
+*.aps
+*.ncb
+*.opensdf
+*.sdf
+
+# Unity upgrade log
+UpgradeLog.htm
