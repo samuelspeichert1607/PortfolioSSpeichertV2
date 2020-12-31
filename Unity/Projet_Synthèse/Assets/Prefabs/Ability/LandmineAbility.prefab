@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1590765160103450}
+  m_IsPrefabParent: 1
+--- !u!1 &1590765160103450
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4907556718621772}
+  - component: {fileID: 114248811966590498}
+  - component: {fileID: 114039397407404770}
+  - component: {fileID: 114898998522693854}
+  - component: {fileID: 114232715715554300}
+  - component: {fileID: 114831382658222114}
+  m_Layer: 0
+  m_Name: LandmineAbility
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4907556718621772
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1590765160103450}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -31.536427, y: -21.78341, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114039397407404770
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1590765160103450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8fe0b9cd483c4644a64c7d0994d6c4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityEffect: {fileID: 0}
+  cooldownDuration: 2
+  ability: {fileID: 114248811966590498}
+--- !u!114 &114232715715554300
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1590765160103450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd962d207d9ddb34b90418ab3de25371, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityEffect: {fileID: 0}
+  ability: {fileID: 114898998522693854}
+  tag: 630012417
+  instanceLimit: 2
+--- !u!114 &114248811966590498
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1590765160103450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f250ba0d3a164a4eb0d98c657dfea1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityEffect: {fileID: 11400000, guid: e9fa6edbef42b3d4fbb9d56e701d9974, type: 2}
+--- !u!114 &114831382658222114
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1590765160103450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 874482aae19b24c42adb1ef63a65fc42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityEffect: {fileID: 0}
+  ability: {fileID: 114232715715554300}
+--- !u!114 &114898998522693854
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1590765160103450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d01bf7c70dacab4c80d640d55600040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityEffect: {fileID: 0}
+  metalPrice: 15
+  ability: {fileID: 114039397407404770}
