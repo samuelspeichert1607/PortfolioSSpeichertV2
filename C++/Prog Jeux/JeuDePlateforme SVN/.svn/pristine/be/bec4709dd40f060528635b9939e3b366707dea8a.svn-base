@@ -1,0 +1,203 @@
+#define _USE_MATH_DEFINES
+
+#include "Game.h"
+
+using namespace plateformer;
+
+Game::Game()
+{
+	//On place dans le contructeur ce qui permet à la game elle-même de fonctionner
+
+	mainWin.create(VideoMode(LARGEUR, HAUTEUR, 32), "Jeu de Plateforme");  // , Style::Titlebar); / , Style::FullScreen);
+	//view = mainWin.getDefaultView();
+
+
+	view = View(sf::FloatRect(0, 0, LARGEUR, HAUTEUR)); //Largeur et hauteur de votre résolution d’écran 
+	view.setCenter(LARGEUR / 2, HAUTEUR / 2);
+	mainWin.setView(view); //Comme la vue est reçu en référence, la manipuler va influencer ce qu’on a à l’écran
+
+	//Synchonisation coordonnée à l'écran!  Normalement 60 frames par secondes
+	//À faire absolument
+	mainWin.setFramerateLimit(60);
+	//mainWin.setVerticalSyncEnabled(true); //Équivalent... normalement
+}
+
+//Game::~Game()
+//{
+//	delete player;
+//}
+
+int Game::run()
+{
+	if (!init())
+	{
+		return EXIT_FAILURE;
+	}
+
+	while (mainWin.isOpen())
+	{
+		getInputs();
+		update();
+		draw();
+	}
+
+	unload();
+
+	return EXIT_SUCCESS;
+}
+
+bool Game::init()
+{
+	//JCOTE
+	backgroundT = new Texture[numBackground];
+	background = new Sprite[numBackground];
+	backgroundSkyT = new Texture;
+	backgroundSky = new Sprite;
+
+	if (!backgroundSkyT->loadFromFile("Content\\Backgrounds\\Layer0_2.png"))
+	{
+		return false;
+	}
+	if (!backgroundT[0].loadFromFile("Content\\Backgrounds\\Layer1_0.png"))
+	{
+		return false;
+	}
+	if (!backgroundT[1].loadFromFile("Content\\Backgrounds\\Layer1_1.png"))
+	{
+		return false;
+	}
+	if (!backgroundT[2].loadFromFile("Content\\Backgrounds\\Layer1_2.png"))
+	{
+		return false;
+	}
+
+	//setTexture
+	backgroundSky->setTexture(*backgroundSkyT);
+	for (size_t i = 0; i < numBackground; i++)
+	{
+		background[i].setTexture(backgroundT[i]);
+	}
+
+
+	//setPosition
+	backgroundSky->setPosition(0, 0);
+	background[0].setPosition(-LARGEUR, 0);
+	background[1].setPosition(0,0);
+	background[2].setPosition(LARGEUR,0);
+
+	//création du joueur
+	player = new Player(LARGEUR / 2, HAUTEUR / 2, &mainWin);
+	player->chargerTextures("Content\\Sprites\\Player\\Idle.png");
+	player->ajustementsVisuels();
+	//view.setCenter(player->getPosition().x, player->getPosition().y);
+
+
+	for (int i = 0; i < 20; i++)
+	{
+		block[i] = new Block(i * (LARGEUR / 32), 438, &mainWin);
+		block[i]->chargerTextures("Content\\Tiles\\BlockA0.png");
+		block[i]->ajustementsVisuels();
+	}
+	
+	//.. init ennemis
+	//.. AjustementsVisuels
+	
+	//JCOTE
+	return true;
+}
+
+void Game::getInputs()
+{
+	//On passe l'événement en référence et celui-ci est chargé du dernier événement reçu!
+	while (mainWin.pollEvent(event))
+	{
+		//x sur la fenêtre
+		if (event.type == Event::Closed)
+		{
+			mainWin.close();
+		}
+	}
+	//JCOTE
+	//pour les déplacements du joueur.
+	if (Keyboard::isKeyPressed(Keyboard::Right))
+	{
+		player->deplacement(true);
+		if (background[2].getPosition().x >= 0)
+		{
+			for (size_t i = 0; i < numBackground; i++)
+			{
+				background[i].setPosition((background[i].getPosition().x) - VITESSE, 0);
+			}
+			
+		}
+	}
+	else if (Keyboard::isKeyPressed(Keyboard::Left))
+	{
+		player->deplacement(false);
+		if (background[0].getPosition().x <= 0)
+		{
+			for (size_t i = 0; i < numBackground; i++)
+			{
+				background[i].setPosition((background[i].getPosition().x) + VITESSE, 0);
+			}
+			
+		}
+	}
+	//JCOTE
+}
+
+void Game::update()
+{
+	/*if (testCollisionBoxes(int x, int y, int oWidth, int oHeight, int xTwo, int yTwo, int oTwoWidth, int oTwoHeight))
+	{*/
+		player->setPosition(player->getPosition().x, player->getPosition().y + VITESSE);
+	//}
+	
+}
+
+void Game::draw()
+{
+	mainWin.clear();
+	//JCOTE
+	
+	mainWin.draw(*backgroundSky);
+	for (size_t i = 0; i < numBackground; i++)
+	{
+		//vérification si le background se trouve dans la zone d'affichage et vaut la peine d'être affiché.
+		if (background[i].getPosition().x != -LARGEUR && background[i].getPosition().x != LARGEUR)
+		{
+			mainWin.draw(background[i]);
+		}	
+	}
+	//JCOTE
+
+	//SSPEICHERT
+	mainWin.draw(*player);
+
+	for (int i = 0; i < 20; i++)
+	{
+		mainWin.draw(*block[i]);
+	}
+	//SSPEICHERT
+	mainWin.display();
+}
+
+void Game::unload()
+{
+	//JCOTE
+	delete backgroundSky;
+	delete backgroundSkyT;
+	delete[]background;
+	delete[]backgroundT;
+	delete player;
+	//JCOTE
+}
+
+// code pris ici : http://stackoverflow.com/questions/6083626/box-collision-code
+bool Game::testCollisionBoxes(int x, int y, int oWidth, int oHeight, int xTwo, int yTwo, int oTwoWidth, int oTwoHeight)
+{
+	if (x + oWidth < xTwo || x > xTwo + oTwoWidth) return false;
+	if (y + oHeight < yTwo || y > yTwo + oTwoHeight) return false;
+
+	return true;
+}

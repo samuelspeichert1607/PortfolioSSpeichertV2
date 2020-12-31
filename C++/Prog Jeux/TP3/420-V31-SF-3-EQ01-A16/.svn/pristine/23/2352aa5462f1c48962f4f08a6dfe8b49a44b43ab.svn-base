@@ -1,0 +1,38 @@
+#include "GuerrierLeger.h"
+
+GuerrierLeger::GuerrierLeger(bool isAlly)
+{
+	speed = 3;
+	health = 360;
+	maxHealth = 360;
+	range = 5;
+	attackPoints = 50;
+	cout = 3;
+	minionType = MinionType::GuerrierLeger;
+	this->isAlly = isAlly;
+	if (isAlly)
+	{
+		isFacingLeft = false;
+	}
+	else
+	{
+		isFacingLeft = true;
+	}
+	Minion();
+}
+
+GuerrierLeger::~GuerrierLeger()
+{
+
+}
+
+void GuerrierLeger::millesLames()
+{
+	attackPoints *= 2;
+	specialAttackTime.restart();
+}
+
+void GuerrierLeger::annulerMillesLames()
+{
+	attackPoints /= 2;
+}

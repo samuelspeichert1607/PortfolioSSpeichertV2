@@ -1,0 +1,124 @@
+#include "Game.h"
+
+Game::Game()
+{
+	//Génération de la fenêtre.
+	mainWin.create(VideoMode(LARGEUR_ECRAN, HAUTEUR_ECRAN, 32), "Projet SFML C++");
+	
+
+	//Synchonisation coordonnée à l'écran!  Normalement 60 frames par secondes
+	//À faire absolument
+	mainWin.setFramerateLimit(60);
+
+	//Synchonisation coordonnée à l'écran!
+	mainWin.setVerticalSyncEnabled(true);
+}
+
+Game::~Game()
+{
+	
+	/*vector<Minion*>::iterator iterMinion;
+	for (iterMinion = minionList.begin(); iterMinion != minionList.end(); iterMinion++)
+	{
+		delete (*iterMinion);
+	}*/
+
+	for (int i = 0; i < minionList.getNbElements(); i++)
+	{
+		minionList.retirer();
+	}
+
+
+}
+
+int Game::testTest()
+{
+	return 0;
+}
+
+int Game::run()
+{
+	if (!init())
+	{
+		return EXIT_FAILURE;
+	}
+
+	while (mainWin.isOpen())
+	{
+		//////////////////////////////////////////////////////////////////////////
+		// 1 - Gestion des entrées
+		//////////////////////////////////////////////////////////////////////////
+		Event event;
+
+		//On passe l'événement en référence et celui-ci est chargé du dernier événement reçu!
+		while (mainWin.pollEvent(event))
+		{
+			if (event.type == Event::Closed)
+			{
+				mainWin.close();
+			}
+		}
+
+
+		//////////////////////////////////////////////////////////////////////////
+		// 2 - Gestion de la logique 
+		//////////////////////////////////////////////////////////////////////////
+
+		update();
+
+		//////////////////////////////////////////////////////////////////////////
+		// 3 - Gestion de l'affichage 
+		//////////////////////////////////////////////////////////////////////////
+
+		
+
+		//Toujours important d'effacer l'écran précédent
+		mainWin.clear();
+		draw();
+		mainWin.display();
+	}
+	return EXIT_SUCCESS;
+}
+
+bool Game::init()
+{
+	//minionList.push_back(new Tour(true));
+	//minionList.ajouter(new Tour(true));
+
+	//vector<Minion*>::iterator iterMinion;
+	//for (iterMinion = minionList.begin(); iterMinion != minionList.end(); iterMinion++)
+	//{
+	//	(*iterMinion)->setPosition(64, HAUTEUR_ECRAN / 2);
+	//	(*iterMinion)->ajustementsVisuels();
+	//	(*iterMinion)->setOrigin((*iterMinion)->getLocalBounds().width / 2, (*iterMinion)->getLocalBounds().height / 2);
+	//}
+	
+
+
+	if (!backgroundT.loadFromFile("..\\..\\Sprites\\Terrain.png"))
+	{
+		return false;
+	}
+	
+	background.setTexture(backgroundT);
+	background.setPosition(0, 0);
+	return true;
+}
+
+void Game::update()
+{
+
+}
+
+void Game::draw()
+{
+
+	mainWin.draw(background);
+
+	/*vector<Minion*>::iterator iterMinion;
+	for (iterMinion = minionList.begin(); iterMinion != minionList.end(); iterMinion++)
+	{
+		mainWin.draw(*(*iterMinion));
+	}*/
+
+}

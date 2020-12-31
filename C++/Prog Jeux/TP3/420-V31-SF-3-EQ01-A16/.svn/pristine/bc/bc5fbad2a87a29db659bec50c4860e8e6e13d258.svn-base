@@ -1,0 +1,17 @@
+#include "Projectile.h"
+
+
+Projectile::Projectile(int speed, int attackPoints, int range)
+{
+	this->speed = speed;
+	this->attackPoints = attackPoints;
+	this->range = range;
+}
+Projectile::~Projectile()
+{
+
+}
+void Projectile::update()
+{
+	setPosition(getPosition().x + speed, getPosition().y + speed);
+}

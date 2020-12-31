@@ -1,0 +1,140 @@
+/// <summary>
+/// Constructeur de la liste.
+/// </summary>
+template <class T>
+Liste<T>::Liste()
+{
+	premierNoeud = nullptr;
+}
+
+/// <summary>
+/// Destructeur de la liste.
+/// </summary>
+template <class T>
+Liste<T>::~Liste()
+{
+
+}
+
+/// <summary>
+/// La fonction Ajouter va faire l'ajout d'un contenu dans la liste, tout en s'assurant
+/// que l'ordre de placement du contenu soit respecté et qu'il n'y ait aucun doublon.
+/// </summary>
+/// <param name="_contenu">Un pointeur vers le contenu que l'on désire ajouter.</param>
+/// <returns>La fonction retourne un booléen indiquant si l'ajout d'un élément est courroné de succès ou non.</returns>
+template <class T>
+bool Liste<T>::Ajouter(T * _contenu)
+{
+	if (premierNoeud == nullptr) //Si le premier noeud est vide
+	{
+		Noeud<T> * nouveauNoeud = new Noeud<T>(); //On crée le noeud.
+		nouveauNoeud->setContenu(_contenu); //On y assigne le contenu dans ce noeud.
+		nouveauNoeud->setNext(nullptr); //Le noeud suivant est maintenant un pointeur NULL.
+		premierNoeud = nouveauNoeud; //Et on assigne ce nouveau noeud comme étant le premier de la liste.
+		return true; //L'opération a fonctionné!
+	}
+	else
+	{
+		Noeud<T> * noeudActuel = premierNoeud;
+		if (*(noeudActuel->getContenu()) == *(_contenu)) // On vérifie le cas si le contenu du pointeur 
+		{                                                // rentré en paramètre est égal au contenu du noeud actuel (pour éviter les doublons)
+			return false; // L'opération a échoué.
+		}
+		if (*(noeudActuel->getContenu()) > *(_contenu)) // Gestion du cas ou on rentre un livre plus petit que celui courrant.
+		{
+			Noeud<T> * nouveauNoeud = new Noeud<T>(); //On crée le noeud.
+			nouveauNoeud->setContenu(_contenu);
+			nouveauNoeud->setNext(noeudActuel);
+			premierNoeud = nouveauNoeud;
+			return true; //L'opération a fonctionné!
+		}
+		while (noeudActuel->getNext() != nullptr) //On parcourt la liste jusqu'a trouver sa fin.
+		{
+			if (*(noeudActuel->getNext()->getContenu()) > *(_contenu))
+			{
+				//Si le noeud suivant du noeud actuel est plus grand que le livre rentré,
+				//alors, un nouveau pointeur de noeud sera crée
+				//va pointeur sur ce nouveau noeud, puis ce dernier va pointer sur le noeud suivant
+				Noeud<T> * nouveauNoeud = new Noeud<T>(); //On crée le noeud.
+				nouveauNoeud->setContenu(_contenu); //On y assigne le contenu dans ce noeud.
+				nouveauNoeud->setNext(noeudActuel->getNext()); //Le noeud suivant du noeud actuel est assigné au nouveau noeud.
+				noeudActuel->setNext(nouveauNoeud); //Le noeud suivant est maintenant un pointeur NULL.
+				return true; //L'opération a fonctionné!
+			}
+			else if (*(noeudActuel->getNext()->getContenu()) == *(_contenu)) // On vérifie le cas si le contenu du pointeur rentré en paramètre 
+			{                                                                // est égal au contenu du noeud suivant du noeud actuel (pour éviter les doublons)
+				return false; // L'opération a échoué.
+			}
+			else
+			{
+				noeudActuel = noeudActuel->getNext(); //Le noeud actuel est assigné au noeud suivant.
+			}
+		}
+		Noeud<T> * nouveauNoeud = new Noeud<T>(); //On crée le noeud.
+		nouveauNoeud->setContenu(_contenu); //On y assigne le contenu dans ce noeud.
+		nouveauNoeud->setNext(noeudActuel->getNext()); //Le noeud suivant du noeud actuel est assigné au nouveau noeud.
+		noeudActuel->setNext(nouveauNoeud); //Le noeud suivant est maintenant un pointeur NULL.
+		return true; //L'opération a fonctionné!
+	}
+	return false; // L'opération a échoué.
+}
+
+
+/// <summary>
+/// La fonction Retirer va faire le retrait d'un contenu dans la liste, tout en s'assurant
+/// que l'élément existe, que la liste ait au moins un élément tout en chaînant entre eux les noeuds.
+/// </summary>
+/// <param name="_contenu">Un pointeur vers le contenu que l'on désire retirer.</param>
+/// <returns>La fonction retourne un booléen indiquant si le retrait d'un élément est courroné de succès ou non.</returns>
+template <class T>
+bool Liste<T>::Retirer(T * _contenu)
+{
+
+	if (premierNoeud != nullptr)
+	{
+
+		if (*(premierNoeud->getContenu()) == *(_contenu)) // On vérifie le cas du 1er noeud.
+		{
+			if (premierNoeud->getNext() != nullptr)
+			{
+				premierNoeud = premierNoeud->getNext();
+			}
+			else
+			{
+				delete premierNoeud;
+			}
+
+			return true;
+		}
+		else
+		{
+			Noeud<T> * noeudActuel = premierNoeud;
+			while (*(noeudActuel->getNext()->getContenu()) != *(_contenu))
+			{
+				noeudActuel = noeudActuel->getNext();
+			}
+			Noeud<T> * noeudTemporaire = noeudActuel->getNext();
+			noeudActuel->setNext(noeudActuel->getNext()->getNext());
+			delete noeudTemporaire;
+			return true;
+		}
+	}
+	return false;
+}
+
+
+/// <summary>
+/// La fonction Afficher va simplement afficher à la console le contenu de la liste.
+/// </summary>
+/// <returns>Aucun retour.</returns>
+template <class T>
+void Liste<T>::Afficher()
+{
+	Noeud * noeudActuel = premierNoeud;
+	while (noeudActuel != nullptr)
+	{
+		noeudActuel->getContenu()->Affiche();
+		noeudActuel = noeudActuel->getNext();
+	}
+}
+

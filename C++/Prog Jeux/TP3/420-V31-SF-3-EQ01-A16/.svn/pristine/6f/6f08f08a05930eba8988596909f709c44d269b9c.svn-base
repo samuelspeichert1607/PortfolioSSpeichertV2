@@ -1,0 +1,2 @@
+const float LARGEUR_ECRAN = 1280;
+const float HAUTEUR_ECRAN = 720;

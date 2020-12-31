@@ -1,0 +1,40 @@
+#include <iostream>
+#include <string>
+
+template <class T>
+Pile<T>::Pile()
+{
+	premierNoeud = NULL;
+}
+
+template <class T>
+Pile<T>::~Pile()
+{
+	while (premierNoeud != nullptr)
+	{
+		Pop();
+	}
+}
+
+template <class T>
+void Pile<T>::Push(T* _contenu)
+{
+	Noeud<T>* nouveau = new Noeud<T>();
+	nouveau->setContenu(_contenu);
+	nouveau->setSuivant(premierNoeud);
+	premierNoeud = nouveau;
+}
+
+template <class T>
+T* Pile<T>::Pop()
+{
+	T* temporaire = nullptr;
+	if (premierNoeud != nullptr)
+	{
+		temporaire = premierNoeud->getContenu();
+		Noeud<T>* noeudTemporaire = premierNoeud;
+		premierNoeud = premierNoeud->getSuivant();
+		delete noeudTemporaire;
+	}
+	return temporaire;
+}

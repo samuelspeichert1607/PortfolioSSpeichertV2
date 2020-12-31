@@ -1,0 +1,32 @@
+#include "GuerrierLourd.h"
+
+GuerrierLourd::GuerrierLourd(bool isAlly)
+{
+	speed = 3;
+	health = 720;
+	maxHealth = 720;
+	range = 5;
+	attackPoints = 70;
+	cout = 5;
+	minionType = MinionType::_GuerrierLourd;
+	this->isAlly = isAlly;
+	if (isAlly)
+	{
+		isFacingLeft = false;
+	}
+	else
+	{
+		isFacingLeft = true;
+	}
+	Minion();
+}
+
+GuerrierLourd::~GuerrierLourd()
+{
+
+}
+
+void GuerrierLourd::murDAcier()
+{
+	specialAttackTime.restart();
+}

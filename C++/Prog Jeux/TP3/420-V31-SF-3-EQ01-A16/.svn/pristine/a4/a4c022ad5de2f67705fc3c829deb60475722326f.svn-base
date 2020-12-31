@@ -1,0 +1,257 @@
+#include "Game.h"
+
+Game::Game()
+{
+	//Génération de la fenêtre.
+	mainWin.create(VideoMode(LARGEUR_ECRAN, HAUTEUR_ECRAN, 32), "Projet SFML C++");
+
+
+
+
+	//Synchonisation coordonnée à l'écran!  Normalement 60 frames par secondes
+	//À faire absolument
+	mainWin.setFramerateLimit(60);
+
+	//Synchonisation coordonnée à l'écran!
+	mainWin.setVerticalSyncEnabled(true);
+}
+
+Game::~Game()
+{
+	for (int i = 0; i < minionList.getNbElements(); i++)
+	{
+		Minion* temporaire = minionList.at(i);
+		minionList.retirer(minionList.at(i));
+		delete temporaire;
+	}
+	listeProjectile.clear();
+}
+
+int Game::testTest()
+{
+	return 0;
+}
+
+int Game::run()
+{
+	if (!init())
+	{
+		return EXIT_FAILURE;
+	}
+
+	while (mainWin.isOpen())
+	{
+		//////////////////////////////////////////////////////////////////////////
+		// 1 - Gestion des entrées
+		//////////////////////////////////////////////////////////////////////////
+
+
+
+		getInputs();
+
+
+
+		//////////////////////////////////////////////////////////////////////////
+		// 2 - Gestion de la logique 
+		//////////////////////////////////////////////////////////////////////////
+
+		update();
+
+		//////////////////////////////////////////////////////////////////////////
+		// 3 - Gestion de l'affichage 
+		//////////////////////////////////////////////////////////////////////////
+
+
+
+		//Toujours important d'effacer l'écran précédent
+		mainWin.clear();
+		draw();
+		mainWin.display();
+	}
+	return EXIT_SUCCESS;
+}
+
+bool Game::init()
+{
+
+	minionList.ajouter(SpawnerMinion::CreateEnnemy(_Tour, 64, HAUTEUR_ECRAN / 2, true));
+	minionList.ajouter(SpawnerMinion::CreateEnnemy(_Tour, LARGEUR_ECRAN - 64, HAUTEUR_ECRAN / 4, false));
+	minionList.ajouter(SpawnerMinion::CreateEnnemy(_Tour, LARGEUR_ECRAN - 64, HAUTEUR_ECRAN / 2, false));
+	minionList.ajouter(SpawnerMinion::CreateEnnemy(_Tour, LARGEUR_ECRAN - 64, HAUTEUR_ECRAN * 3 / 4, false));
+	minionList.at(0)->ajustementsVisuels();
+	minionList.at(1)->ajustementsVisuels();
+	minionList.at(2)->ajustementsVisuels();
+	minionList.at(3)->ajustementsVisuels();
+
+
+
+
+	Tour* test = (Tour*)minionList.at(0);
+	minionList.ajouter(test->spawn(MinionType::_Archer));
+	minionList.at(4)->ajustementsVisuels();
+	//minionList.ajouter(test->spawn(MinionType::_Archer));
+	//minionList.at(5)->ajustementsVisuels();
+
+	//l'affichage de notre sélecteur
+	selecteur.setFillColor(Color::Transparent);
+	selecteur.setOutlineColor(Color::Red);
+	selecteur.setOutlineThickness(1);
+
+
+	if (!backgroundT.loadFromFile("..\\..\\Sprites\\Terrain.png"))
+	{
+		return false;
+	}
+
+
+
+	background.setTexture(backgroundT);
+	background.setPosition(0, 0);
+	return true;
+}
+
+void Game::getInputs()
+{
+	//Pas mal d'événements à gérer
+	while (mainWin.pollEvent(event))
+	{
+		//Tous les événement de press de souris
+		if (event.type == Event::MouseButtonPressed)
+		{
+			//Si c'est le bouton gauche
+			if (event.mouseButton.button == Mouse::Left)
+			{
+				//On arrête et on vide le dernier mist, la sélection va en créer un nouveau
+				//groupeDeMinions.arreter();
+				groupeDeMinions.vider();
+
+				//Rectangle de sélection: début du traitement
+				positionSelecteur = Vector2f(Mouse::getPosition(mainWin).x, Mouse::getPosition(mainWin).y);
+			}
+
+			//Avec le click droit, sélection de la soul à déplacer.
+			else if (event.mouseButton.button == Mouse::Right)
+			{
+				Vector2f v(Mouse::getPosition(mainWin).x, Mouse::getPosition(mainWin).y);
+				groupeDeMinions.AjouterDestination(&v);
+			}
+		}
+
+		//Avec le release de la souris on crée le mist.
+		else if (event.type == Event::MouseButtonReleased && event.mouseButton.button == Mouse::Left)
+		{
+			//On taille un rectangle de collision
+			IntRect containter;
+			containter.left = std::min(positionSelecteur.x, tailleSelecteur.x);
+			containter.top = std::min(positionSelecteur.y, tailleSelecteur.y);
+			containter.width = abs(positionSelecteur.x - tailleSelecteur.x);
+			containter.height = abs(positionSelecteur.y - tailleSelecteur.y);
+
+			//Si la position de la soul est dans le rectangle, on l'ajoute au mist.
+			for (int i = 0; i < minionList.getNbElements(); i++)
+			{
+				if (containter.contains(minionList.at(i)->getPosition().x, minionList.at(i)->getPosition().y))
+				{
+					groupeDeMinions.ajouter(minionList.at(i));
+				}
+			}
+
+			//On "kill" le sélecteur
+			positionSelecteur = Vector2f(-1, -1);
+			tailleSelecteur = Vector2f(-1, -1);
+		}
+
+
+		//En dernier; c'est de loin le plus rare
+		else if (event.type == Event::Closed)
+		{
+			mainWin.close();
+		}
+
+	}
+
+	//Si le bouton gauche reste enfoncé 
+	if (Mouse::isButtonPressed(sf::Mouse::Left) && positionSelecteur.x > -1)
+	{
+		tailleSelecteur = Vector2f(Mouse::getPosition(mainWin).x, Mouse::getPosition(mainWin).y);
+	}
+}
+
+
+void Game::update()
+{
+	for (int i = 3; i < minionList.getNbElements(); i++)
+	{
+		if (minionList.at(i)->lookForEnnemies(&minionList))
+		{
+			Projectile* temporaire = minionList.at(i)->attack();
+			if (temporaire != NULL)
+			{
+				listeProjectile.push_back(*temporaire);
+			}
+			delete temporaire;
+		}
+		else
+		{
+			if (typeid(minionList.at(i)) != typeid(Tour))
+			{
+				minionList.at(i)->bouger(&minionList);
+				//groupeDeMinions.bouger(&minionList);
+			}
+		}
+	}
+	vector<int> NoProjectilesAEnlever = vector<int>();
+	vector<Projectile>::iterator i;
+	int noProjCourant = -1;
+	for (i = listeProjectile.begin(); i < listeProjectile.end(); i++)
+	{
+		noProjCourant++;
+		if ((*i).update())
+		{
+			NoProjectilesAEnlever.push_back(noProjCourant);
+		}
+	}
+	for (vector<int>::iterator j = NoProjectilesAEnlever.begin(); j < NoProjectilesAEnlever.end(); j++)
+	{
+		listeProjectile.erase(listeProjectile.begin() + *j);
+	}
+
+	//Calculs pour l'affichage du joli rectangle
+	selecteur.setPosition(std::min(positionSelecteur.x, tailleSelecteur.x), std::min(positionSelecteur.y, tailleSelecteur.y));
+	selecteur.setSize(Vector2f(abs(positionSelecteur.x - tailleSelecteur.x), abs(positionSelecteur.y - tailleSelecteur.y)));
+
+}
+
+void Game::draw()
+{
+
+
+	mainWin.draw(background);
+
+	for (int i = 0; i < minionList.getNbElements(); i++)
+	{
+		mainWin.draw(*(minionList.at(i)));
+
+		RectangleShape maxLifeBar;
+		maxLifeBar.setSize(sf::Vector2f(50, 5));
+		maxLifeBar.setOrigin(maxLifeBar.getSize().x / 2, maxLifeBar.getSize().y / 2);
+		maxLifeBar.setPosition(minionList.at(i)->getPosition().x, minionList.at(i)->getPosition().y - 50);
+		maxLifeBar.setFillColor(Color::Black);
+		mainWin.draw(maxLifeBar);
+
+		RectangleShape lifeBar;
+		lifeBar.setSize(sf::Vector2f((50 * minionList.at(i)->getHealth()) / minionList.at(i)->getMaxHealth(), 5));
+		lifeBar.setOrigin(lifeBar.getSize().x / 2, lifeBar.getSize().y / 2);
+		lifeBar.setPosition(minionList.at(i)->getPosition().x, minionList.at(i)->getPosition().y - 50);
+		lifeBar.setFillColor(Color::Green);
+		lifeBar.setOutlineColor(Color::Black);
+		mainWin.draw(lifeBar);
+	}
+
+	for (vector<Projectile>::iterator i = listeProjectile.begin(); i < listeProjectile.end(); i++)
+	{
+		mainWin.draw((*i));
+	}
+
+	mainWin.draw(selecteur);
+}

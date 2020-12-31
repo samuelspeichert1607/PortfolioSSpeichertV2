@@ -1,0 +1,14 @@
+#include "Noeud.h"
+template <class T>
+class Liste
+{
+public:
+	Liste();
+	~Liste();
+	bool ajouter(T* _contenu);
+	bool retirer(T* _contenu);
+	T* at(int id);
+private:
+	Noeud<T>* premierNoeud = NULL;
+};
+#include "Liste.hpp"

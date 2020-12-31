@@ -1,0 +1,11 @@
+#pragma once
+#include "Minion.h"
+
+class Lancier : public Minion
+{
+public:
+	Lancier(bool isAlly, int id);
+	~Lancier();
+	void javelot();
+	void annulerJavelot();
+};

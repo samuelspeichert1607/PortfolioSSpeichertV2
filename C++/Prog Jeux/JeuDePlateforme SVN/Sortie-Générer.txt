@@ -1,0 +1,46 @@
+﻿1>------ Début de la génération : Projet : JeuDePlateforme, Configuration : Debug Win32 ------
+1>  Player.cpp
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 2\tp2\jeudeplateforme svn\jeudeplateforme\player.cpp(29): warning C4018: '<' : incompatibilité signed/unsigned
+1>  Génération de code en cours...
+1>  Compilation en cours...
+1>  Spike.cpp
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 2\tp2\jeudeplateforme svn\jeudeplateforme\spike.cpp(35): warning C4305: '+=' : troncation de 'double' à 'float'
+1>  ParaGoomba.cpp
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 2\tp2\jeudeplateforme svn\jeudeplateforme\paragoomba.cpp(10): warning C4244: '=' : conversion de 'const float' en 'int', perte possible de données
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 2\tp2\jeudeplateforme svn\jeudeplateforme\paragoomba.cpp(11): warning C4244: '=' : conversion de 'const float' en 'int', perte possible de données
+1>  Main.cpp
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 2\tp2\jeudeplateforme svn\jeudeplateforme\collectible.h(18): warning C4305: 'initialisation' : troncation de 'double' à 'const float'
+1>  Goomba.cpp
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 2\tp2\jeudeplateforme svn\jeudeplateforme\goomba.cpp(33): warning C4305: '+=' : troncation de 'double' à 'float'
+1>  Game.cpp
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 2\tp2\jeudeplateforme svn\jeudeplateforme\collectible.h(18): warning C4305: 'initialisation' : troncation de 'double' à 'const float'
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 2\tp2\jeudeplateforme svn\jeudeplateforme\game.cpp(23): warning C4244: 'argument' : conversion de 'const int' en 'float', perte possible de données
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 2\tp2\jeudeplateforme svn\jeudeplateforme\game.cpp(24): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 2\tp2\jeudeplateforme svn\jeudeplateforme\game.cpp(93): warning C4018: '<' : incompatibilité signed/unsigned
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 2\tp2\jeudeplateforme svn\jeudeplateforme\game.cpp(100): warning C4244: 'argument' : conversion de 'const int' en 'float', perte possible de données
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 2\tp2\jeudeplateforme svn\jeudeplateforme\game.cpp(102): warning C4244: 'argument' : conversion de 'const int' en 'float', perte possible de données
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 2\tp2\jeudeplateforme svn\jeudeplateforme\game.cpp(116): warning C4996: 'sf::Text::setColor': a été déclaré déconseillé
+1>          c:\librairiesprogrammation\sfml-2.4.0\include\sfml\graphics\text.hpp(177) : voir la déclaration de 'sf::Text::setColor'
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 2\tp2\jeudeplateforme svn\jeudeplateforme\game.cpp(158): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 2\tp2\jeudeplateforme svn\jeudeplateforme\game.cpp(200): warning C4018: '<' : incompatibilité signed/unsigned
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 2\tp2\jeudeplateforme svn\jeudeplateforme\game.cpp(261): warning C4244: 'argument' : conversion de 'const float' en 'int', perte possible de données
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 2\tp2\jeudeplateforme svn\jeudeplateforme\game.cpp(262): warning C4244: 'argument' : conversion de 'const float' en 'int', perte possible de données
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 2\tp2\jeudeplateforme svn\jeudeplateforme\game.cpp(281): warning C4244: 'argument' : conversion de 'const int' en 'const float', perte possible de données
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 2\tp2\jeudeplateforme svn\jeudeplateforme\game.cpp(292): warning C4244: 'argument' : conversion de 'int' en 'const float', perte possible de données
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 2\tp2\jeudeplateforme svn\jeudeplateforme\game.cpp(295): warning C4244: 'argument' : conversion de 'unsigned int' en 'float', perte possible de données
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 2\tp2\jeudeplateforme svn\jeudeplateforme\game.cpp(300): warning C4244: 'argument' : conversion de 'int' en 'const float', perte possible de données
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 2\tp2\jeudeplateforme svn\jeudeplateforme\game.cpp(304): warning C4244: 'argument' : conversion de 'unsigned int' en 'float', perte possible de données
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 2\tp2\jeudeplateforme svn\jeudeplateforme\game.cpp(309): warning C4244: 'argument' : conversion de 'int' en 'const float', perte possible de données
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 2\tp2\jeudeplateforme svn\jeudeplateforme\game.cpp(313): warning C4244: 'argument' : conversion de 'unsigned int' en 'float', perte possible de données
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 2\tp2\jeudeplateforme svn\jeudeplateforme\game.cpp(318): warning C4244: 'argument' : conversion de 'int' en 'const float', perte possible de données
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 2\tp2\jeudeplateforme svn\jeudeplateforme\game.cpp(322): warning C4244: 'argument' : conversion de 'unsigned int' en 'float', perte possible de données
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 2\tp2\jeudeplateforme svn\jeudeplateforme\game.cpp(327): warning C4244: 'argument' : conversion de 'int' en 'const float', perte possible de données
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 2\tp2\jeudeplateforme svn\jeudeplateforme\game.cpp(329): warning C4244: 'argument' : conversion de 'unsigned int' en 'float', perte possible de données
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 2\tp2\jeudeplateforme svn\jeudeplateforme\game.cpp(334): warning C4244: 'argument' : conversion de 'int' en 'const float', perte possible de données
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 2\tp2\jeudeplateforme svn\jeudeplateforme\game.cpp(336): warning C4244: 'argument' : conversion de 'unsigned int' en 'float', perte possible de données
+1>  Ennemy.cpp
+1>  Acteur.cpp
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 2\tp2\jeudeplateforme svn\jeudeplateforme\acteur.cpp(10): warning C4244: 'initialisation' : conversion de 'const float' en 'const int', perte possible de données
+1>  Génération de code en cours...
+1>  JeuDePlateforme.vcxproj -> D:\Cegep Ste-Foy\Programmation de jeux vidéo III\Étape 2\TP2\JeuDePlateforme SVN\Debug\JeuDePlateforme.exe
+========== Génération : 1 a réussi, 0 a échoué, 0 mis à jour, 0 a été ignoré ==========

@@ -1,0 +1,25 @@
+#pragma once
+#include <SFML/Graphics.hpp>
+#include "Sujet.h"
+#include "Constantes.h"
+using namespace sf;
+
+class Spell : public Sujet, public Sprite
+{
+public:
+	Spell(SpellType spellType);
+	~Spell();
+	Vector2f getImpactPoints();
+	int getImpactRadius();
+	int getCout();
+	SpellType getType();
+	
+private:
+	
+	Vector2f impactPoint;
+	int impactRadius = 0;
+	int cout = 0;
+	SpellType spellType;
+
+	Texture * textureAnimation;
+};

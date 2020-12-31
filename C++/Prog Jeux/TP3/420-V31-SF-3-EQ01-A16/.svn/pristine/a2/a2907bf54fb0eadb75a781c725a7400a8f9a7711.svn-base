@@ -1,0 +1,95 @@
+#pragma once
+#include <SFML/Graphics.hpp>
+#include <math.h>
+#include "Constantes.h"
+#include "Observateur.h"
+#include "Projectile.h"
+#include "Pile.h"
+
+using namespace sf;
+
+
+class Minion : public Observateur, public Sprite
+{
+	public:
+
+		Minion();
+
+		~Minion();
+
+		int gotHit(int damage);
+
+		int getHealth();
+
+		int getMaxHealth();
+
+		Minion * clone();
+
+		void move();
+
+		Projectile * attack();
+
+		Vector2f getTarget();
+
+		int getCout();
+
+		int getRange();
+
+		int getAttackPoints();
+
+		int getSpeed();
+
+		void AjouterDestination(Vector2f destination);
+
+		bool getIsFacingLeft();
+
+		void notifier(Sujet * sujet);
+
+	protected :
+
+		// Points de vie du minion.
+		int health; 
+
+		// Points de vie maximal du minion.
+		int maxHealth; 
+
+		//Type de minion.
+		MinionType minionType;
+
+		//Si le minion regarde vers la gauche.
+		bool isFacingLeft = true;
+
+		//Si le minion est allié ou ennemi.
+		bool isAlly = true;
+
+		//Si le minion a déja fait son attaque spéciale.
+		bool specialAttackAlreadyDone = false;
+
+		//Vitesse du minion.
+		int speed;
+
+		//Portée du minion.
+		int range;
+
+		//Points d'attaque du minion.
+		int attackPoints;
+
+		//Prix pour enrôler le minion dans l'armée.
+		int cout;
+
+		//Pile utilisée pour l'ordre des ennemis à attaquer.
+		Pile<Vector2f> ordreAAttaquer;
+
+		//Cible actuelle du minion
+		Vector2f target;
+
+		//Temps d'attaque
+		Clock attackTime;
+
+		//Temps pour l'attaque spéciale
+		Clock specialAttackTime;
+
+
+
+		
+};

@@ -1,0 +1,8 @@
+//Largeur de l'écran
+const float LARGEUR_ECRAN = 1280;
+//Hauteur de l'écran
+const float HAUTEUR_ECRAN = 720;
+//Différents types de sorts
+const enum SpellType { Eclair, BouleDeFeu, Meteore, Gel, Fatigue, Vigueur, Clonage, Poison, Guide, Soin, Affutage, Divination };
+//Différents types de minions
+const enum MinionType { Magichien, Lancier, Cavalier, GuerrierLeger, GuerrierLourd, Archer, Barbare };

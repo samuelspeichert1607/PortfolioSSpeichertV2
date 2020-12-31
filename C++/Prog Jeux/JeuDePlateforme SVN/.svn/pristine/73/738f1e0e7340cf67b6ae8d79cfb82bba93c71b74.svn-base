@@ -1,0 +1,87 @@
+#include "Player.h"
+
+Texture Player::playerT;
+
+Player::Player(const float posX, const float posY, RenderWindow* const renderWindow) : renderWindow(renderWindow), cadran(6), animateur(0), animateurImmobile(0), directionImmobile(1), estMobile(false)
+{
+	setPosition(posX, posY);
+}
+
+Player::~Player()
+{
+	for (size_t i = 0; i < NBR_NIVEAUX; i++)
+	{
+		delete[] intRectsImmobile[i];
+		delete[] intRectsMouvement[i];
+	}
+	delete[] intRectsImmobile;
+	delete[] intRectsMouvement;
+}
+
+bool Player::chargerTextures(const char texturePath[])
+{
+	if (!playerT.loadFromFile(texturePath))
+	{
+		return false;
+	}
+
+	
+
+	playerT.setSmooth(false);
+	return true;
+}
+
+void Player::ajustementsVisuels()
+{
+	setTexture(playerT);
+
+	//for (size_t i = 0; i < NBR_NIVEAUX; i++)
+	//{
+	//	intRectsImmobile[i] = new IntRect[NBR_ANIMS_IMMOBILE];
+	//	intRectsMouvement[i] = new IntRect[NBR_ANIMS_MOUVEMENT];
+
+	//	int largeur = texture.getSize().x / NBR_ANIMS;
+	//	int hauteur = texture.getSize().y / NBR_NIVEAUX;
+
+	//	for (size_t j = 0; i < NBR_ANIMS_IMMOBILE; i++)
+	//	{
+	//		intRectsImmobile[i][j].left = largeur * j;
+	//		intRectsImmobile[i][j].top = hauteur * j;
+	//		intRectsImmobile[i][j].width = largeur;
+	//		intRectsImmobile[i][j].height = hauteur;
+	//	}
+
+	//	for (size_t j = 0; i < NBR_ANIMS_MOUVEMENT; i++)
+	//	{
+	//		intRectsImmobile[i][j].left = largeur * j;
+	//		intRectsImmobile[i][j].top = hauteur * j;
+	//		intRectsImmobile[i][j].width = largeur;
+	//		intRectsImmobile[i][j].height = hauteur;
+	//	}
+	//}
+
+	//setTextureRect(intRectsImmobile[cadran][0]);
+	//setOrigin(intRectsImmobile[0][0].height / 2, intRectsImmobile[0][0].width / 2);
+}
+
+void Player::deplacement(bool direction)
+{
+
+	if (direction == true)
+	{
+		setPosition(getPosition().x + VITESSE, getPosition().y);
+	}
+	else if (direction == false)
+	{
+		setPosition(getPosition().x - VITESSE, getPosition().y);
+	}
+	
+//
+//
+	//Gravity logic
+	//if (player->GetY() < ground_height && isJumping == true)
+	//{
+	//	
+	//}
+
+}

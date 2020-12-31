@@ -1,0 +1,15 @@
+#pragma once
+
+
+
+class Observateur
+{
+	public:
+		virtual void notify(Sujet * sujet) = 0;
+
+
+	private:
+
+
+
+};

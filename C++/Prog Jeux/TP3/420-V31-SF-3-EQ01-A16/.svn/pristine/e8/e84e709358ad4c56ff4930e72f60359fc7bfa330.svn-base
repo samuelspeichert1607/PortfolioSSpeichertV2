@@ -1,0 +1,27 @@
+#include "Spell.h"
+
+
+Spell::Spell(SpellType spellType)
+{
+	this->spellType = spellType;
+}
+Spell::~Spell()
+{
+
+}
+Vector2f Spell::getImpactPoints()
+{
+	return impactPoint;
+}
+int Spell::getImpactRadius()
+{
+	return impactRadius;
+}
+int Spell::getCout()
+{
+	return cout;
+}
+SpellType Spell::getType()
+{
+	return spellType;
+}

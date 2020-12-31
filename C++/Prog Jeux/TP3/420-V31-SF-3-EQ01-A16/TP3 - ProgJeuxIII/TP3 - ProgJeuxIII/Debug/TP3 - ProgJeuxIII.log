@@ -1,0 +1,54 @@
+﻿La génération a démarré 12/17/2016 1:13:32 AM.
+     1>Projet "D:\Cegep Ste-Foy\# Archives Session 3\Programmation de jeux vidéo III\Étape 3\TP3\420-V31-SF-3-EQ01-A16\TP3 - ProgJeuxIII\TP3 - ProgJeuxIII\TP3 - ProgJeuxIII.vcxproj" sur le nœud 2 (Build cible(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Game.cpp
+         Game.cpp
+     1>d:\cegep ste-foy\# archives session 3\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(6): warning C4244: 'argument' : conversion de 'const float' en 'unsigned int', perte possible de données
+     1>d:\cegep ste-foy\# archives session 3\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(135): warning C4996: 'sf::Text::setColor': a été déclaré déconseillé
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\graphics\text.hpp(177) : voir la déclaration de 'sf::Text::setColor'
+     1>d:\cegep ste-foy\# archives session 3\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(140): warning C4996: 'sf::Text::setColor': a été déclaré déconseillé
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\graphics\text.hpp(177) : voir la déclaration de 'sf::Text::setColor'
+     1>d:\cegep ste-foy\# archives session 3\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(145): warning C4996: 'sf::Text::setColor': a été déclaré déconseillé
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\graphics\text.hpp(177) : voir la déclaration de 'sf::Text::setColor'
+     1>d:\cegep ste-foy\# archives session 3\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(173): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+     1>d:\cegep ste-foy\# archives session 3\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(182): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+     1>d:\cegep ste-foy\# archives session 3\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(194): warning C4244: '=' : conversion de 'const float' en 'int', perte possible de données
+     1>d:\cegep ste-foy\# archives session 3\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(195): warning C4244: '=' : conversion de 'const float' en 'int', perte possible de données
+     1>d:\cegep ste-foy\# archives session 3\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(196): warning C4244: '=' : conversion de 'float' en 'int', perte possible de données
+     1>d:\cegep ste-foy\# archives session 3\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(197): warning C4244: '=' : conversion de 'float' en 'int', perte possible de données
+     1>d:\cegep ste-foy\# archives session 3\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(202): warning C4244: 'argument' : conversion de 'const float' en 'int', perte possible de données
+     1>d:\cegep ste-foy\# archives session 3\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(224): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+     1>d:\cegep ste-foy\# archives session 3\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(466): warning C4018: '<' : incompatibilité signed/unsigned
+     1>d:\cegep ste-foy\# archives session 3\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(470): warning C4805: '!=' : mélange risqué de type 'int' et de type 'bool' dans l'opération
+     1>d:\cegep ste-foy\# archives session 3\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(519): warning C4018: '<' : incompatibilité signed/unsigned
+     1>d:\cegep ste-foy\# archives session 3\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(559): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+     1>d:\cegep ste-foy\# archives session 3\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(629): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+     1>d:\cegep ste-foy\# archives session 3\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(638): warning C4018: '<' : incompatibilité signed/unsigned
+     1>d:\cegep ste-foy\# archives session 3\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(656): warning C4996: 'sf::Text::setColor': a été déclaré déconseillé
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\graphics\text.hpp(177) : voir la déclaration de 'sf::Text::setColor'
+     1>d:\cegep ste-foy\# archives session 3\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(672): warning C4996: 'sf::Text::setColor': a été déclaré déconseillé
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\graphics\text.hpp(177) : voir la déclaration de 'sf::Text::setColor'
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Cegep Ste-Foy\# Archives Session 3\Programmation de jeux vidéo III\Étape 3\TP3\420-V31-SF-3-EQ01-A16\TP3 - ProgJeuxIII\Debug\TP3 - ProgJeuxIII.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files (x86)\Visual Leak Detector\lib\Win32" "sfml-system-d.lib" "sfml-main-d.lib" "sfml-graphics-d.lib" "sfml-audio-d.lib" "sfml-network-d.lib" "sfml-window-d.lib" openal32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Cegep Ste-Foy\# Archives Session 3\Programmation de jeux vidéo III\Étape 3\TP3\420-V31-SF-3-EQ01-A16\TP3 - ProgJeuxIII\Debug\TP3 - ProgJeuxIII.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Cegep Ste-Foy\# Archives Session 3\Programmation de jeux vidéo III\Étape 3\TP3\420-V31-SF-3-EQ01-A16\TP3 - ProgJeuxIII\Debug\TP3 - ProgJeuxIII.lib" /MACHINE:X86 Debug\Archer.obj
+         Debug\Barbare.obj
+         Debug\Cavalier.obj
+         Debug\Game.obj
+         Debug\GuerrierLeger.obj
+         Debug\GuerrierLourd.obj
+         Debug\Lancier.obj
+         Debug\Magicien.obj
+         Debug\Main.obj
+         Debug\Minion.obj
+         Debug\GroupeMinion.obj
+         Debug\Projectile.obj
+         Debug\SpawnerMinion.obj
+         Debug\Spell.obj
+         Debug\Sujet.obj
+         Debug\Testeur.obj
+         Debug\Tour.obj
+         TP3 - ProgJeuxIII.vcxproj -> D:\Cegep Ste-Foy\# Archives Session 3\Programmation de jeux vidéo III\Étape 3\TP3\420-V31-SF-3-EQ01-A16\TP3 - ProgJeuxIII\Debug\TP3 - ProgJeuxIII.exe
+     1>Génération du projet "D:\Cegep Ste-Foy\# Archives Session 3\Programmation de jeux vidéo III\Étape 3\TP3\420-V31-SF-3-EQ01-A16\TP3 - ProgJeuxIII\TP3 - ProgJeuxIII\TP3 - ProgJeuxIII.vcxproj" terminée (Build cible(s)).
+
+La génération a réussi.
+
+Temps écoulé 00:00:03.18

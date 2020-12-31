@@ -1,0 +1,83 @@
+#pragma once
+#include "Minion.h"
+#include "Magicien.h"
+#include "Lancier.h"
+#include "Cavalier.h"
+#include "GuerrierLeger.h"
+#include "GuerrierLourd.h"
+#include "Archer.h"
+#include "Barbare.h"
+#include "Constantes.h"
+
+
+class SpawnerMinion
+{
+public:
+	static int nextIdMinon;
+	static Minion * CreateEnnemy(MinionType minion, const float posX, const float posY, bool isAlly)
+	{
+		nextIdMinon++;
+		if (MinionType::_Magichien == minion) //Si le ticket entré en paramètre est un goomba
+		{
+			Magicien* nouveau = new Magicien(isAlly, nextIdMinon); //On en crée un sur la heap
+			nouveau->setPosition(posX, posY); // on met la position
+			nouveau->setOrigin(LARGEUR_MINON / 2, HAUTEUR_MINON / 2);//on met l'origine du minon
+			return nouveau;//on le retourne
+		}
+		else if (MinionType::_Lancier == minion)
+		{
+			Lancier* nouveau = new Lancier(isAlly, nextIdMinon); //On en crée un sur la heap
+			nouveau->setPosition(posX, posY); // on met la position
+			nouveau->setOrigin(LARGEUR_MINON / 2, HAUTEUR_MINON / 2);//on met l'origine du minon
+			return nouveau;//on le retourne
+		}
+		else if (MinionType::_Cavalier == minion)
+		{
+			Cavalier* nouveau = new Cavalier(isAlly, nextIdMinon); //On en crée un sur la heap
+			nouveau->setPosition(posX, posY); // on met la position
+			nouveau->setOrigin(LARGEUR_MINON / 2, HAUTEUR_MINON / 2);//on met l'origine du minon
+			return nouveau;//on le retourne
+		}
+		else if (MinionType::_GuerrierLeger == minion)
+		{
+			GuerrierLeger* nouveau = new GuerrierLeger(isAlly, nextIdMinon); //On en crée un sur la heap
+			nouveau->setPosition(posX, posY); // on met la position
+			nouveau->setOrigin(LARGEUR_MINON / 2, HAUTEUR_MINON / 2);//on met l'origine du minon
+			return nouveau;//on le retourne
+		}
+		else if (MinionType::_GuerrierLourd == minion)
+		{
+			GuerrierLourd* nouveau = new GuerrierLourd(isAlly, nextIdMinon); //On en crée un sur la heap
+			nouveau->setPosition(posX, posY); // on met la position
+			return nouveau;//on le retourne
+		}
+		else if (MinionType::_Archer == minion)
+		{
+			Archer* nouveau = new Archer(isAlly, nextIdMinon); //On en crée un sur la heap
+			nouveau->setPosition(posX, posY); // on met la position
+			nouveau->setOrigin(LARGEUR_MINON / 2, HAUTEUR_MINON / 2);//on met l'origine du minon
+			return nouveau;//on le retourne
+		}
+		else if (MinionType::_Barbare == minion)
+		{
+			Barbare* nouveau = new Barbare(isAlly, nextIdMinon); //On en crée un sur la heap
+			nouveau->setPosition(posX, posY); // on met la position
+			nouveau->setOrigin(LARGEUR_MINON / 2, HAUTEUR_MINON / 2);//on met l'origine du minon
+			return nouveau;//on le retourne
+		}
+		else if (MinionType::_Tour == minion)
+		{
+			Tour* nouveau = new Tour(isAlly, nextIdMinon); //On en crée un sur la heap
+			nouveau->setPosition(posX, posY); // on met la position
+			nouveau->setOrigin(105 / 2, 138 / 2);//on met l'origine du minon
+			return nouveau;//on le retourne
+		}
+		return NULL;
+	}
+private:
+	SpawnerMinion()
+	{
+		nextIdMinon = 0;
+	}
+};
+

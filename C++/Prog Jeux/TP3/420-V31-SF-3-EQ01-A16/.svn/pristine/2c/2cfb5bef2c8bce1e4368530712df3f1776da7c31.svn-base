@@ -1,0 +1,70 @@
+#pragma once
+#ifndef _DEBUG
+	#define NDEBUG 
+#endif
+#include <cassert>
+#include <SFML/Graphics.hpp>
+#include "Constantes.h"
+#include <vector>
+#include "SpawnerMinion.h"
+#include "GroupeMinion.h"
+#include "Spell.h"
+#include "File.h"
+
+using namespace sf;
+using namespace std;
+
+class Game
+{
+	public:
+		Game();
+		~Game();
+		int run();
+		int testTest();
+
+		private:
+
+		bool init();
+		void getInputs();
+		void update();
+		void draw();
+
+	
+	private:
+
+		Sprite background;
+		Texture backgroundT;
+
+		RectangleShape selecteur;
+		Vector2f positionSelecteur = Vector2f(-1, -1);
+		Vector2f tailleSelecteur = Vector2f(-1, -1);
+		
+		//vector<Minion*> minionList; //liste des ennemis du niveau.
+		Liste<Minion> minionList = Liste<Minion>();
+		vector<Projectile> listeProjectile = vector<Projectile>();
+
+		/// <summary>
+		/// Mist qui détermine ce qu'on déplace
+		/// </summary>
+		GroupeMinion groupeDeMinions;
+		Tour* allyTower;
+		Tour* ennemyTower;
+
+
+		File<Minion> minionQueueAlly; //File des minions alliés
+		File<Minion> minionQueueEnnemy; //File des minions ennemis
+
+
+		//vector<Spell*> spellList; //liste des pièces du niveau.
+
+		RenderWindow mainWin;
+		Event event;
+		Clock allyClock;
+		Clock ennemyClock;
+
+		Font font;
+		Text commandes;
+
+
+
+};

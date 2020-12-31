@@ -1,0 +1,79 @@
+#include "ObjetDeJeu.h"
+
+
+
+ObjetDeJeu::ObjetDeJeu(const Vector2f& taille, const Vector2f& position, const Color& couleur, int animationMaximale) 
+	: demiTailleX(taille.x / 2), demiTailleY(taille.y / 2), position(position), couleur(couleur), ANIMATION_MAXIMALE(animationMaximale), 
+	animation(0), actif(false)
+{
+
+}
+
+bool ObjetDeJeu::estTermine() const
+{
+	return animation >= ANIMATION_MAXIMALE;
+}
+
+bool ObjetDeJeu::collisionClick(const Vector2i& position) const
+{
+	if (abs(position.x - this->position.x) < demiTailleX && abs(position.y - this->position.y) < demiTailleY)
+	{
+		return true;
+	}
+	return false;
+}
+
+void ObjetDeJeu::activer()
+{
+	actif = true;
+}
+
+Color& ObjetDeJeu::getCouleur()
+{
+	return couleur;
+}
+
+Vector2f& ObjetDeJeu::getPosition()
+{
+	return position;
+}
+
+int ObjetDeJeu::getID() const
+{
+	return ID;
+}
+
+
+
+
+///Surcharges d'opérateurs
+
+bool ObjetDeJeu::operator < (const ObjetDeJeu& objetDeJeu)
+{
+	return this->ID < objetDeJeu.ID;
+}
+
+bool ObjetDeJeu::operator >(const ObjetDeJeu& objetDeJeu)
+{
+	return this->ID > objetDeJeu.ID;
+}
+
+bool ObjetDeJeu::operator >= (const ObjetDeJeu& objetDeJeu)
+{
+	return this->ID >= objetDeJeu.ID;
+}
+
+bool ObjetDeJeu::operator <= (const ObjetDeJeu& objetDeJeu)
+{
+	return this->ID <= objetDeJeu.ID;
+}
+
+bool ObjetDeJeu::operator == (const ObjetDeJeu& objetDeJeu)
+{
+	return this->ID == objetDeJeu.ID;
+}
+
+bool ObjetDeJeu::operator != (const ObjetDeJeu& objetDeJeu)
+{
+	return this->ID != objetDeJeu.ID;
+}

@@ -1,0 +1,73 @@
+#include "Tour.h"
+
+Tour::Tour(bool isAlly)
+{
+	speed = 0;
+	health = 2400;
+	maxHealth = 2400;
+	range = 0;
+	attackPoints = 0;
+	cout = 0;
+	minionType = MinionType::_Tour;
+	this->isAlly = isAlly;
+	if (isAlly)
+	{
+		isFacingLeft = false;
+	}
+	else
+	{
+		isFacingLeft = true;
+	}
+}
+
+Tour::~Tour()
+{
+
+}
+
+Minion* Tour::spawn(MinionType type)
+{
+	if (MinionType::_Magichien == type) //Si le ticket entré en paramètre est un goomba
+	{
+		Magicien* nouveau = new Magicien(isAlly); //On en crée un sur la heap
+		nouveau->setPosition(getPosition()); // on met la position
+		return nouveau;//on le retourne
+	}
+	else if (MinionType::_Lancier == type)
+	{
+		Lancier* nouveau = new Lancier(isAlly); //On en crée un sur la heap
+		nouveau->setPosition(getPosition()); // on met la position
+		return nouveau;//on le retourne
+	}
+	else if (MinionType::_Cavalier == type)
+	{
+		Cavalier* nouveau = new Cavalier(isAlly); //On en crée un sur la heap
+		nouveau->setPosition(getPosition()); // on met la position
+		return nouveau;//on le retourne
+	}
+	else if (MinionType::_GuerrierLeger == type)
+	{
+		GuerrierLeger* nouveau = new GuerrierLeger(isAlly); //On en crée un sur la heap
+		nouveau->setPosition(getPosition()); // on met la position
+		return nouveau;//on le retourne
+	}
+	else if (MinionType::_GuerrierLourd == type)
+	{
+		GuerrierLourd* nouveau = new GuerrierLourd(isAlly); //On en crée un sur la heap
+		nouveau->setPosition(getPosition()); // on met la position
+		return nouveau;//on le retourne
+	}
+	else if (MinionType::_Archer == type)
+	{
+		Archer* nouveau = new Archer(isAlly); //On en crée un sur la heap
+		nouveau->setPosition(getPosition()); // on met la position
+		return nouveau;//on le retourne
+	}
+	else if (MinionType::_Barbare == type)
+	{
+		Barbare* nouveau = new Barbare(isAlly); //On en crée un sur la heap
+		nouveau->setPosition(getPosition()); // on met la position
+		return nouveau;//on le retourne
+	}
+	return NULL;
+}

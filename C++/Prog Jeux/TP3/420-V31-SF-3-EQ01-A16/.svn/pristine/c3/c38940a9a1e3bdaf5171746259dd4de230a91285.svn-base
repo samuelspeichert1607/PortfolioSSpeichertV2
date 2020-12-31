@@ -1,0 +1,106 @@
+﻿La génération a démarré 12/2/2016 12:26:13 PM.
+     1>Projet "D:\Cegep Ste-Foy\Programmation de jeux vidéo III\Étape 3\TP3\420-V31-SF-3-EQ01-A16\TP3 - ProgJeuxIII\TP3 - ProgJeuxIII\TP3 - ProgJeuxIII.vcxproj" sur le nœud 2 (Build cible(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Game.cpp Main.cpp
+         Game.cpp
+     1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(6): warning C4244: 'argument' : conversion de 'const float' en 'unsigned int', perte possible de données
+     1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\liste.hpp(37): error C2678: '<' binaire : aucun opérateur trouvé qui accepte un opérande de partie gauche de type 'Minion' (ou il n'existe pas de conversion acceptable)
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\window\videomode.hpp(141): peut être 'bool sf::operator <(const sf::VideoMode &,const sf::VideoMode &)'
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\system\string.hpp(522): ou       'bool sf::operator <(const sf::String &,const sf::String &)'
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\system\time.hpp(185): ou       'bool sf::operator <(sf::Time,sf::Time)'
+                 lors de la tentative de mise en correspondance de la liste des arguments '(Minion, Minion)'
+                 d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\liste.hpp(23) : lors de la compilation de la fonction membre 'bool Liste<Minion>::ajouter(T *)' de la classe modèle
+                 with
+                 [
+                     T=Minion
+                 ]
+                 d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(83) : voir la référence à l'instanciation de la fonction modèle 'bool Liste<Minion>::ajouter(T *)' en cours de compilation
+                 with
+                 [
+                     T=Minion
+                 ]
+                 d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.h(38) : voir la référence à l'instanciation de la classe modèle 'Liste<Minion>' en cours de compilation
+     1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\liste.hpp(47): error C2678: '==' binaire : aucun opérateur trouvé qui accepte un opérande de partie gauche de type 'Minion' (ou il n'existe pas de conversion acceptable)
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\graphics\color.hpp(114): peut être 'bool sf::operator ==(const sf::Color &,const sf::Color &)'
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\graphics\blendmode.hpp(133): ou       'bool sf::operator ==(const sf::BlendMode &,const sf::BlendMode &)'
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\window\videomode.hpp(117): ou       'bool sf::operator ==(const sf::VideoMode &,const sf::VideoMode &)'
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\system\string.hpp(521): ou       'bool sf::operator ==(const sf::String &,const sf::String &)'
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\system\time.hpp(161): ou       'bool sf::operator ==(sf::Time,sf::Time)'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\system_error(410): ou       'bool std::operator ==(const std::error_condition &,const std::error_code &) throw()'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\system_error(402): ou       'bool std::operator ==(const std::error_code &,const std::error_condition &) throw()'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\exception(507): ou       'bool std::operator ==(const std::exception_ptr &,std::nullptr_t)'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\exception(502): ou       'bool std::operator ==(std::nullptr_t,const std::exception_ptr &)'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\exception(497): ou       'bool std::operator ==(const std::exception_ptr &,const std::exception_ptr &)'
+                 lors de la tentative de mise en correspondance de la liste des arguments '(Minion, Minion)'
+     1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\liste.hpp(52): error C2678: '==' binaire : aucun opérateur trouvé qui accepte un opérande de partie gauche de type 'Minion' (ou il n'existe pas de conversion acceptable)
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\graphics\color.hpp(114): peut être 'bool sf::operator ==(const sf::Color &,const sf::Color &)'
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\graphics\blendmode.hpp(133): ou       'bool sf::operator ==(const sf::BlendMode &,const sf::BlendMode &)'
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\window\videomode.hpp(117): ou       'bool sf::operator ==(const sf::VideoMode &,const sf::VideoMode &)'
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\system\string.hpp(521): ou       'bool sf::operator ==(const sf::String &,const sf::String &)'
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\system\time.hpp(161): ou       'bool sf::operator ==(sf::Time,sf::Time)'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\system_error(410): ou       'bool std::operator ==(const std::error_condition &,const std::error_code &) throw()'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\system_error(402): ou       'bool std::operator ==(const std::error_code &,const std::error_condition &) throw()'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\exception(507): ou       'bool std::operator ==(const std::exception_ptr &,std::nullptr_t)'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\exception(502): ou       'bool std::operator ==(std::nullptr_t,const std::exception_ptr &)'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\exception(497): ou       'bool std::operator ==(const std::exception_ptr &,const std::exception_ptr &)'
+                 lors de la tentative de mise en correspondance de la liste des arguments '(Minion, Minion)'
+     1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\liste.hpp(62): error C2678: '<' binaire : aucun opérateur trouvé qui accepte un opérande de partie gauche de type 'Minion' (ou il n'existe pas de conversion acceptable)
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\window\videomode.hpp(141): peut être 'bool sf::operator <(const sf::VideoMode &,const sf::VideoMode &)'
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\system\string.hpp(522): ou       'bool sf::operator <(const sf::String &,const sf::String &)'
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\system\time.hpp(185): ou       'bool sf::operator <(sf::Time,sf::Time)'
+                 lors de la tentative de mise en correspondance de la liste des arguments '(Minion, Minion)'
+     1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\liste.hpp(79): error C2678: '>' binaire : aucun opérateur trouvé qui accepte un opérande de partie gauche de type 'Minion' (ou il n'existe pas de conversion acceptable)
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\window\videomode.hpp(153): peut être 'bool sf::operator >(const sf::VideoMode &,const sf::VideoMode &)'
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\system\string.hpp(576): ou       'bool sf::operator >(const sf::String &,const sf::String &)'
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\system\time.hpp(197): ou       'bool sf::operator >(sf::Time,sf::Time)'
+                 lors de la tentative de mise en correspondance de la liste des arguments '(Minion, Minion)'
+     1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\liste.hpp(79): error C2678: '<' binaire : aucun opérateur trouvé qui accepte un opérande de partie gauche de type 'Minion' (ou il n'existe pas de conversion acceptable)
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\window\videomode.hpp(141): peut être 'bool sf::operator <(const sf::VideoMode &,const sf::VideoMode &)'
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\system\string.hpp(522): ou       'bool sf::operator <(const sf::String &,const sf::String &)'
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\system\time.hpp(185): ou       'bool sf::operator <(sf::Time,sf::Time)'
+                 lors de la tentative de mise en correspondance de la liste des arguments '(Minion, Minion)'
+     1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\liste.hpp(88): error C2678: '<' binaire : aucun opérateur trouvé qui accepte un opérande de partie gauche de type 'Minion' (ou il n'existe pas de conversion acceptable)
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\window\videomode.hpp(141): peut être 'bool sf::operator <(const sf::VideoMode &,const sf::VideoMode &)'
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\system\string.hpp(522): ou       'bool sf::operator <(const sf::String &,const sf::String &)'
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\system\time.hpp(185): ou       'bool sf::operator <(sf::Time,sf::Time)'
+                 lors de la tentative de mise en correspondance de la liste des arguments '(Minion, Minion)'
+     1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\liste.hpp(88): error C2678: '>' binaire : aucun opérateur trouvé qui accepte un opérande de partie gauche de type 'Minion' (ou il n'existe pas de conversion acceptable)
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\window\videomode.hpp(153): peut être 'bool sf::operator >(const sf::VideoMode &,const sf::VideoMode &)'
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\system\string.hpp(576): ou       'bool sf::operator >(const sf::String &,const sf::String &)'
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\system\time.hpp(197): ou       'bool sf::operator >(sf::Time,sf::Time)'
+                 lors de la tentative de mise en correspondance de la liste des arguments '(Minion, Minion)'
+     1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\liste.hpp(99): error C2678: '!=' binaire : aucun opérateur trouvé qui accepte un opérande de partie gauche de type 'Minion' (ou il n'existe pas de conversion acceptable)
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\graphics\color.hpp(128): peut être 'bool sf::operator !=(const sf::Color &,const sf::Color &)'
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\graphics\blendmode.hpp(145): ou       'bool sf::operator !=(const sf::BlendMode &,const sf::BlendMode &)'
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\window\videomode.hpp(129): ou       'bool sf::operator !=(const sf::VideoMode &,const sf::VideoMode &)'
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\system\string.hpp(552): ou       'bool sf::operator !=(const sf::String &,const sf::String &)'
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\system\time.hpp(173): ou       'bool sf::operator !=(sf::Time,sf::Time)'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\system_error(426): ou       'bool std::operator !=(const std::error_condition &,const std::error_code &) throw()'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\system_error(419): ou       'bool std::operator !=(const std::error_code &,const std::error_condition &) throw()'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\exception(522): ou       'bool std::operator !=(const std::exception_ptr &,std::nullptr_t)'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\exception(517): ou       'bool std::operator !=(std::nullptr_t,const std::exception_ptr &)'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\exception(512): ou       'bool std::operator !=(const std::exception_ptr &,const std::exception_ptr &)'
+                 lors de la tentative de mise en correspondance de la liste des arguments '(Minion, Minion)'
+     1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\liste.hpp(173): error C2678: '==' binaire : aucun opérateur trouvé qui accepte un opérande de partie gauche de type 'Minion' (ou il n'existe pas de conversion acceptable)
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\graphics\color.hpp(114): peut être 'bool sf::operator ==(const sf::Color &,const sf::Color &)'
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\graphics\blendmode.hpp(133): ou       'bool sf::operator ==(const sf::BlendMode &,const sf::BlendMode &)'
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\window\videomode.hpp(117): ou       'bool sf::operator ==(const sf::VideoMode &,const sf::VideoMode &)'
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\system\string.hpp(521): ou       'bool sf::operator ==(const sf::String &,const sf::String &)'
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\system\time.hpp(161): ou       'bool sf::operator ==(sf::Time,sf::Time)'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\system_error(410): ou       'bool std::operator ==(const std::error_condition &,const std::error_code &) throw()'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\system_error(402): ou       'bool std::operator ==(const std::error_code &,const std::error_condition &) throw()'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\exception(507): ou       'bool std::operator ==(const std::exception_ptr &,std::nullptr_t)'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\exception(502): ou       'bool std::operator ==(std::nullptr_t,const std::exception_ptr &)'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\exception(497): ou       'bool std::operator ==(const std::exception_ptr &,const std::exception_ptr &)'
+                 lors de la tentative de mise en correspondance de la liste des arguments '(Minion, Minion)'
+                 d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\liste.hpp(168) : lors de la compilation de la fonction membre 'Minion *Liste<Minion>::at(int)' de la classe modèle
+                 d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(117) : voir la référence à l'instanciation de la fonction modèle 'Minion *Liste<Minion>::at(int)' en cours de compilation
+         Génération de code en cours...
+         Compilation en cours...
+         Main.cpp
+         Génération de code en cours...
+     1>Génération du projet "D:\Cegep Ste-Foy\Programmation de jeux vidéo III\Étape 3\TP3\420-V31-SF-3-EQ01-A16\TP3 - ProgJeuxIII\TP3 - ProgJeuxIII\TP3 - ProgJeuxIII.vcxproj" terminée (Build cible(s)) -- ÉCHEC.
+
+ÉCHEC de la build.
+
+Temps écoulé 00:00:03.52

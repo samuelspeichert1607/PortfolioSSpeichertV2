@@ -1,0 +1,22 @@
+#pragma once
+//#include "stdafx.h"
+#include "Noeud.h"
+#include <stddef.h>
+
+using namespace std;
+
+template <class T>
+class Pile
+{
+public:
+	Pile();
+	~Pile();
+	void Push(T* _contenu);
+	T* Pop();
+
+private:
+	Noeud<T>* premierNoeud;
+	int nbElements = 0; //Ajouté à cause des test unitaires.
+};
+
+#include "Pile.hpp"

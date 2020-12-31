@@ -1,0 +1,39 @@
+#include "Cavalier.h"
+
+Cavalier::Cavalier(bool isAlly)
+{
+	speed = 5;
+	pointsDeVie = 750;
+	pointsDeVieMax = 750;
+	range = 10;
+	pointsDAttaque = 150;
+	cout = 10;
+	this->isAlly = isAlly;
+	if (isAlly)
+	{
+		isFacingLeft = false;
+	}
+	else
+	{
+		isFacingLeft = true;
+	}
+	Minion();
+}
+
+Cavalier::~Cavalier()
+{
+
+}
+
+void Cavalier::charge()
+{
+	speed += 3;
+	pointsDAttaque *= 2;
+	timeSpecialAttack.restart();
+}
+
+void Cavalier::annulerCharge()
+{
+	speed -= 3;
+	pointsDAttaque /= 2;
+}

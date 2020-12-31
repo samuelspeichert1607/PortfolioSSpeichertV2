@@ -1,0 +1,14 @@
+#include "Noeud.h"
+template <class T>
+class File
+{
+public:
+	File();
+	~File();
+	void Push(T* _contenu);
+	T* Pop();
+private:
+	Noeud<T>* premierNoeud = NULL;
+	Noeud<T>* deremierNoeud = NULL;
+};
+#include "File.hpp"

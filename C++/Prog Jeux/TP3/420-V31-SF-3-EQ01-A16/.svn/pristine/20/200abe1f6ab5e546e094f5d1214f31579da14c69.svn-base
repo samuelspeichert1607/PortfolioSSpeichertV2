@@ -1,0 +1,11 @@
+#pragma once
+#include "Observateur.h"
+
+
+class Observateur : public Observateur
+{
+
+
+
+
+};

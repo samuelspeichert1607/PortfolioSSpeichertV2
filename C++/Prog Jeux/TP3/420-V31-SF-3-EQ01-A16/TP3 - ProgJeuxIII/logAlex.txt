@@ -1,0 +1,76 @@
+16 novembre:
+	de 15h à 18h:
+	-finir remise 1
+18 novembre:
+	de 8h à 11h:
+	-finir remise 2
+	-début du listage des requêtes
+	-commencer croquis interface avec Samuel
+22 novembre:
+	de 7:50 à 8h:
+	-retouches croquis interface 
+23 novembre:
+	de 15h à 18h:
+	-finir remise 3
+	-finir remise 4
+	-instaurer le code de connexion dans le serveur avec seulement un soket
+24 novembre:
+	de 8:50 à 9:45
+	-établir connexion entre Linux et Windows
+25 novembre:
+	de 8h à 11h:	
+	-commencer remise 5 avec Samuel
+	-instaurer le code de connexion dans le serveur avec des thread
+	-élaborer comment le serveur analysera les requêtes
+	-établir code de déconnection du Client
+	-création de DropBox avec Samuel
+27 novembre:
+	de 17:45 à 23h:
+	-commencer à lister les cartes réponses et les cartes questions avec Samuel
+29 novembre:
+	de 14h à 15h:
+	-implémenter le système de requêtes dans le serveur
+	-implémenter structure et tableau d'utilisateur dans le serveur
+30 novembre:
+	de 8h à 10h:
+	-stokage du nom d'utilisateur, du mot de passe, du thread ainsi que du soket de chaque client dans la structure utilisateur  
+	-implémenter requête 1 dans le Serveur
+	-mettre requête de déconnection en tant que requête vide
+	-implémenter requête 2 (même si elle n'avais pas le numéro 2)
+	-introduction du chiffre 3 dans la requête de déconnection (même si c'étais 2 dans le temps (already fells old to think of that))
+	de 15h à 18h:
+	-continuer listage requêtes
+	-finir remise 5 avec Samuel
+2 décembre:
+	de 8h à 11h:
+	-implémenter du chiffre 2 dans la confirmation de connection
+	-paufiner requête 3 et instaurer le chiffre 3 dedans
+	-instaurer chiffre 4 dans la confirmation de déconnection
+	-instaurer le renvoie de la requête avec le nom d'utilisateur de son client à la place du numéro de requête (comme la requête 18 sauf sans le chiffre 18) lorsque la requête ne commence pas par un chiffre qui correspond à une des requêtes du programme
+	de 19:40 à 20h:
+	-commencer et finir remise 6
+7 décembre:
+	de 11h à 18h:
+	-finir de lister les requêtes
+	-indroduire une légende à côté de la liste de requête
+	-réorganisation des numéros de requêtes
+	-implémenter requêtes 5 à 8 au complet dans le serveur
+8 décembre:
+	de 8:50 à 9:40:
+	-ajouter la spécification du cas où la première information de la requête commence par un chiffre dans la légende des requêtes
+	-implémenter requêtes 9 et 10
+	de 11h à 13h:
+	-implémenter log des requêtes
+	-implémenter l'affichage de l'adresse IP lors du démarrage du serveur
+	-implémenter la demande du port de connexion lors du démarrage du serveur 
+	de 16h à 23h:
+	-implémenter requêtes 11 à 18
+	-modificartion de condition de requête erronée pour saisir l'oportunité de crier après l'utilisateur du client qui ne sais pas comment l'utiliser
+	-implémenteation de 8 séries de commentaires possibles (numéro de série déterminé à la création du thread du client) lorsque la requête est erronée
+9 décembre:
+	de 9:45 à 12:15:
+	-régler erreurs de compilations
+	-finir serveur
+	-donner le serveur complet à Sam pour faire ses tests avec le client
+	de 20h à 22:30:
+	-compléter le document de journalisation du travail que j'ai fait basé sur tous les messages envoyés à Samuel via google docx ou FaceBook

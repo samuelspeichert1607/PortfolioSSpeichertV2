@@ -1,0 +1,18 @@
+#pragma once
+
+//Largeur de l'écran
+const float LARGEUR_ECRAN = 1280;
+//Hauteur de l'écran
+const float HAUTEUR_ECRAN = 720;
+
+const float LARGEUR_MINON = 160;
+
+const float HAUTEUR_MINON = 136.5F;
+
+const int NB_SPRITES_DANS_TEXTURE_HORIZONTAL = 6;
+
+const int NB_SPRITES_DANS_TEXTURE_VERTICAL = 4;
+
+enum SpellType { Eclair, BouleDeFeu, Meteore, Gel, Fatigue, Vigueur, Clonage, Poison, Guide, Soin, Affutage, Divination };
+
+enum MinionType { _Magichien, _Lancier, _Cavalier, _GuerrierLeger, _GuerrierLourd, _Archer, _Barbare, _Tour };

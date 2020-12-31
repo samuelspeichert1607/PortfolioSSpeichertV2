@@ -1,0 +1,124 @@
+template <class T>
+Liste<T>::Liste()
+{
+	premierNoeud = NULL;
+}
+template <class T>
+Liste<T>::~Liste()
+{
+	while (premierNoeud != NULL)
+	{
+		retirer(premierNoeud->getContenu());
+	}
+}
+template <class T>
+bool Liste<T>::ajouter(T* _contenu)
+{
+	Noeud<T>* nouveau = new Noeud<T>();
+	nouveau->setContenu(_contenu);
+	nouveau->setSuivant(NULL);
+	if (premierNoeud == NULL)
+	{
+		premierNoeud = nouveau;
+		return true;
+	}
+	else if (*_contenu < *(premierNoeud->getContenu()))
+	{
+		nouveau->setSuivant(premierNoeud);
+		premierNoeud = nouveau;
+		return true;
+	}
+	else if (*(premierNoeud->getContenu()) == *_contenu)
+	{
+		return false;
+	}
+	else if (premierNoeud->getSuivant() == NULL)
+	{
+		premierNoeud->setSuivant(nouveau);
+		return true;
+	}
+	else
+	{
+		Noeud<T>* courant = premierNoeud;
+		while (*(courant->getSuivant()->getContenu()) < *_contenu)
+		{
+			courant = courant->getSuivant();
+			if (courant->getSuivant() == NULL)
+			{
+				if (*(courant->getContenu()) == *_contenu)
+				{
+					return false;
+				}
+				else if (*(courant->getContenu()) < *_contenu)
+				{
+					break;
+				}
+			}
+		}
+		nouveau->setSuivant(courant->getSuivant());
+		courant->setSuivant(nouveau);
+		return true;
+	}
+}
+template <class T>
+bool Liste<T>::retirer(T* _contenu)
+{
+	if (premierNoeud == NULL)
+	{
+		return false;
+	}
+	else if (*(premierNoeud->getContenu()) == *_contenu)
+	{
+		Noeud<T>* temporaire = premierNoeud;
+		premierNoeud = premierNoeud->getSuivant();
+		delete temporaire;
+		return true;
+	}
+	Noeud<T>* courant = premierNoeud;
+	if (courant->getSuivant() != NULL)
+	{
+		while (*(courant->getSuivant()->getContenu()) != *_contenu)
+		{
+			courant = courant->getSuivant();
+			if (courant->getSuivant() == NULL)
+			{
+				if (*(courant->getContenu()) == *_contenu)
+				{
+					break;
+				}
+				else
+				{
+					return false;
+				}
+			}
+		}
+	}
+	else if (*(courant->getContenu()) != *_contenu)
+	{
+		return false;
+	}
+	else
+	{
+		delete premierNoeud;
+		premierNoeud = NULL;
+		return true;
+	}
+	Noeud<T>* temporaire = courant->getSuivant();
+	courant->setSuivant(temporaire->getSuivant());
+	delete temporaire;
+	return true;
+}
+template <class T>
+T* Liste<T>::at(int id)
+{
+	Noeud<T>* courant = premierNoeud;
+	for (int i = 0; i < id; i++)
+	{
+		courant = courant->getSuivant();
+		if (courant == NULL)
+		{
+			return NULL;
+		}
+	}
+	return courant->getContenu();
+}

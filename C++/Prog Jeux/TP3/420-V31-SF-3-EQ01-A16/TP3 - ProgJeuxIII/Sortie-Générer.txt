@@ -1,0 +1,32 @@
+﻿1>------ Début de la génération : Projet : TP3 - ProgJeuxIII, Configuration : Debug Win32 ------
+1>  Projectile.cpp
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\projectile.cpp(8): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\projectile.cpp(10): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+1>  Minion.cpp
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\minion.cpp(221): warning C4305: '+=' : troncation de 'double' à 'float'
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\minion.cpp(295): warning C4305: '+=' : troncation de 'double' à 'float'
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\minion.cpp(312): warning C4805: '!=' : mélange risqué de type 'int' et de type 'bool' dans l'opération
+1>  Game.cpp
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(6): warning C4244: 'argument' : conversion de 'const float' en 'unsigned int', perte possible de données
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(126): warning C4996: 'sf::Text::setColor': a été déclaré déconseillé
+1>          c:\librairiesprogrammation\sfml-2.4.0\include\sfml\graphics\text.hpp(177) : voir la déclaration de 'sf::Text::setColor'
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(132): warning C4996: 'sf::Text::setColor': a été déclaré déconseillé
+1>          c:\librairiesprogrammation\sfml-2.4.0\include\sfml\graphics\text.hpp(177) : voir la déclaration de 'sf::Text::setColor'
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(156): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(163): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(173): warning C4244: '=' : conversion de 'const float' en 'int', perte possible de données
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(174): warning C4244: '=' : conversion de 'const float' en 'int', perte possible de données
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(175): warning C4244: '=' : conversion de 'float' en 'int', perte possible de données
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(176): warning C4244: '=' : conversion de 'float' en 'int', perte possible de données
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(181): warning C4244: 'argument' : conversion de 'const float' en 'int', perte possible de données
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(204): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(344): warning C4018: '<' : incompatibilité signed/unsigned
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(349): warning C4805: '!=' : mélange risqué de type 'int' et de type 'bool' dans l'opération
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(445): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(468): warning C4996: 'sf::Text::setColor': a été déclaré déconseillé
+1>          c:\librairiesprogrammation\sfml-2.4.0\include\sfml\graphics\text.hpp(177) : voir la déclaration de 'sf::Text::setColor'
+1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp(484): warning C4996: 'sf::Text::setColor': a été déclaré déconseillé
+1>          c:\librairiesprogrammation\sfml-2.4.0\include\sfml\graphics\text.hpp(177) : voir la déclaration de 'sf::Text::setColor'
+1>  Génération de code en cours...
+1>  TP3 - ProgJeuxIII.vcxproj -> D:\Cegep Ste-Foy\Programmation de jeux vidéo III\Étape 3\TP3\420-V31-SF-3-EQ01-A16\TP3 - ProgJeuxIII\Debug\TP3 - ProgJeuxIII.exe
+========== Génération : 1 a réussi, 0 a échoué, 0 mis à jour, 0 a été ignoré ==========

@@ -1,0 +1,14 @@
+#pragma once
+#include "Minion.h"
+
+class Archer : public Minion
+{
+public:
+	Archer(bool isAlly, int id);
+	~Archer();
+	void retraiteStrategique();
+	void annulerRetraiteStrategique();
+	
+private:
+	Vector2f* positionRetraite = nullptr;
+};

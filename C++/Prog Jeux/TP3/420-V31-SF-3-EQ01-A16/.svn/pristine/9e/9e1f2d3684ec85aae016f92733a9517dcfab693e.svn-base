@@ -1,0 +1,131 @@
+#include "Game.h"
+
+Game::Game()
+{
+	//Génération de la fenêtre.
+	mainWin.create(VideoMode(LARGEUR_ECRAN, HAUTEUR_ECRAN, 32), "Projet SFML C++");
+
+
+	//Synchonisation coordonnée à l'écran!  Normalement 60 frames par secondes
+	//À faire absolument
+	mainWin.setFramerateLimit(60);
+
+	//Synchonisation coordonnée à l'écran!
+	mainWin.setVerticalSyncEnabled(true);
+}
+
+Game::~Game()
+{
+
+	for (int i = 0; i < minionList.getNbElements(); i++)
+	{
+		minionList.retirer(minionList.at(i));
+	}
+	//minionList = Liste<Minion>();
+
+
+}
+
+int Game::testTest()
+{
+	return 0;
+}
+
+int Game::run()
+{
+	if (!init())
+	{
+		return EXIT_FAILURE;
+	}
+
+	while (mainWin.isOpen())
+	{
+		//////////////////////////////////////////////////////////////////////////
+		// 1 - Gestion des entrées
+		//////////////////////////////////////////////////////////////////////////
+		Event event;
+
+		//On passe l'événement en référence et celui-ci est chargé du dernier événement reçu!
+		while (mainWin.pollEvent(event))
+		{
+			if (event.type == Event::Closed)
+			{
+				mainWin.close();
+			}
+		}
+
+
+		//////////////////////////////////////////////////////////////////////////
+		// 2 - Gestion de la logique 
+		//////////////////////////////////////////////////////////////////////////
+
+		update();
+
+		//////////////////////////////////////////////////////////////////////////
+		// 3 - Gestion de l'affichage 
+		//////////////////////////////////////////////////////////////////////////
+
+
+
+		//Toujours important d'effacer l'écran précédent
+		mainWin.clear();
+		draw();
+		mainWin.display();
+	}
+	return EXIT_SUCCESS;
+}
+
+bool Game::init()
+{
+	minionList.ajouter(SpawnerMinion::CreateEnnemy(_Tour, 64, HAUTEUR_ECRAN / 2, true));
+	minionList.ajouter(SpawnerMinion::CreateEnnemy(_Tour, LARGEUR_ECRAN - 64, HAUTEUR_ECRAN / 4, false));
+	minionList.ajouter(SpawnerMinion::CreateEnnemy(_Tour, LARGEUR_ECRAN - 64, HAUTEUR_ECRAN / 2, false));
+	minionList.ajouter(SpawnerMinion::CreateEnnemy(_Tour, LARGEUR_ECRAN - 64, HAUTEUR_ECRAN * 3 / 4, false));
+	minionList.at(0)->ajustementsVisuels();
+	minionList.at(1)->ajustementsVisuels();
+	minionList.at(2)->ajustementsVisuels();
+	minionList.at(3)->ajustementsVisuels();
+	Minion::setListeMinions(&minionList);
+
+	Tour* test = (Tour*)minionList.at(0);
+	minionList.ajouter(test->spawn(MinionType::_Archer));
+	minionList.at(4)->ajustementsVisuels();
+
+	if (!backgroundT.loadFromFile("..\\..\\Sprites\\Terrain.png"))
+	{
+		return false;
+	}
+
+	background.setTexture(backgroundT);
+	background.setPosition(0, 0);
+	return true;
+}
+
+void Game::update()
+{
+	for (int i = 4; i < minionList.getNbElements(); i++)
+	{
+		if (minionList.at(i)->lookForEnnemies())
+		{
+			listeProjectile.push_back(minionList.at(i)->attack());
+		}
+		else
+		{
+			minionList.at(i)->bouger();
+		}
+	}
+
+
+
+}
+
+void Game::draw()
+{
+
+	mainWin.draw(background);
+
+	for (int i = 0; i < minionList.getNbElements(); i++)
+	{
+		mainWin.draw(*(minionList.at(i)));
+	}
+}

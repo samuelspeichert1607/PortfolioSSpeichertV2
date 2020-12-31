@@ -1,0 +1,45 @@
+#include "Radiation.h"
+
+
+//Sam
+Radiation::Radiation(const Vector2f& taille, const Vector2f& position, const Color& couleur, int ID)
+	: ObjetDeJeu(taille, position, couleur, 140), echelle(100)
+{
+	srand(time(NULL));
+	force = rand() % 50 + 1;
+	this->ID = ID;
+}
+
+//Sam
+void Radiation::action()
+{
+	if (actif && animation < ANIMATION_MAXIMALE)
+	{
+		if (animation == 0)
+		{
+			notifierTousLesObservateurs();
+		}
+
+		animation++;
+
+		if (animation < 21)
+		{
+			echelle = 100 + animation;			
+		}
+		else
+		{
+			echelle = 140 - animation;
+		}
+	}
+}
+//Sam
+float Radiation::getEchelle() const
+{
+	return echelle / 100.0f;
+}
+
+//ajout
+int Radiation::getForce() const
+{
+	return force;
+}

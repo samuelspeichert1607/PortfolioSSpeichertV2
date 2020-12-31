@@ -1,0 +1,581 @@
+#include "Game.h"
+//sam
+Game::Game()
+{
+	//Génération de la fenêtre.
+	mainWin.create(VideoMode(LARGEUR_ECRAN, HAUTEUR_ECRAN, 32), "Projet SFML C++");
+
+
+
+
+	//Synchonisation coordonnée à l'écran!  Normalement 60 frames par secondes
+	//À faire absolument
+	mainWin.setFramerateLimit(60);
+
+	//Synchonisation coordonnée à l'écran!
+	mainWin.setVerticalSyncEnabled(true);
+}
+//Alex et Sam
+Game::~Game()
+{
+	int nbElements = minionList.getNbElements();
+	for (int i = 0; i < nbElements; i++)
+	{
+		Minion* temporaire = minionList.at(0);
+		minionList.retirer(minionList.at(0));
+		delete temporaire;
+	}
+	int nbElementsSpells = minionList.getNbElements();
+	for (int i = 0; i < nbElementsSpells; i++)
+	{
+		ObjetDeJeu* temporaire2 = spellList.at(0);
+		spellList.retirer(spellList.at(0));
+		delete temporaire2;
+	}
+	listeProjectile.clear();
+
+}
+//Sam
+int Game::testTest()
+{
+	return 0;
+}
+//Sam
+int Game::run()
+{
+	if (!init())
+	{
+		return EXIT_FAILURE;
+	}
+
+	while (mainWin.isOpen())
+	{
+		//////////////////////////////////////////////////////////////////////////
+		// 1 - Gestion des entrées
+		//////////////////////////////////////////////////////////////////////////
+
+
+
+		getInputs();
+
+
+
+		//////////////////////////////////////////////////////////////////////////
+		// 2 - Gestion de la logique 
+		//////////////////////////////////////////////////////////////////////////
+
+		update();
+
+		//////////////////////////////////////////////////////////////////////////
+		// 3 - Gestion de l'affichage 
+		//////////////////////////////////////////////////////////////////////////
+
+
+
+		//Toujours important d'effacer l'écran précédent
+		mainWin.clear();
+		draw();
+		mainWin.display();
+	}
+	return EXIT_SUCCESS;
+}
+//Sam
+bool Game::init()
+{
+
+	minionList.ajouter(SpawnerMinion::CreateEnnemy(_Tour, 64, HAUTEUR_ECRAN / 2, true));
+	minionList.ajouter(SpawnerMinion::CreateEnnemy(_Tour, LARGEUR_ECRAN - 64, HAUTEUR_ECRAN / 4, false));
+	minionList.ajouter(SpawnerMinion::CreateEnnemy(_Tour, LARGEUR_ECRAN - 64, HAUTEUR_ECRAN / 2, false));
+	minionList.ajouter(SpawnerMinion::CreateEnnemy(_Tour, LARGEUR_ECRAN - 64, HAUTEUR_ECRAN * 3 / 4, false));
+	minionList.at(0)->ajustementsVisuels();
+	minionList.at(1)->ajustementsVisuels();
+	minionList.at(2)->ajustementsVisuels();
+	minionList.at(3)->ajustementsVisuels();
+
+	allyTower = (Tour*)minionList.at(0);
+	ennemyTower = (Tour*)minionList.at(2);
+
+
+
+
+
+
+
+	//l'affichage de notre sélecteur
+	selecteur.setFillColor(Color::Transparent);
+	selecteur.setOutlineColor(Color::White);
+	selecteur.setOutlineThickness(1);
+
+
+	if (!backgroundT.loadFromFile("..\\..\\Sprites\\Terrain.png"))
+	{
+		return false;
+	}
+
+
+	if (!font.loadFromFile("..\\..\\Sprites\\IHateComicSans.ttf"))
+	{
+		return false;
+	}
+
+	if (!radiationT.loadFromFile("..\\..\\Sprites\\Radiation.png"))
+	{
+		return false;
+	}
+	radiation.setTexture(radiationT);
+	radiation.setOrigin(radiation.getLocalBounds().width / 2, radiation.getLocalBounds().height / 2);
+
+	background.setTexture(backgroundT);
+	background.setPosition(0, 0);
+
+	commandes.setString("Q : Archer\tW : Barbare\tE : Cavalier\tR : Guerreier lege\tT : Guerrier Lourd\tY : Lancier\tU : Magicien\n1 : Eclair\t2 : Soin\t3 : Feu\tAppuyez sur SPACE pour jeter un sort.");
+	commandes.setFont(font);
+	commandes.setCharacterSize(18);
+	commandes.setColor(Color::White);
+	commandes.setPosition(32, 10);
+
+	return true;
+}
+//Sam et Alex
+void Game::getInputs()
+{
+	//Pas mal d'événements à gérer
+	while (mainWin.pollEvent(event))
+	{
+		//Tous les événement de press de souris
+		if (Keyboard::isKeyPressed(sf::Keyboard::Escape))
+		{
+			mainWin.close();
+		}
+		else if (event.type == Event::MouseButtonPressed)
+		{
+			//Si c'est le bouton gauche
+			if (event.mouseButton.button == Mouse::Left)
+			{
+				//On arrête et on vide le dernier mist, la sélection va en créer un nouveau
+				//groupeDeMinions.arreter();
+				groupeDeMinions.vider();
+
+				//Rectangle de sélection: début du traitement
+				positionSelecteur = Vector2f(Mouse::getPosition(mainWin).x, Mouse::getPosition(mainWin).y);
+
+				
+			}
+
+			//Avec le click droit, sélection de la soul à déplacer.
+			else if (event.mouseButton.button == Mouse::Right)
+			{
+
+				Vector2f v(Mouse::getPosition(mainWin).x, Mouse::getPosition(mainWin).y);
+				groupeDeMinions.AjouterDestination(v);
+
+				activerObjetJeu(sf::Mouse::getPosition(mainWin));
+			}
+		}
+
+		//Avec le release de la souris on crée le mist.
+		else if (event.type == Event::MouseButtonReleased && event.mouseButton.button == Mouse::Left)
+		{
+			//On taille un rectangle de collision
+			IntRect containter;
+			containter.left = std::min(positionSelecteur.x, tailleSelecteur.x);
+			containter.top = std::min(positionSelecteur.y, tailleSelecteur.y);
+			containter.width = abs(positionSelecteur.x - tailleSelecteur.x);
+			containter.height = abs(positionSelecteur.y - tailleSelecteur.y);
+
+			//Si la position de la soul est dans le rectangle, on l'ajoute au mist.
+			for (int i = 0; i < minionList.getNbElements(); i++)
+			{
+				if (containter.contains(minionList.at(i)->getPosition().x, minionList.at(i)->getPosition().y) && minionList.at(i)->getIsAlly())
+				{
+					groupeDeMinions.ajouter(minionList.at(i));
+				}
+			}
+
+			//On "kill" le sélecteur
+			positionSelecteur = Vector2f(-1, -1);
+			tailleSelecteur = Vector2f(-1, -1);
+		}
+
+
+		//En dernier; c'est de loin le plus rare
+		else if (event.type == Event::Closed)
+		{
+			mainWin.close();
+		}
+
+	}
+
+	if (event.mouseButton.button == Keyboard::Space)
+	{
+		if (!testerPrescenceObjetJeu(sf::Mouse::getPosition(mainWin)))
+		{
+			ajouterObjetJeu(sf::Mouse::getPosition(mainWin));
+		}
+	}
+	//Si le bouton gauche reste enfoncé 
+	if (Mouse::isButtonPressed(sf::Mouse::Left) && positionSelecteur.x > -1)
+	{
+		tailleSelecteur = Vector2f(Mouse::getPosition(mainWin).x, Mouse::getPosition(mainWin).y);
+	}
+
+
+
+
+	//Interface du joueur pour créer des minions
+	if (Keyboard::isKeyPressed(sf::Keyboard::Q) && allyClock.getElapsedTime().asSeconds() >= 2)
+	{
+		allyClock.restart();
+		minionQueueAlly.Ajouter(allyTower->spawn(MinionType::_Archer));
+		Minion * nouveauMinion = minionQueueAlly.Retirer();
+		if (nouveauMinion != NULL)
+		{
+			nouveauMinion->ajustementsVisuels();
+			minionList.ajouter(nouveauMinion);
+		}
+	}
+	else if (Keyboard::isKeyPressed(sf::Keyboard::W) && allyClock.getElapsedTime().asSeconds() >= 2)
+	{
+		allyClock.restart();
+		minionQueueAlly.Ajouter(allyTower->spawn(MinionType::_Barbare));
+		Minion * nouveauMinion = minionQueueAlly.Retirer();
+		if (nouveauMinion != NULL)
+		{
+			nouveauMinion->ajustementsVisuels();
+			minionList.ajouter(nouveauMinion);
+		}
+	}
+	else if (Keyboard::isKeyPressed(sf::Keyboard::E) && allyClock.getElapsedTime().asSeconds() >= 2)
+	{
+		allyClock.restart();
+		minionQueueAlly.Ajouter(allyTower->spawn(MinionType::_Cavalier));
+		Minion * nouveauMinion = minionQueueAlly.Retirer();
+		if (nouveauMinion != NULL)
+		{
+			nouveauMinion->ajustementsVisuels();
+			minionList.ajouter(nouveauMinion);
+		}
+	}
+	else if (Keyboard::isKeyPressed(sf::Keyboard::R) && allyClock.getElapsedTime().asSeconds() >= 2)
+	{
+		allyClock.restart();
+		minionQueueAlly.Ajouter(allyTower->spawn(MinionType::_GuerrierLeger));
+		Minion * nouveauMinion = minionQueueAlly.Retirer();
+		if (nouveauMinion != NULL)
+		{
+			nouveauMinion->ajustementsVisuels();
+			minionList.ajouter(nouveauMinion);
+		}
+	}
+	else if (Keyboard::isKeyPressed(sf::Keyboard::T) && allyClock.getElapsedTime().asSeconds() >= 2)
+	{
+		allyClock.restart();
+		minionQueueAlly.Ajouter(allyTower->spawn(MinionType::_GuerrierLourd));
+		Minion * nouveauMinion = minionQueueAlly.Retirer();
+		if (nouveauMinion != NULL)
+		{
+			nouveauMinion->ajustementsVisuels();
+			minionList.ajouter(nouveauMinion);
+		}
+	}
+	else if (Keyboard::isKeyPressed(sf::Keyboard::Y) && allyClock.getElapsedTime().asSeconds() >= 2)
+	{
+		allyClock.restart();
+		minionQueueAlly.Ajouter(allyTower->spawn(MinionType::_Lancier));
+		Minion * nouveauMinion = minionQueueAlly.Retirer();
+		if (nouveauMinion != NULL)
+		{
+			nouveauMinion->ajustementsVisuels();
+			minionList.ajouter(nouveauMinion);
+		}
+	}
+	else if (Keyboard::isKeyPressed(sf::Keyboard::U) && allyClock.getElapsedTime().asSeconds() >= 2)
+	{
+		allyClock.restart();
+		minionQueueAlly.Ajouter(allyTower->spawn(MinionType::_Magichien));
+		Minion * nouveauMinion = minionQueueAlly.Retirer();
+		if (nouveauMinion != NULL)
+		{
+			nouveauMinion->ajustementsVisuels();
+			minionList.ajouter(nouveauMinion);
+		}
+	}
+	else if (event.key.code == sf::Keyboard::Num1)
+	{
+		choixObjet = ObjetsDeJeu::Radiation_Bleue;
+	}
+	else if (event.key.code == sf::Keyboard::Num2)
+	{
+		choixObjet = ObjetsDeJeu::Radiation_Verte;
+	}
+	else if (event.key.code == sf::Keyboard::Num3)
+	{
+		choixObjet = ObjetsDeJeu::Radiation_Rouge;
+	}
+}
+
+//Sam et Alex
+void Game::update()
+{
+	if (ennemyClock.getElapsedTime().asSeconds() >= 2)
+	{
+		ennemyClock.restart();
+		int noEnnemy = rand() % 7;
+		minionQueueEnnemy.Ajouter(ennemyTower->spawn((MinionType)noEnnemy));
+		Minion * nouveauMinion = minionQueueEnnemy.Retirer();
+		if (nouveauMinion != NULL)
+		{
+			nouveauMinion->ajustementsVisuels();
+			minionList.ajouter(nouveauMinion);
+		}
+	}
+
+
+
+	for (int i = 4; i < minionList.getNbElements(); i++)
+	{
+		if (minionList.at(i)->lookForEnnemies(&minionList))
+		{
+			Projectile *temporaire = minionList.at(i)->attack();
+			if (temporaire != NULL)
+			{
+				Projectile proj = *temporaire;
+				listeProjectile.push_back(proj);
+			}
+			delete temporaire;
+		}
+		else
+		{
+			minionList.at(i)->bouger(&minionList);
+		}
+	}
+	for (int i = 0; i < listeProjectile.size(); i++)
+	{
+		for (int j = 0; j < minionList.getNbElements(); j++)
+		{
+			if (minionList.at(j)->getIsAlly() != listeProjectile.at(i).getIsAlly() && !(minionList.at(j)->getIsDead())
+				&& minionList.at(j)->getGlobalBounds().intersects(listeProjectile.at(i).getGlobalBounds()))
+			{
+				if (minionList.at(j)->gotHit(listeProjectile.at(i).getAttackPoints()))
+				{
+					if (minionList.at(j)->getMinionType() == _Tour)
+					{
+						minionList.at(j)->die();
+						if ((minionList.at(0)->getIsDead() == true) || (minionList.at(1)->getIsDead() == true && minionList.at(2)->getIsDead() == true && minionList.at(3)->getIsDead() == true))
+						{
+							timeBeforeEnd.restart();
+						}
+					}
+					else
+					{
+						for (int k = 0; k < spellList.getNbElements(); k++)
+						{
+							Observateur *o = (Observateur*)minionList.at(j);
+							spellList.at(k)->retirerObservateur(o);
+						}
+						Minion* temporaire = minionList.at(j);
+						minionList.retirer(minionList.at(j));
+
+
+						delete temporaire;
+						j--;
+					}
+				}
+				listeProjectile.erase(listeProjectile.begin() + i);
+				i--;
+				if (listeProjectile.size() == 0 || i < 0 )
+				{
+					break;
+				}
+			}
+		}
+		if (i >= 0 && listeProjectile.at(i).update())
+		{
+			listeProjectile.erase(listeProjectile.begin() + i);
+			i--;
+		}
+	}
+	//Calculs pour l'affichage du joli rectangle
+	selecteur.setPosition(std::min(positionSelecteur.x, tailleSelecteur.x), std::min(positionSelecteur.y, tailleSelecteur.y));
+	selecteur.setSize(Vector2f(abs(positionSelecteur.x - tailleSelecteur.x), abs(positionSelecteur.y - tailleSelecteur.y)));
+
+
+	//Les différents objets de jeu
+	for (int i = 0; i < spellList.getNbElements(); i++)
+	{
+		if (spellList.at(i) != nullptr)
+		{
+			spellList.at(i)->action();
+
+			if (spellList.at(i)->estTermine())
+			{
+				delete spellList.at(i);
+				spellList.retirer(spellList.at(i));
+			}
+		}
+	}
+
+
+
+}
+//Sam
+bool Game::testerPrescenceObjetJeu(Vector2i& position)
+{
+	for (int i = 0; i < spellList.getNbElements(); i++)
+	{
+		if (spellList.at(i) != nullptr)
+		{
+			if (spellList.at(i)->collisionClick(position))
+			{
+				return true;
+			}
+		}
+	}
+
+	return false;
+}
+//Sam
+void Game::ajouterObjetJeu(Vector2i position)
+{
+	//for (int i = 0; i < spellList.getNbElements(); i++)//(int i = 0; i < 3; i++)
+	//{
+		//if (spellList.at(i) == nullptr)
+		//{
+			static int nextIdSpell = 0;
+			
+			switch (choixObjet)
+			{
+			case ObjetsDeJeu::Radiation_Bleue:
+				spellList.ajouter(new Radiation(Vector2f(radiationT.getSize().x, radiationT.getSize().y), Vector2f(position.x, position.y), Color::Blue, nextIdSpell));
+				break;
+
+			case ObjetsDeJeu::Radiation_Verte:
+				spellList.ajouter(new Radiation(Vector2f(radiationT.getSize().x, radiationT.getSize().y), Vector2f(position.x, position.y), Color::Green, nextIdSpell));
+				break;
+
+			case ObjetsDeJeu::Radiation_Rouge:
+				spellList.ajouter(new Radiation(Vector2f(radiationT.getSize().x, radiationT.getSize().y), Vector2f(position.x, position.y), Color::Red, nextIdSpell));
+				break;
+			}
+			
+
+			//ajout
+			for (int i = 0; i < minionList.getNbElements(); i++)
+			{
+				
+				Observateur *o = (Observateur*)minionList.at(i);
+				
+				ObjetDeJeu* odj = spellList.at(nextIdSpell);
+				minionList.at(i)->AjouterSpell(odj);
+				odj->ajouterObservateur(o);
+			}
+			nextIdSpell++;
+			return;  //Pour ne pas fuller la liste
+		//}
+	//}
+}
+//Sam
+void Game::activerObjetJeu(Vector2i position)
+{
+	for (int i = 0; i < spellList.getNbElements(); i++)
+	{
+		if (spellList.at(i) != nullptr)
+		{
+			if (spellList.at(i)->collisionClick(position))
+			{
+				spellList.at(i)->activer();
+			}
+		}
+	}
+}
+//Sam et Alex
+void Game::draw()
+{
+	mainWin.draw(background);
+
+	for (int i = 0; i < minionList.getNbElements(); i++)
+	{
+		if (minionList.at(i)->getMinionType() == _Tour && minionList.at(i)->getIsDead())
+		{
+		}
+		else
+		{
+			mainWin.draw(*(minionList.at(i)));
+
+			RectangleShape maxLifeBar;
+			maxLifeBar.setSize(sf::Vector2f(50, 5));
+			maxLifeBar.setOrigin(maxLifeBar.getSize().x / 2, maxLifeBar.getSize().y / 2);
+			maxLifeBar.setPosition(minionList.at(i)->getPosition().x, minionList.at(i)->getPosition().y - minionList.at(i)->getOrigin().y - 5);
+			maxLifeBar.setFillColor(Color::Black);
+			mainWin.draw(maxLifeBar);
+
+			RectangleShape lifeBar;
+			lifeBar.setSize(sf::Vector2f((50 * minionList.at(i)->getHealth()) / minionList.at(i)->getMaxHealth(), 5));
+			lifeBar.setOrigin(lifeBar.getSize().x / 2, lifeBar.getSize().y / 2);
+			lifeBar.setPosition(minionList.at(i)->getPosition().x, minionList.at(i)->getPosition().y - minionList.at(i)->getOrigin().y - 5);
+			lifeBar.setFillColor(Color::Green);
+			lifeBar.setOutlineColor(Color::Black);
+			mainWin.draw(lifeBar);
+		}
+	}
+
+	for (vector<Projectile>::iterator i = listeProjectile.begin(); i < listeProjectile.end(); i++)
+	{
+		mainWin.draw((*i));
+	}
+	mainWin.draw(commandes);
+	mainWin.draw(commandesSpells);
+	mainWin.draw(selecteur);
+
+
+	if (minionList.at(0)->getIsDead() == true)
+	{
+		issueDeLaPartie.setString("YOU LOST!");
+		issueDeLaPartie.setFont(font);
+		issueDeLaPartie.setCharacterSize(72);
+		issueDeLaPartie.setColor(Color::Red);
+		FloatRect textRect = issueDeLaPartie.getLocalBounds();
+		issueDeLaPartie.setOrigin(textRect.left + textRect.width / 2.0f, textRect.top + textRect.height / 2.0f);
+		issueDeLaPartie.setPosition(LARGEUR_ECRAN / 2, HAUTEUR_ECRAN / 2);
+		mainWin.draw(issueDeLaPartie);
+
+		if (timeBeforeEnd.getElapsedTime().asSeconds() > 2)
+		{
+			mainWin.close();
+		}
+	}
+	else if (minionList.at(1)->getIsDead() == true && minionList.at(2)->getIsDead() == true && minionList.at(3)->getIsDead() == true)
+	{
+		issueDeLaPartie.setString("YOU WON!");
+		issueDeLaPartie.setFont(font);
+		issueDeLaPartie.setCharacterSize(72);
+		issueDeLaPartie.setColor(Color::Blue);
+		FloatRect textRect = issueDeLaPartie.getLocalBounds();
+		issueDeLaPartie.setOrigin(textRect.left + textRect.width / 2.0f, textRect.top + textRect.height / 2.0f);
+		issueDeLaPartie.setPosition(LARGEUR_ECRAN / 2, HAUTEUR_ECRAN / 2);
+		mainWin.draw(issueDeLaPartie);
+
+		if (timeBeforeEnd.getElapsedTime().asSeconds() > 2)
+		{
+			mainWin.close();
+		}
+	}
+
+	for (int i = 0; i < spellList.getNbElements(); i++)
+	{
+		if (spellList.at(i) != nullptr)
+		{
+			if (typeid(*spellList.at(i)) == typeid(Radiation))
+			{
+				Radiation *r = (Radiation*)spellList.at(i);
+				radiation.setColor(spellList.at(i)->getCouleur());
+				radiation.setScale(r->getEchelle(), r->getEchelle());
+				radiation.setPosition(r->getPosition());
+				mainWin.draw(radiation);
+			}
+		}
+	}
+
+
+}
+

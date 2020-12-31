@@ -1,0 +1,16 @@
+#pragma once
+
+#include <SFML/Graphics.hpp>
+
+using namespace sf;
+
+class Game
+{
+public:
+	Game();
+	int run();
+	int testTest();
+
+	const int LARGEUR = 640;
+	const int HAUTEUR = 480;
+};

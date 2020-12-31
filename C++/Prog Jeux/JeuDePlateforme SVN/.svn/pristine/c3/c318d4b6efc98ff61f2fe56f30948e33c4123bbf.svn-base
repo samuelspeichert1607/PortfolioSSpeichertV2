@@ -1,0 +1,26 @@
+#pragma once
+#include <SFML/Graphics.hpp>
+#include <string>
+
+using namespace sf;
+
+using std::string;
+
+namespace platformer
+{
+	class Coin : public Sprite
+	{
+	public:
+		Coin(const float posX, const float posY, RenderWindow* const renderWindow);
+		~Coin();
+
+		bool chargerTextures(const char texturePath[]);
+		void ajustementsVisuels();
+
+	private:
+
+		Texture texture; // static Texture texture;
+
+	};
+}
+

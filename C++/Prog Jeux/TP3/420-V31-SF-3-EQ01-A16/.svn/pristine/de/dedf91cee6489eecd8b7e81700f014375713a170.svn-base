@@ -1,0 +1,81 @@
+#include "Minion.h"
+
+Minion::Minion() : target(target)
+{
+
+}
+
+Minion::~Minion()
+{
+
+}
+
+int Minion::gotHit(int damage)
+{
+	return 0;
+}
+
+int Minion::getHealth()
+{
+	return 0;
+}
+
+int Minion::getMaxHealth()
+{
+	return 0;
+}
+
+Minion * Minion::clone()
+{
+	return new Minion();
+}
+
+void Minion::move()
+{
+	setPosition(getPosition().x + speed, getPosition().y + speed);
+}
+
+Projectile * Minion::attack()
+{
+	return new Projectile(speed, attackPoints, range);
+}
+
+Vector2f Minion::getTarget()
+{
+	return target;
+}
+
+int Minion::getCout()
+{
+	return cout;
+}
+
+int Minion::getRange()
+{
+	return range;
+}
+
+int Minion::getAttackPoints()
+{
+	return attackPoints;
+}
+
+int Minion::getSpeed()
+{
+	return speed;
+}
+
+void Minion::AjouterDestination(Vector2f destination)
+{
+	ordreAAttaquer.Push(&destination);
+}
+
+bool Minion::getIsFacingLeft()
+{
+	return isFacingLeft;
+}
+
+void Minion::notifier(Sujet * sujet)
+{
+	//sujet->notifierTousLesObservateurs();
+}

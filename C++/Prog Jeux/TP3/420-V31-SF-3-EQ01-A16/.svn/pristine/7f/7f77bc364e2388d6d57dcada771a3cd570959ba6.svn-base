@@ -1,0 +1,46 @@
+#include "Archer.h"
+
+Archer::Archer(bool isAlly, int id)
+{
+	speed = 3;
+	health = 125;
+	maxHealth = 125;
+	range = 50;
+	attackPoints = 35;
+	cout = 3;
+	minionType = MinionType::_Archer;
+	this->isAlly = isAlly;
+	this->id = id;
+	if (isAlly)
+	{
+		isFacingLeft = false;
+	}
+	else
+	{
+		isFacingLeft = true;
+	}
+	Minion();
+}
+
+Archer::~Archer()
+{
+
+}
+
+void Archer::retraiteStrategique()
+{
+	positionRetraite = Vector2f(getPosition().x - LARGEUR_ECRAN / 3, rand() % (int)HAUTEUR_ECRAN);
+	AjouterDestination(positionRetraite);
+	speed = 5;
+	specialAttackTime.restart();
+}
+
+void Archer::annulerRetraiteStrategique()
+{
+	speed = 3;
+	Vector2f* temporaire = ordreAAttaquer.Pop();
+	if (*temporaire != positionRetraite)
+	{
+		ordreAAttaquer.Push(temporaire);
+	}
+}

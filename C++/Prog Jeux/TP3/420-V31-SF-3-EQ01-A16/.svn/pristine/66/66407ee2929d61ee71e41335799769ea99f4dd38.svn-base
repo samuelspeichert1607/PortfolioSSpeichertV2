@@ -1,0 +1,33 @@
+#include "Tour.h"
+
+Tour::Tour(bool isAlly)
+{
+	speed = 0;
+	health = 2400;
+	maxHealth = 2400;
+	range = 0;
+	attackPoints = 0;
+	cout = 0;
+	this->isAlly = isAlly;
+	if (isAlly)
+	{
+		isFacingLeft = false;
+	}
+	else
+	{
+		isFacingLeft = true;
+	}
+}
+
+Tour::~Tour()
+{
+
+}
+
+void Tour::spawn(MinionType type)
+{
+	if (true)
+	{
+
+	}
+}

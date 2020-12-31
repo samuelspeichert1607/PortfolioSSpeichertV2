@@ -1,0 +1,61 @@
+#include "Tour.h"
+#include "SpawnerMinion.h"
+
+
+Tour::Tour(bool isAlly, int ID) //:Minion(_Tour)
+{
+	speed = 0;
+	health = 2400;
+	maxHealth = 2400;
+	this->ID = ID;
+	range = 0;
+	attackPoints = 0;
+	cout = 0;
+	minionType = MinionType::_Tour;
+	isDead = false;
+	this->isAlly = isAlly;
+	if (isAlly)
+	{
+		isFacingLeft = false;
+		setColor(Color(0, 128, 255));
+	}
+	else
+	{
+		isFacingLeft = true;
+		setColor(Color::Red);
+	}
+}
+
+Tour::~Tour()
+{
+
+}
+//Alex
+Minion* Tour::spawn(MinionType type)
+{
+	if (!isDead)
+	{
+		if (isAlly)
+		{
+			return SpawnerMinion::CreateEnnemy(type, getPosition().x + getOrigin().x + LARGEUR_MINON / 2, getPosition().y, isAlly);
+		}
+		else
+		{
+			return SpawnerMinion::CreateEnnemy(type, getPosition().x - getOrigin().x - LARGEUR_MINON / 2, getPosition().y, isAlly);
+		}
+	}
+	else
+	{
+		return NULL;
+	}
+}
+//Alex
+bool Tour::getIsDead()
+{
+	return isDead;
+}
+//Alex
+void Tour::die()
+{
+	isDead = true;
+}

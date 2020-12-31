@@ -1,0 +1,31 @@
+#pragma once
+#include "Ennemy.h"
+#include "Goomba.h"
+
+namespace Fabrique
+{
+	class SpawnerRandom
+	{
+	public:
+		static enum typeEnnemy { Goomba, CleverGoomba, ParaGoomba };
+
+		static Ennemy* CreateEnnemy(typeEnnemy ennemy)
+		{
+			if (Goomba == ennemy)
+			{
+				return new Goomba();
+			}
+			//else if (CleverGoomba == ennemy)
+			//{
+			//	return new Poutine();
+			//}
+			//else if (ParaGoomba == ennemy)
+			//{
+			//	return new McFlurry();
+			//}
+			return nullptr;
+		}
+	private:
+		SpawnerRandom();
+	};
+}

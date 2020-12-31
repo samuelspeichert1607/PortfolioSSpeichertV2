@@ -1,0 +1,12 @@
+#pragma once
+#include "Minion.h"
+
+class GuerrierLourd : public Minion
+{
+public:
+	GuerrierLourd(bool isAlly);
+	~GuerrierLourd();
+	void murDAcier();
+private:
+	Texture textureGuerrierLourd;
+};

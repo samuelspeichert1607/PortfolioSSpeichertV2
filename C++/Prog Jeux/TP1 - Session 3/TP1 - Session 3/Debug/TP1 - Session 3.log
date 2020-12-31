@@ -1,0 +1,35 @@
+﻿La génération a démarré 12/11/2016 3:23:41 PM.
+     1>Projet "D:\Cegep Ste-Foy\Programmation de jeux vidéo III\Étape 1\TP1\TP1 - Session 3\TP1 - Session 3\TP1 - Session 3.vcxproj" sur le nœud 2 (Build cible(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Game.cpp
+         Game.cpp
+     1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 1\tp1\tp1 - session 3\tp1 - session 3\game.cpp(125): warning C4996: 'sf::Text::setColor': a été déclaré déconseillé
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\graphics\text.hpp(177) : voir la déclaration de 'sf::Text::setColor'
+     1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 1\tp1\tp1 - session 3\tp1 - session 3\game.cpp(131): warning C4996: 'sf::Text::setColor': a été déclaré déconseillé
+                 c:\librairiesprogrammation\sfml-2.4.0\include\sfml\graphics\text.hpp(177) : voir la déclaration de 'sf::Text::setColor'
+     1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 1\tp1\tp1 - session 3\tp1 - session 3\game.cpp(226): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+     1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 1\tp1\tp1 - session 3\tp1 - session 3\game.cpp(226): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+     1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 1\tp1\tp1 - session 3\tp1 - session 3\game.cpp(271): warning C4244: 'argument' : conversion de 'const float' en 'int', perte possible de données
+     1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 1\tp1\tp1 - session 3\tp1 - session 3\game.cpp(275): warning C4244: 'argument' : conversion de 'const float' en 'int', perte possible de données
+     1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 1\tp1\tp1 - session 3\tp1 - session 3\game.cpp(279): warning C4244: 'argument' : conversion de 'const float' en 'int', perte possible de données
+     1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 1\tp1\tp1 - session 3\tp1 - session 3\game.cpp(283): warning C4244: 'argument' : conversion de 'const float' en 'int', perte possible de données
+     1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 1\tp1\tp1 - session 3\tp1 - session 3\game.cpp(329): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+     1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 1\tp1\tp1 - session 3\tp1 - session 3\game.cpp(348): warning C4244: 'argument' : conversion de 'unsigned int' en 'float', perte possible de données
+     1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 1\tp1\tp1 - session 3\tp1 - session 3\game.cpp(353): warning C4244: 'argument' : conversion de 'unsigned int' en 'float', perte possible de données
+     1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 1\tp1\tp1 - session 3\tp1 - session 3\game.cpp(356): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+     1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 1\tp1\tp1 - session 3\tp1 - session 3\game.cpp(375): warning C4244: 'argument' : conversion de 'unsigned int' en 'float', perte possible de données
+     1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 1\tp1\tp1 - session 3\tp1 - session 3\game.cpp(378): warning C4244: 'argument' : conversion de 'unsigned int' en 'float', perte possible de données
+     1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 1\tp1\tp1 - session 3\tp1 - session 3\game.cpp(381): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Cegep Ste-Foy\Programmation de jeux vidéo III\Étape 1\TP1\TP1 - Session 3\Debug\TP1 - Session 3.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files (x86)\Visual Leak Detector\lib\Win32" "sfml-system-d.lib" "sfml-main-d.lib" "sfml-graphics-d.lib" "sfml-audio-d.lib" "sfml-network-d.lib" "sfml-window-d.lib" openal32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Cegep Ste-Foy\Programmation de jeux vidéo III\Étape 1\TP1\TP1 - Session 3\Debug\TP1 - Session 3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Cegep Ste-Foy\Programmation de jeux vidéo III\Étape 1\TP1\TP1 - Session 3\Debug\TP1 - Session 3.lib" /MACHINE:X86 Debug\Game.obj
+         Debug\LasPlagas.obj
+         Debug\Main.obj
+         Debug\Player.obj
+         Debug\Projectile.obj
+         Debug\Testeur.obj
+         TP1 - Session 3.vcxproj -> D:\Cegep Ste-Foy\Programmation de jeux vidéo III\Étape 1\TP1\TP1 - Session 3\Debug\TP1 - Session 3.exe
+     1>Génération du projet "D:\Cegep Ste-Foy\Programmation de jeux vidéo III\Étape 1\TP1\TP1 - Session 3\TP1 - Session 3\TP1 - Session 3.vcxproj" terminée (Build cible(s)).
+
+La génération a réussi.
+
+Temps écoulé 00:00:03.44

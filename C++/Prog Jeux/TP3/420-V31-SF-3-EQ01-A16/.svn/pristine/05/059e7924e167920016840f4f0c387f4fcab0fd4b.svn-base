@@ -1,0 +1,427 @@
+#define _USE_MATH_DEFINES
+#include "Minion.h"
+//Alex
+Minion::Minion()
+{
+	AjouterDestination(new Vector2f(LARGEUR_ECRAN / 2, (float)(rand() % (int)HAUTEUR_ECRAN)));
+	ordreAAttaquer.Push(target);
+	target = nullptr;
+}
+
+Minion::Minion(bool isAlly, int id)
+{
+	if (minionType != _Tour)
+	{
+		if (isAlly)
+		{
+			int noTourSuivante = rand() % 3;
+			int tours[3];
+			tours[0] = noTourSuivante;
+			while (noTourSuivante == tours[0])
+			{
+				noTourSuivante = rand() % 3;
+			}
+			tours[1] = noTourSuivante;
+			while (noTourSuivante == tours[0] || noTourSuivante == tours[1])
+			{
+				noTourSuivante = rand() % 3;
+			}
+			tours[2] = noTourSuivante;
+			for (int i = 0; i < 3; i++)
+			{
+				if (tours[i] == 0)
+				{
+					AjouterDestination(new Vector2f(LARGEUR_ECRAN - 64, HAUTEUR_ECRAN / 4));
+				}
+				else if (tours[i] == 1)
+				{
+					AjouterDestination(new Vector2f(LARGEUR_ECRAN - 64, HAUTEUR_ECRAN / 2));
+				}
+				else if (tours[i] == 2)
+				{
+					AjouterDestination(new Vector2f(LARGEUR_ECRAN - 64, HAUTEUR_ECRAN * 3 / 4));
+				}
+			}
+		}
+		else
+		{
+			AjouterDestination(new Vector2f(64, HAUTEUR_ECRAN / 2));
+		}
+		AjouterDestination(new Vector2f(LARGEUR_ECRAN / 2, (float)(rand() % (int)HAUTEUR_ECRAN)));
+		ordreAAttaquer.Push(target);
+		target = nullptr;
+	}
+}
+
+//Sam
+Minion::~Minion()
+{
+	if (target != nullptr)
+	{
+		delete target;
+	}
+	Vector2f * temp = ordreAAttaquer.Pop();
+	do
+	{
+		if (temp != nullptr)
+		{
+			delete temp;
+		}
+		temp = ordreAAttaquer.Pop();
+	} while (temp != NULL);
+}
+
+//Sam
+bool Minion::ajustementsVisuels()
+{
+	if (minionType == _Tour)
+	{
+		if (!texture.loadFromFile("..\\..\\Sprites\\Tour.png"))
+		{
+			return false;
+		}
+		setTexture(texture);
+	}
+	else if (minionType == _Archer)
+	{
+		if (!texture.loadFromFile("..\\..\\Sprites\\Archer.png"))
+		{
+			return false;
+		}
+		setTexture(texture);
+	}
+	setOrigin(getLocalBounds().width / 2, getLocalBounds().height / 2);
+	return true;
+}
+
+bool Minion::gotHit(int damage)
+{
+	health -= damage;
+	if (health < 0)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+MinionType Minion::getMinionType()
+{
+	return minionType;
+}
+
+//Sam
+int Minion::getHealth()
+{
+	return health;
+}
+
+//Sam
+int Minion::getMaxHealth()
+{
+	return maxHealth;
+}
+
+//Minion * Minion::clone()
+//{
+//	//return new Minion();
+//}
+
+/// <summary>
+/// Permet seulement de vérifier si une position x/y est à l'intérieur du cercle
+/// </summary>
+/// <param name="posX">La position en x.</param>
+/// <param name="PosY">La position en y.</param>
+/// <returns></returns>
+//Alex
+bool Minion::cliquer(float posX, float posY)
+{
+	return getGlobalBounds().intersects(FloatRect(posX, posY, 1, 1));
+}
+//Alex
+void Minion::bouger(Liste<Minion>* minionList)
+{
+	//Une destination nulle pas de mouvement
+	if (target != nullptr)
+	{
+		//On sauvegarde la position précédente au cas
+		positionBackup = new Vector2f(getPosition());
+
+		//On effectue le déplacement
+		Transformable::move(cos(angle) * speed, sin(angle) * speed);
+
+		//Vue la faible vitesse et pour garder les choses simples, s'il y a collision, on annule 
+		//tout simplement le mouvement pour ce refresh de frame et on termine la méthode immédiatement
+		for (int i = 0; i < minionList->getNbElements(); i++)
+		{
+			if (testCollisionMinion((minionList->at(i))))
+			{
+				backup();
+				return;
+			}
+		}
+
+		//À PARTIR D'ICI C'EST QU'IL N'Y A PAS EU DE COLLISION
+
+		//Avec les float, il faut accepter un seuil de tolérance, quand on arrive à distance de la "vitesse" visé, on considère avoir atteint notre destination
+		if ((abs(target->x - getPosition().x) <= speed) && (abs(target->y - getPosition().y) <= speed))
+		{
+			//On la fixe, pour être certain
+			setPosition(*target);
+			delete target;
+			//On arrête de bouger
+			if (isModeManual == true)
+			{
+				arreter();
+			}
+			else if (isModeManual == false)
+			{
+				calculerAngle();
+			}
+		}
+		//Dans tous les cas, pour éviter les leaks on libère le backup
+		cleanBackup();
+	}
+	else if (isModeManual == true)
+	{
+		arreter();
+	}
+	else if (isModeManual == false)
+	{
+		calculerAngle();
+	}
+}
+
+
+void Minion::arreter()
+{
+	if (target != nullptr)
+	{
+		delete target;
+		target = nullptr;
+		isModeManual = true;
+	}
+}
+//Alex
+void Minion::backup()
+{
+	if (positionBackup != nullptr)
+	{
+		setPosition(*positionBackup);
+		delete positionBackup;
+		positionBackup = nullptr;
+	}
+}
+//Alex
+void Minion::cleanBackup()
+{
+	if (positionBackup != nullptr)
+	{
+		delete positionBackup;
+		positionBackup = nullptr;
+	}
+}
+
+/// <summary>
+/// Tester la collision des Minions.  Algo de collision des cercles que vous connaissez déjà
+/// </summary>
+/// <param name="autreMinion">The autre Minion.</param>
+/// <returns>vrai si nous sommes en colision avec un autre Minion, sionon faux</returns>
+//Alex
+bool Minion::testCollisionMinion(Minion* autreMinion)
+{
+	//S'assurer qu'on est pas avec null ou avec sois-même.  parce qu'on collisionne toujours avec soit-même...
+	if (autreMinion == nullptr || autreMinion == this || autreMinion->getMinionType() == _Tour && autreMinion->getIsDead())
+	{
+		return false;
+	}
+
+	return sqrt(pow(autreMinion->getPosition().x - getPosition().x, 2) +
+		pow(autreMinion->getPosition().y - getPosition().y, 2)) <= sqrt(pow(autreMinion->getOrigin().x - getOrigin().x, 2) +
+		pow(autreMinion->getOrigin().y - getOrigin().y, 2));
+}
+
+/// <summary>
+/// donne un projectile qui va dans la direction du target du minion
+/// </summary>
+//Alex
+Projectile * Minion::attack()
+{
+	if (attackTime.getElapsedTime().asMilliseconds() >= (50 - speed) * 2)
+	{
+		attackTime.restart();
+		float angleProjectile = atanf(((target->y - getPosition().y)) / (target->x - getPosition().x));
+		if (target->x < getPosition().x)
+		{
+			angleProjectile += M_PI;
+		}
+		Projectile* ARetourner = new Projectile(speed, attackPoints, range, angleProjectile, isAlly);
+		ARetourner->setPosition(Vector2f(getPosition().x + cos(angleProjectile) * getOrigin().x, getPosition().y + sin(angleProjectile) * getOrigin().y));
+		return ARetourner;
+	}
+	else
+	{
+		return NULL;
+	}
+}
+
+Vector2f* Minion::getTarget()
+{
+	return target;
+}
+
+int Minion::getCout()
+{
+	return cout;
+}
+
+int Minion::getRange()
+{
+	return range;
+}
+
+int Minion::getAttackPoints()
+{
+	return attackPoints;
+}
+
+int Minion::getSpeed()
+{
+	return speed;
+}
+/// <summary>
+/// ajoute une destination donnée
+/// ne pas oublier d'appler calculerAngle lorque nous voulons utiliser le contenu de la liste
+/// </summary>
+/// <param name="autreMinion">la destination à ajouter</param>
+//Alex
+void Minion::AjouterDestination(Vector2f* destination)
+{
+	if (target != nullptr)
+	{
+		ordreAAttaquer.Push(target);
+	}
+	ordreAAttaquer.Push(destination);
+
+	calculerAngle();
+}
+
+/// <summary>
+/// met la prochaine destination et calcule l'angle d'attaque
+/// </summary>
+//Alex
+void Minion::calculerAngle()
+{
+	target = ordreAAttaquer.Pop();
+
+	//On calcule l'angle pour la direction de la soul.
+	angle = atanf(((target->y - getPosition().y)) / ((target->x - getPosition().x)));
+
+	if (target->x < getPosition().x)
+	{
+		angle += M_PI;
+	}
+}
+/// <summary>
+/// trouve si un ennemi est à porté d'attaque et le met comme sa cible
+/// </summary>
+/// <returns>vrai si nous avons trouvé un ennemie à porté, sionon faux</returns>
+//Alex
+bool Minion::lookForEnnemies(Liste<Minion>* minionList)
+{
+	for (int i = 0; i < minionList->getNbElements(); i++)
+	{
+		if (minionList->at(i) == nullptr || minionList->at(i) == this || minionList->at(i)->getMinionType() == _Tour && minionList->at(i)->getIsDead())
+		{
+			return false;
+		}
+		else if (minionList->at(i)->getIsAlly() != isAlly && sqrt(pow(minionList->at(i)->getPosition().x - getPosition().x, 2) +
+			pow(minionList->at(i)->getPosition().y - getPosition().y, 2)) <= range + 
+			sqrt(pow(minionList->at(i)->getOrigin().x - getOrigin().x, 2) +
+			pow(minionList->at(i)->getOrigin().y - getOrigin().y, 2)) - 10)
+		{
+			//AjouterDestination(new Vector2f(minionList->at(i)->getPosition().x, minionList->at(i)->getPosition().y));
+			if (target == nullptr || (*target).x != minionList->at(i)->getPosition().x && (*target).y != minionList->at(i)->getPosition().y)
+			{
+				AjouterDestination(new Vector2f(minionList->at(i)->getPosition().x, minionList->at(i)->getPosition().y));
+			}
+			return true;
+		}
+	}
+	return false;
+}
+
+bool Minion::getIsFacingLeft()
+{
+	return isFacingLeft;
+}
+
+void Minion::notifier(Sujet * sujet)
+{
+	//sujet->notifierTousLesObservateurs();
+}
+
+int Minion::getID()
+{
+	return ID;
+}
+//Alex
+int Minion::getIsAlly()
+{
+	return isAlly;
+}
+
+
+Pile<Vector2f> Minion::getOrdreAAttaquer()
+{
+	return ordreAAttaquer;
+}
+
+//Alex
+bool Minion::getIsDead()
+{
+	return isDead;
+}
+//Alex
+void Minion::die()
+{
+	isDead = true;
+}
+
+
+
+
+////LES OPERATORS!!!
+
+
+bool Minion::operator < (const Minion& minion)
+{
+	return this->ID < minion.ID;
+}
+
+bool Minion::operator >(const Minion& minion)
+{
+	return this->ID > minion.ID;
+}
+
+bool Minion::operator >= (const Minion& minion)
+{
+	return this->ID >= minion.ID;
+}
+
+bool Minion::operator <= (const Minion& minion)
+{
+	return this->ID <= minion.ID;
+}
+
+bool Minion::operator == (const Minion& minion)
+{
+	return this->ID == minion.ID;
+}
+
+bool Minion::operator != (const Minion& minion)
+{
+	return this->ID != minion.ID;
+}

@@ -1,0 +1,33 @@
+﻿La génération a démarré 12/14/2016 1:52:09 PM.
+     1>Projet "D:\Cegep Ste-Foy\Programmation de jeux vidéo III\Étape 3\TP3\420-V31-SF-3-EQ01-A16\TP3 - ProgJeuxIII\TP3 - ProgJeuxIII\TP3 - ProgJeuxIII.vcxproj" sur le nœud 2 (Build cible(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Minion.cpp
+         Minion.cpp
+     1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\minion.cpp(259): warning C4305: '+=' : troncation de 'double' à 'float'
+     1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\minion.cpp(334): warning C4305: '+=' : troncation de 'double' à 'float'
+     1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\minion.cpp(351): warning C4805: '!=' : mélange risqué de type 'int' et de type 'bool' dans l'opération
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Cegep Ste-Foy\Programmation de jeux vidéo III\Étape 3\TP3\420-V31-SF-3-EQ01-A16\TP3 - ProgJeuxIII\Debug\TP3 - ProgJeuxIII.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files (x86)\Visual Leak Detector\lib\Win32" "sfml-system-d.lib" "sfml-main-d.lib" "sfml-graphics-d.lib" "sfml-audio-d.lib" "sfml-network-d.lib" "sfml-window-d.lib" openal32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Cegep Ste-Foy\Programmation de jeux vidéo III\Étape 3\TP3\420-V31-SF-3-EQ01-A16\TP3 - ProgJeuxIII\Debug\TP3 - ProgJeuxIII.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Cegep Ste-Foy\Programmation de jeux vidéo III\Étape 3\TP3\420-V31-SF-3-EQ01-A16\TP3 - ProgJeuxIII\Debug\TP3 - ProgJeuxIII.lib" /MACHINE:X86 Debug\Archer.obj
+         Debug\Barbare.obj
+         Debug\Cavalier.obj
+         Debug\Game.obj
+         Debug\GuerrierLeger.obj
+         Debug\GuerrierLourd.obj
+         Debug\Lancier.obj
+         Debug\Magicien.obj
+         Debug\Main.obj
+         Debug\Minion.obj
+         Debug\GroupeMinion.obj
+         Debug\Projectile.obj
+         Debug\SpawnerMinion.obj
+         Debug\Spell.obj
+         Debug\Sujet.obj
+         Debug\Testeur.obj
+         Debug\Tour.obj
+         Debug\UserInterface.obj
+         TP3 - ProgJeuxIII.vcxproj -> D:\Cegep Ste-Foy\Programmation de jeux vidéo III\Étape 3\TP3\420-V31-SF-3-EQ01-A16\TP3 - ProgJeuxIII\Debug\TP3 - ProgJeuxIII.exe
+     1>Génération du projet "D:\Cegep Ste-Foy\Programmation de jeux vidéo III\Étape 3\TP3\420-V31-SF-3-EQ01-A16\TP3 - ProgJeuxIII\TP3 - ProgJeuxIII\TP3 - ProgJeuxIII.vcxproj" terminée (Build cible(s)).
+
+La génération a réussi.
+
+Temps écoulé 00:00:02.68

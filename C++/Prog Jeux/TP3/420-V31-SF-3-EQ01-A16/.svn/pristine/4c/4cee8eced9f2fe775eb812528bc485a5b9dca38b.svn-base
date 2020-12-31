@@ -1,0 +1,29 @@
+
+template <class T>
+Noeud<T>::Noeud()
+{
+}
+template <class T>
+Noeud<T>::~Noeud()
+{
+}
+template <class T>
+Noeud<T>* Noeud<T>::getNext()
+{
+	return suivant;
+}
+template <class T>
+void Noeud<T>::setNext(Noeud<T>* _suivant)
+{
+	suivant = _suivant;
+}
+template <class T>
+T* Noeud<T>::getContenu()
+{
+	return contenu;
+}
+template <class T>
+void Noeud<T>::setContenu(T* _contenu)
+{
+	contenu = _contenu;
+}

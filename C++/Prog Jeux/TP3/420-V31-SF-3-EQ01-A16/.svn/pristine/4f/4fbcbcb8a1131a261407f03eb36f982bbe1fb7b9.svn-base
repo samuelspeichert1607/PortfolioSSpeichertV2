@@ -1,0 +1,13 @@
+#pragma once
+#include "Minion.h"
+
+class Cavalier : public Minion
+{
+public:
+	Cavalier(bool isAlly);
+	~Cavalier();
+	void charge();
+	void annulerCharge();
+private:
+	Texture textureCavalier;
+};

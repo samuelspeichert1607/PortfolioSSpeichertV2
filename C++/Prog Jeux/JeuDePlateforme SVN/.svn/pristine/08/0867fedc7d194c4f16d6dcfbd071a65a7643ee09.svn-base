@@ -1,0 +1,427 @@
+#define _USE_MATH_DEFINES
+
+#include "Game.h"
+#include "Collider.h"
+#include <iostream>
+#include <math.h>
+#include <vector>
+#include <algorithm>
+using namespace plateformer;
+using namespace std;
+
+Game::Game()
+{
+	//On place dans le contructeur ce qui permet à la game elle-même de fonctionner
+
+	mainWin.create(VideoMode(LARGEUR, HAUTEUR, 32), "Jeu de Plateforme");  // , Style::Titlebar); / , Style::FullScreen);
+	//view = mainWin.getDefaultView();
+
+
+	view = View(sf::FloatRect(0, 0, LARGEUR, HAUTEUR)); //Largeur et hauteur de votre résolution d’écran 
+	view.setCenter(LARGEUR / 2, HAUTEUR / 2);
+	mainWin.setView(view); //Comme la vue est reçu en référence, la manipuler va influencer ce qu’on a à l’écran
+
+	//Synchonisation coordonnée à l'écran!  Normalement 60 frames par secondes
+	//À faire absolument
+	mainWin.setFramerateLimit(60);
+	//mainWin.setVerticalSyncEnabled(true); //Équivalent... normalement
+}
+
+
+Game::~Game()
+{
+	//SSPEICHERT
+	delete player;
+	delete backgroundT;
+	delete background;
+	delete backgroundSkyT;
+	delete backgroundSky;
+	//SSPEICHERT
+}
+
+
+int Game::run()
+{
+	if (!init())
+	{
+		return EXIT_FAILURE;
+	}
+
+	while (mainWin.isOpen())
+	{
+		getInputs();
+		update();
+		draw();
+	}
+
+	unload();
+
+	return EXIT_SUCCESS;
+}
+
+bool Game::init()
+{
+	//JCOTE
+	//TODO: créer une classe parent pour le background et les blocs.
+	backgroundT = new Texture[numBackground];
+	background = new Sprite[numBackground];
+	backgroundSkyT = new Texture;
+	backgroundSky = new Sprite;
+
+	if (!backgroundSkyT->loadFromFile("Content\\Backgrounds\\Layer0_2.png"))
+	{
+		return false;
+	}
+	if (!backgroundT[0].loadFromFile("Content\\Backgrounds\\Layer1_0.png"))
+	{
+		return false;
+	}
+	if (!backgroundT[1].loadFromFile("Content\\Backgrounds\\Layer1_1.png"))
+	{
+		return false;
+	}
+	if (!backgroundT[2].loadFromFile("Content\\Backgrounds\\Layer1_2.png"))
+	{
+		return false;
+	}
+
+	//setTexture
+	backgroundSky->setTexture(*backgroundSkyT);
+	for (size_t i = 0; i < numBackground; i++)
+	{
+		background[i].setTexture(backgroundT[i]);
+	}
+
+	//setPosition
+	backgroundSky->setPosition(0, 0);
+	background[0].setPosition(-LARGEUR, 0);
+	background[1].setPosition(0,0);
+	background[2].setPosition(LARGEUR,0);
+
+	//SSpeichert
+	//création des blocks
+	BlockBuilder("Content\\Levels\\testlevel.txt", "Content\\Tiles\\BlockA0.png");
+	//SSpeichert
+
+
+	//string * strLevel = level.getLevel();
+
+	//string * strLevel = level.getLevel();
+
+	//création du joueur
+	/*player = new Player(LARGEUR / 2, HAUTEUR-32, &mainWin);
+	player->chargerTextures("Content\\Sprites\\Player\\Idle.png");
+	player->ajustementsVisuels();*/
+
+	//blockArray = new Block[numberOfBlocks];
+
+	//blockArray = new Block[numberOfBlocks];
+
+	//pour que le joueur affiche a 32px au dessus du bas de l'écran.
+	//player->setPosition(LARGEUR / 2, HAUTEUR - (player->getTexture()->getSize().y) - 32);
+
+	//for (int i = 0; i < (HAUTEUR / 32) - 2; i++)
+	//{
+	//	for (int j = 0; j < (LARGEUR / 32); j++)
+	//	{
+	//		if (strLevel[i][j] == '1')
+	//		{	
+	//			numberOfBlocks++;		
+	//			blockArray[numberOfBlocks].Init( j * (LARGEUR / 32), i * (HAUTEUR / 32), &mainWin);
+	//			blockArray[numberOfBlocks].chargerTextures("Content\\Tiles\\BlockA0.png");
+	//		    blockArray[numberOfBlocks].ajustementsVisuels();
+	//		}
+	//		if (strLevel[i][j] == '2')
+	//		{
+	//			player = new Player(i * (HAUTEUR / 32), j * (LARGEUR / 32), &mainWin);
+	//			player->chargerTextures("Content\\Sprites\\Player\\Idle.png");
+	//			player->ajustementsVisuels();
+	//		}
+	//	}
+	//}
+
+	//for (int i = 0; i < (HAUTEUR / 32) - 2; i++)
+	//{
+	//	for (int j = 0; j < (LARGEUR / 32); j++)
+	//	{
+	//		if (strLevel[i][j] == '1')
+	//		{
+	//			numberOfBlocks++;
+	//			blockArray[numberOfBlocks].Init(i * (HAUTEUR / 32), j * (LARGEUR / 32), &mainWin);
+	//			blockArray[numberOfBlocks].chargerTextures("Content\\Tiles\\BlockA0.png");
+	//		    blockArray[numberOfBlocks].ajustementsVisuels();
+	//		}
+	//		if (strLevel[i][j] == '2')
+	//		{
+	//			player = new Player(i * (HAUTEUR / 32), j * (LARGEUR / 32), &mainWin);
+	//			player->chargerTextures("Content\\Sprites\\Player\\Idle.png");
+	//			player->ajustementsVisuels();
+	//		}
+	//	}
+	//}
+
+	//création du joueur
+	
+/*	player = new Player(32, 32, &mainWin);
+	player->chargerTextures("Content\\Sprites\\Player\\Idle.png");
+	player->ajustementsVisuels()*/;
+	
+	//block = new Block();
+	//block->Init( 32, 256, &mainWin);
+	//block->chargerTextures("Content\\Tiles\\BlockA0.png");
+	//block->ajustementsVisuels();
+
+	//player->setOrigin(player->texture.getSize().x / 2, player->texture.getSize().y / 2);
+	//view.setCenter(player->getPosition().x, player->getPosition().y);
+
+
+//	
+//||||||| .r7
+	//création du joueur
+	
+	player->setOrigin(32, 32);
+	//view.setCenter(player->getPosition().x, player->getPosition().y);
+
+
+	
+//=======
+//>>>>>>> .r9
+	//.. init ennemis
+	//.. AjustementsVisuels
+	
+	//JCOTE
+	return true;
+}
+
+void Game::getInputs()
+{
+	//On passe l'événement en référence et celui-ci est chargé du dernier événement reçu!
+	while (mainWin.pollEvent(event))
+	{
+		//x sur la fenêtre
+		if (event.type == Event::Closed)
+		{
+			mainWin.close();
+		}
+	}
+	//JCOTE
+	//pour les déplacements du joueur.
+	if (Keyboard::isKeyPressed(Keyboard::Right))
+	{
+		player->deplacement(true);
+	}
+	else if (Keyboard::isKeyPressed(Keyboard::Left))
+	{
+		player->deplacement(false);
+	}
+	//JCOTE
+
+	//SSPEICHERT
+	if (Keyboard::isKeyPressed(Keyboard::Up) && can_jump == true) //&& 
+	{
+		player->jump();
+		can_jump = false;
+		//TODO: Calcul du Jump
+	}
+	//SSPEICHERT
+}
+
+void Game::update()
+{
+//<<<<<<< .mine
+//	for (int i = 0; i < 20; i++)
+//	{
+//		if (!(player->getGlobalBounds().intersects(block->getGlobalBounds())))
+//		{
+//			player->setPosition(player->getPosition().x, __min(player->getPosition().y + VITESSE, block->getPosition().y - player->getOrigin().y)); //
+//		}
+//
+//	}
+//||||||| .r7
+//	//for (int i = 0; i < 20; i++)
+//	//{
+//	//	if (!(player->getGlobalBounds().intersects(block[i]->getGlobalBounds())))
+//	//	{
+//	//		player->setPosition(player->getPosition().x, __min(player->getPosition().y + VITESSE, block[i]->getPosition().y - player->getOrigin().y)); //
+//	//	}
+//	//	else
+//	//	{
+//	//		player->setPosition(player->getPosition().x, player->getPosition().y);
+//	//	}
+//	//	
+//	//}
+//=======
+	view.setCenter(player->getPosition().x + (LARGEUR/4), HAUTEUR/2);
+	//player->setOrigin(player->texture.getSize().x / 2, player->texture.getSize().y / 2);
+	//TOFIX: ramène  toujours le personnage en bas completement de l'écran.
+	/*for (int i = 0; i < 20; i++)
+	{
+		if (!(player->getGlobalBounds().intersects(block[i]->getGlobalBounds())))
+		{
+			player->setPosition(player->getPosition().x, __min(player->getPosition().y + VITESSE, block[i]->getPosition().y - player->getOrigin().y));
+		}
+		
+	}*/
+
+	if (!VerifierCollisionBox())
+	{
+		player->setPosition(player->getPosition().x, player->getPosition().y + VITESSE);
+		can_jump = false;
+	}
+	else
+	{
+		can_jump = true;
+	}
+	
+
+	//for (iter = blockList.begin(); iter < blockList.end(); iter++)
+	//{
+	//	if (!(player->getGlobalBounds().intersects(iter->getGlobalBounds())))
+	//	{
+	//		player->setPosition(player->getPosition().x, player->getPosition().y + VITESSE);
+	//	}
+	//}
+	//vector<Block>::const_iterator iter;
+	//
+	//Collider collide(*player, *iter);
+
+	//for_each(blockList.begin(), blockList.end(), collide);
+
+	
+
+	//merged
+
+	//for (int i = 0; i < 20; i++)
+	//{
+	//	if (!(player->getGlobalBounds().intersects(block[i]->getGlobalBounds())))
+	//	{
+	//		player->setPosition(player->getPosition().x, __min(player->getPosition().y + VITESSE, block[i]->getPosition().y - player->getOrigin().y)); //
+	//	}
+	//	else
+	//	{
+	//		player->setPosition(player->getPosition().x, player->getPosition().y);
+	//	}
+	//	
+	//}
+
+	//merged end
+}
+
+void Game::draw()
+{
+	mainWin.clear();
+	//JCOTE
+	mainWin.setView(view);
+	backgroundSky->setPosition((view.getCenter().x) - (LARGEUR / 2), (view.getCenter().y) - (HAUTEUR / 2));
+	mainWin.draw(*backgroundSky);
+	for (size_t i = 0; i < numBackground; i++)
+	{
+		//TODO: changer la vérification pour qu'elle fonctionne avec setview.
+		//vérification si le background se trouve dans la zone d'affichage et vaut la peine d'être affiché.
+		if (background[i].getPosition().x < (view.getCenter().x) + (LARGEUR / 2) && background[i].getPosition().x + LARGEUR >(view.getCenter().x) - (LARGEUR / 2))
+		{
+			mainWin.draw(background[i]);
+		}	
+	}
+	//JCOTE
+	
+	//SSPEICHERT
+//<<<<<<< .mine
+
+
+//	for (int i = 0; i < numberOfBlocks; i++)
+//||||||| .r7
+	
+
+	//for (int i = 0; i < numberOfBlocks; i++)
+//=======
+	vector<Block>::const_iterator iter;
+	for ( iter = blockList.begin(); iter < blockList.end(); iter++)
+	{
+		mainWin.draw(*iter);
+	}
+
+	mainWin.draw(*player);
+	//SSPEICHERT
+	mainWin.display();
+}
+
+void Game::unload()
+{
+	//JCOTE
+	delete backgroundSky;
+	delete backgroundSkyT;
+	delete[]background;
+	delete[]backgroundT;
+	delete player;
+	//JCOTE
+}
+
+// code pris ici : http://stackoverflow.com/questions/6083626/box-collision-code
+bool Game::testCollisionBoxes(int x, int y, int oWidth, int oHeight, int xTwo, int yTwo, int oTwoWidth, int oTwoHeight)
+{
+	if (x + oWidth < xTwo || x > xTwo + oTwoWidth) return false;
+	if (y + oHeight < yTwo || y > yTwo + oTwoHeight) return false;
+
+	return true;
+}
+
+bool Game::testCollisionBoxes2(Sprite spr1, Sprite spr2)
+{
+	IntRect r1(spr1.getPosition().x - spr1.getTexture()->getSize().x / 2, spr1.getPosition().y - spr1.getTexture()->getSize().y / 2, spr1.getTexture()->getSize().x, spr1.getTexture()->getSize().y);
+	IntRect r2(spr2.getPosition().x - spr2.getTexture()->getSize().x / 2, spr2.getPosition().y - spr2.getTexture()->getSize().y / 2, spr2.getTexture()->getSize().x, spr2.getTexture()->getSize().y);
+	
+	return r1.intersects(r2);
+}
+
+void Game::BlockBuilder(const char levelPath[], const char BlockTPath[])
+{
+	LevelManager level(levelPath);
+	string * strLevel = level.getLevel();
+
+	for (int i = 0; i < (HAUTEUR / 32); i++)
+	{
+		for (int j = 0; j < (LARGEUR / 32); j++)
+		{
+			if (strLevel[i][j] == '1')
+			{
+				Block block;
+				block.Init(j * block.LARGEUR_BLOCK, i * block.LARGEUR_BLOCK, &mainWin);
+				if (blockList.empty())
+				{
+					block.chargerTextures(BlockTPath);
+				}
+				block.ajustementsVisuels();
+				blockList.push_back(block);
+			}
+			if (strLevel[i][j] == '2')
+			{
+				player = new Player(j * 32, i * 32, &mainWin);
+				player->chargerTextures("Content\\Sprites\\Player\\Idle.png"); 
+				player->ajustementsVisuels();
+			}
+		}
+	}
+}
+
+
+bool Game::VerifierCollisionBox()
+{
+	vector<Block>::const_iterator iter;
+	for (iter = blockList.begin(); iter < blockList.end(); iter++)
+	{
+		if (iter->getPosition().x > 0 && iter->getPosition().x < LARGEUR && iter->getPosition().y > 0 && iter->getPosition().y < HAUTEUR)
+		{
+			if (testCollisionBoxes2(*player, *iter) )
+			{
+				if (iter->getPosition().y > player->getPosition().y)
+				{
+					return true;
+				}
+				
+			}
+		}
+	}
+	return false;
+
+}

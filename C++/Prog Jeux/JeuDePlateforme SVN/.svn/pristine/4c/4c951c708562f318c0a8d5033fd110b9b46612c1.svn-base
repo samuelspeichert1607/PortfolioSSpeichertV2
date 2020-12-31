@@ -1,0 +1,33 @@
+#pragma once
+#include "Ennemy.h"
+#include "Goomba.h"
+#include "CleverGoomba.h"
+#include "ParaGoomba.h"
+
+namespace platformer
+{
+	class SpawnerRandom
+	{
+	public:
+		static enum typeEnnemy { goomba, cleverGoomba, paraGoomba };
+
+		static Ennemy * CreateEnnemy(typeEnnemy ennemy, const float posX, const float posY, RenderWindow* const renderWindow)
+		{
+			if (goomba == ennemy)
+			{
+				return new Goomba(posX, posY, renderWindow);
+			}
+			else if (cleverGoomba == ennemy)
+			{
+				return new CleverGoomba(posX, posY, renderWindow);
+			}
+			else if (paraGoomba == ennemy)
+			{
+				return new ParaGoomba(posX, posY, renderWindow);
+			}
+			return nullptr;
+		}
+	private:
+		SpawnerRandom();
+	};
+}

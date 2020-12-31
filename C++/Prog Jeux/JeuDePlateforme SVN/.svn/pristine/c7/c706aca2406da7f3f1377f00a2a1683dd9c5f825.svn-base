@@ -1,0 +1,53 @@
+#include "Player.h"
+
+//Texture Player::texture;
+
+Player::Player(const float posX, const float posY, RenderWindow* const renderWindow) 
+: Acteur(posX,posY,renderWindow)
+{
+	
+}
+
+Player::~Player()
+{
+	for (size_t i = 0; i < NBR_NIVEAUX; i++)
+	{
+		delete[] intRects[i];
+		delete[] intRects[i];
+	}
+	delete[] intRects;
+	delete[] intRects;
+}
+
+
+void Player::deplacement(bool direction)
+{
+
+	if (direction == true)
+	{
+		setPosition(getPosition().x + VITESSE, getPosition().y);
+	}
+	else if (direction == false)
+	{
+		setPosition(getPosition().x - VITESSE, getPosition().y);
+	}
+	
+//
+//
+	//Gravity logic
+	//if (player->GetY() < ground_height && isJumping == true)
+	//{
+	//	
+	//}
+
+}
+
+void Player::keyboardMovement()
+{
+	if (Keyboard::isKeyPressed(Keyboard::Right))
+	{
+		interfaceDeplacement.x = CLAVIER_DROITE;
+		interfaceDeplacement.y = 0.0f;
+
+	}
+}

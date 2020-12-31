@@ -1,0 +1,37 @@
+#pragma once
+#define _USE_MATH_DEFINES
+#include <SFML/Graphics.hpp>
+#include "Sujet.h"
+
+	using namespace sf;
+
+	class ObjetDeJeu: public Sujet
+	{
+	public:
+		ObjetDeJeu(const Vector2f& taille, const Vector2f& position, const Color& couleur, const int animationMaximale);
+		virtual void action() = 0;
+		bool estTermine() const;
+		bool collisionClick(const Vector2i& position) const;
+		void activer();
+		Color& getCouleur();
+		Vector2f& getPosition();
+		int getID() const;
+		
+		bool operator < (const ObjetDeJeu& objetDeJeu);
+		bool operator > (const ObjetDeJeu& objetDeJeu);
+		bool operator >= (const ObjetDeJeu& objetDeJeu);
+		bool operator <= (const ObjetDeJeu& objetDeJeu);
+		bool operator == (const ObjetDeJeu& objetDeJeu);
+		bool operator != (const ObjetDeJeu& objetDeJeu);
+
+	protected:
+		float demiTailleX;
+		float demiTailleY;
+		Vector2f position;
+		Color couleur;
+		int animation;
+		const int ANIMATION_MAXIMALE;
+		bool actif;
+		//Id pour le retrouver dans le minion
+		int ID = -1;
+	};

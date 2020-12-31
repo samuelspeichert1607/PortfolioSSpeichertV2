@@ -1,0 +1,34 @@
+#include "Magicien.h"
+
+Magicien::Magicien(bool isAlly)
+{
+	speed = 3;
+	health = 280;
+	maxHealth = 280;
+	range = 50;
+	attackPoints = 200;
+	cout = 10;
+	minionType = MinionType::Magichien;
+	this->isAlly = isAlly;
+	if (isAlly)
+	{
+		isFacingLeft = false;
+	}
+	else
+	{
+		isFacingLeft = true;
+	}
+	Minion();
+}
+
+Magicien::~Magicien()
+{
+
+}
+
+Spell* Magicien::soin()
+{
+	Spell* soin = new Spell(SpellType::Soin);
+	soin->setPosition(getPosition());
+	return soin;
+}

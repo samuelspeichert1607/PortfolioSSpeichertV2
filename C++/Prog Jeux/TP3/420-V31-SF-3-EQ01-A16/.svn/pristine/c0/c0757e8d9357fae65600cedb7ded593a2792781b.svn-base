@@ -1,0 +1,43 @@
+#pragma once
+#ifndef _DEBUG
+	#define NDEBUG 
+#endif
+#include <cassert>
+#include <SFML/Graphics.hpp>
+#include "Constantes.h"
+#include "Liste.h"
+#include "Minion.h"
+#include "Tour.h"
+#include "Spell.h"
+
+
+using namespace sf;
+using namespace std;
+
+class Game
+{
+	public:
+		Game();
+		~Game();
+		int run();
+		int testTest();
+
+		private:
+
+		bool init();
+		void update();
+		void draw();
+
+	
+	private:
+
+		Sprite background;
+		Texture backgroundT;
+		
+		//vector<Minion*> minionList; //liste des ennemis du niveau.
+		Liste<Minion*> minionList;
+
+		//vector<Spell*> spellList; //liste des pièces du niveau.
+
+		RenderWindow mainWin;
+};

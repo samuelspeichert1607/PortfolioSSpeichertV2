@@ -1,0 +1,35 @@
+#include "Tour.h"
+#include "SpawnerMinion.h"
+
+
+Tour::Tour(bool isAlly, int ID)
+{
+	speed = 0;
+	health = 2400;
+	maxHealth = 2400;
+	this->ID = ID;
+	range = 0;
+	attackPoints = 0;
+	cout = 0;
+	minionType = MinionType::_Tour;
+	this->isAlly = isAlly;
+	if (isAlly)
+	{
+		isFacingLeft = false;
+		setColor(Color::Blue);	}
+	else
+	{
+		isFacingLeft = true;
+		setColor(Color::Red);
+	}
+}
+
+Tour::~Tour()
+{
+
+}
+
+Minion* Tour::spawn(MinionType type)
+{
+	return SpawnerMinion::CreateEnnemy(type,getPosition().x,getPosition().y,isAlly);
+}

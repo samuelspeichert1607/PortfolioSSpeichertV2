@@ -1,0 +1,37 @@
+#include "GuerrierLeger.h"
+
+GuerrierLeger::GuerrierLeger(bool isAlly)
+{
+	speed = 3;
+	pointsDeVie = 360;
+	pointsDeVieMax = 360;
+	range = 5;
+	pointsDAttaque = 50;
+	cout = 3;
+	this->isAlly = isAlly;
+	if (isAlly)
+	{
+		isFacingLeft = false;
+	}
+	else
+	{
+		isFacingLeft = true;
+	}
+	Minion();
+}
+
+GuerrierLeger::~GuerrierLeger()
+{
+
+}
+
+void GuerrierLeger::millesLames()
+{
+	pointsDAttaque *= 2;
+	timeSpecialAttack.restart();
+}
+
+void GuerrierLeger::annulerMillesLames()
+{
+	pointsDAttaque /= 2;
+}

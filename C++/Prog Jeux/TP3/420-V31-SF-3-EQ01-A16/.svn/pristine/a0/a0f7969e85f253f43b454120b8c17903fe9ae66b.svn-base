@@ -1,0 +1,47 @@
+template <class T>
+Pile<T>::Pile()
+{
+	//TODO : Construction d'une pile = pile vide (voir spécifications)
+	premierNoeud = NULL;
+}
+
+template <class T>
+Pile<T>::~Pile()
+{
+	delete premierNoeud->getNext();
+	delete premierNoeud;
+}
+
+/// <summary>
+/// La fonction Push de la pile va rentrer un élément dans la pile. 
+/// </summary>
+/// <param name="_contenu">Un pointeur vers le contenu que l'on désire insérer.</param>
+/// <returns>Aucun retour.</returns>
+template <class T>
+void Pile<T>::Push(T* _contenu)
+{
+	Noeud<T> * nouveauNoeud = new Noeud<T>();
+	nouveauNoeud->setContenu(_contenu);
+	nouveauNoeud->setNext(premierNoeud);
+	premierNoeud = nouveauNoeud;
+	nbElements++;
+}
+
+/// <summary>
+/// La fonction Pop de la pile va retirer l'élément au-dessus de la pile. 
+/// </summary>
+/// <returns>Cette fonction va retourner un pointeur vers le contenu retiré.</returns>
+template <class T>
+T * Pile<T>::Pop()
+{
+	T * contenu = NULL;
+	if (premierNoeud != NULL && nbElements > 0)
+	{
+		contenu = premierNoeud->getContenu();
+		Noeud<T> * noeudAEnlever = premierNoeud;
+		premierNoeud = premierNoeud->getNext();
+		delete noeudAEnlever;
+		nbElements--;
+	}
+	return contenu;
+}

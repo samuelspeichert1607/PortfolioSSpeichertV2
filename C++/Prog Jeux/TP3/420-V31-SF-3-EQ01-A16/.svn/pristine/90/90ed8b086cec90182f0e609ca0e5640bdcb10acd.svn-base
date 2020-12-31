@@ -1,0 +1,53 @@
+#include "Game.h"
+
+Game::Game()
+{
+
+}
+
+int Game::testTest()
+{
+	return 0;
+}
+
+int Game::run()
+{
+	RenderWindow mainWin(VideoMode(LARGEUR, HAUTEUR, 32), "Projet SFML C++");
+
+	//Synchonisation coordonnée à l'écran!
+	mainWin.setVerticalSyncEnabled(true);
+
+	while (mainWin.isOpen())
+	{
+		//////////////////////////////////////////////////////////////////////////
+		// 1 - Gestion des entrées
+		//////////////////////////////////////////////////////////////////////////
+		Event event;
+
+		//On passe l'événement en référence et celui-ci est chargé du dernier événement reçu!
+		while (mainWin.pollEvent(event))
+		{
+			if (event.type == Event::Closed)
+			{
+				mainWin.close();
+			}
+		}
+
+
+		//////////////////////////////////////////////////////////////////////////
+		// 2 - Gestion de la logique 
+		//////////////////////////////////////////////////////////////////////////
+
+
+
+		//////////////////////////////////////////////////////////////////////////
+		// 3 - Gestion de l'affichage 
+		//////////////////////////////////////////////////////////////////////////
+
+		//Toujours important d'effacer l'écran précédent
+		mainWin.clear();
+
+		mainWin.display();
+	}
+	return EXIT_SUCCESS;
+}

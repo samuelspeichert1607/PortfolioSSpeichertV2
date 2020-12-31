@@ -1,0 +1,24 @@
+#pragma once
+
+class Sujet
+{
+
+	public:
+
+		public virtual notifierTousLesObservateurs()
+
+
+		public ajouterObservateur(observateur: Observateur*)
+		public retirerObservateur(observateur: Observateur*)
+
+
+	protected: 
+		observateurs: vector<Observateur*>
+
+
+
+
+
+
+};
+

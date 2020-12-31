@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Acteur.cpp" />
+    <ClCompile Include="Block.cpp" />
+    <ClCompile Include="Ennemy.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Goomba.cpp" />
+    <ClCompile Include="LevelManager.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="CleverGoomba.cpp" />
+    <ClCompile Include="ParaGoomba.cpp" />
+    <ClCompile Include="Coin.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Acteur.h" />
+    <ClInclude Include="Block.h" />
+    <ClInclude Include="Ennemy.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="Goomba.h" />
+    <ClInclude Include="LevelManager.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="SpawnerFixe.h" />
+    <ClInclude Include="SpawnerRandom.h" />
+    <ClInclude Include="CleverGoomba.h" />
+    <ClInclude Include="ParaGoomba.h" />
+    <ClInclude Include="Coin.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Content\Backgrounds\Layer0_0.png" />
+    <Image Include="Content\Backgrounds\Layer0_1.png" />
+    <Image Include="Content\Backgrounds\Layer0_2.png" />
+    <Image Include="Content\Backgrounds\Layer0_2_1920x1080.png" />
+    <Image Include="Content\Backgrounds\Layer1_0.png" />
+    <Image Include="Content\Backgrounds\Layer1_0_1920x1080.png" />
+    <Image Include="Content\Backgrounds\Layer1_1.png" />
+    <Image Include="Content\Backgrounds\Layer1_1_1920x1080.png" />
+    <Image Include="Content\Backgrounds\Layer1_2.png" />
+    <Image Include="Content\Backgrounds\Layer1_2_1920x1080.png" />
+    <Image Include="Content\Backgrounds\Layer2_0.png" />
+    <Image Include="Content\Backgrounds\Layer2_1.png" />
+    <Image Include="Content\Backgrounds\Layer2_2.png" />
+    <Image Include="Content\Overlays\you_died.png" />
+    <Image Include="Content\Overlays\you_lose.png" />
+    <Image Include="Content\Overlays\you_win.png" />
+    <Image Include="Content\Sprites\Gem.png" />
+    <Image Include="Content\Sprites\MonsterA\Idle.png" />
+    <Image Include="Content\Sprites\MonsterA\Run.png" />
+    <Image Include="Content\Sprites\MonsterB\Idle.png" />
+    <Image Include="Content\Sprites\MonsterB\Run.png" />
+    <Image Include="Content\Sprites\MonsterC\Idle.png" />
+    <Image Include="Content\Sprites\MonsterC\Run.png" />
+    <Image Include="Content\Sprites\MonsterD\Idle.png" />
+    <Image Include="Content\Sprites\MonsterD\Run.png" />
+    <Image Include="Content\Sprites\Player\Celebrate.png" />
+    <Image Include="Content\Sprites\Player\Die.png" />
+    <Image Include="Content\Sprites\Player\Idle.png" />
+    <Image Include="Content\Sprites\Player\Jump.png" />
+    <Image Include="Content\Sprites\Player\Player_SpriteSheet.png" />
+    <Image Include="Content\Sprites\Player\Run.png" />
+    <Image Include="Content\Tiles\BlockA0.png" />
+    <Image Include="Content\Tiles\BlockA1.png" />
+    <Image Include="Content\Tiles\BlockA2.png" />
+    <Image Include="Content\Tiles\BlockA3.png" />
+    <Image Include="Content\Tiles\BlockA4.png" />
+    <Image Include="Content\Tiles\BlockA5.png" />
+    <Image Include="Content\Tiles\BlockA6.png" />
+    <Image Include="Content\Tiles\BlockB0.png" />
+    <Image Include="Content\Tiles\BlockB1.png" />
+    <Image Include="Content\Tiles\Exit.png" />
+    <Image Include="Content\Tiles\Platform.png" />
+    <Image Include="Content\Sprites\goomba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\Sounds\ExitReached.wma" />
+    <None Include="Content\Sounds\GemCollected.wma" />
+    <None Include="Content\Sounds\MonsterKilled.wma" />
+    <None Include="Content\Sounds\Music.wma" />
+    <None Include="Content\Sounds\PlayerFall.wma" />
+    <None Include="Content\Sounds\PlayerJump.wma" />
+    <None Include="Content\Sounds\PlayerKilled.wma" />
+    <None Include="Content\Sounds\Powerup.wma" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Content\Levels\testlevel.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Content\Fonts\Aztecways.ttf" />
+  </ItemGroup>
+</Project>

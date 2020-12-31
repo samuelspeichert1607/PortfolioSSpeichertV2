@@ -1,0 +1,22 @@
+﻿La génération a démarré 2016-12-02 13:11:03.
+     1>Projet "C:\Users\Alex\Documents\cours\Session 3\Progamation jeu\TP3\420-V31-SF-3-EQ01-A16\TP3 - ProgJeuxIII\TP3 - ProgJeuxIII\TP3 - ProgJeuxIII.vcxproj" sur le nœud 2 (Build cible(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Lancier.cpp Tour.cpp
+         Tour.cpp
+     1>c:\users\alex\documents\cours\session 3\progamation jeu\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\spawnerminion.h(71): error C2065: 'Tour' : identificateur non déclaré
+     1>c:\users\alex\documents\cours\session 3\progamation jeu\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\spawnerminion.h(71): error C2065: 'nouveau' : identificateur non déclaré
+     1>c:\users\alex\documents\cours\session 3\progamation jeu\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\spawnerminion.h(71): error C2061: erreur de syntaxe : identificateur 'Tour'
+     1>c:\users\alex\documents\cours\session 3\progamation jeu\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\spawnerminion.h(72): error C2065: 'nouveau' : identificateur non déclaré
+     1>c:\users\alex\documents\cours\session 3\progamation jeu\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\spawnerminion.h(72): error C2227: la partie gauche de '->setPosition' doit pointer vers un type class/struct/union/générique
+                 le type est 'unknown-type'
+     1>c:\users\alex\documents\cours\session 3\progamation jeu\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\spawnerminion.h(73): error C2065: 'nouveau' : identificateur non déclaré
+     1>c:\users\alex\documents\cours\session 3\progamation jeu\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\spawnerminion.h(73): error C2227: la partie gauche de '->setOrigin' doit pointer vers un type class/struct/union/générique
+                 le type est 'unknown-type'
+     1>c:\users\alex\documents\cours\session 3\progamation jeu\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\spawnerminion.h(74): error C2065: 'nouveau' : identificateur non déclaré
+         Lancier.cpp
+         Génération de code en cours...
+     1>Génération du projet "C:\Users\Alex\Documents\cours\Session 3\Progamation jeu\TP3\420-V31-SF-3-EQ01-A16\TP3 - ProgJeuxIII\TP3 - ProgJeuxIII\TP3 - ProgJeuxIII.vcxproj" terminée (Build cible(s)) -- ÉCHEC.
+
+ÉCHEC de la build.
+
+Temps écoulé 00:00:01.14

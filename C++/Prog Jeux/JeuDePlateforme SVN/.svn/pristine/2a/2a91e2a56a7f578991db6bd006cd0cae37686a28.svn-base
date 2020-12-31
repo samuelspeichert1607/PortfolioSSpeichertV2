@@ -1,0 +1,40 @@
+#pragma once
+#include <SFML/Graphics.hpp>
+#include <string>
+
+using namespace sf;
+using std::string;
+
+namespace plateformer
+{
+	class Acteur : public Sprite
+	{
+		public:
+			Acteur(const float posX, const float posY, RenderWindow* const renderWindow);
+			~Acteur();
+
+			static bool chargerTextures(const char texturePath[]);
+			void ajustementsVisuels();
+
+		protected:
+
+			const enum DIRECTIONS { IMMOBILE = -1, GAUCHE, DROITE, SAUT };
+			const float VITESSE = 6.0f;
+			const int SPEED_ANIMATION = 10;
+
+			static Texture texture;
+
+			RenderWindow* renderWindow;
+
+			IntRect** intRects;
+			int animateur;
+			int cadran;
+
+			Vector2f interfaceDeplacement;
+
+			int animateurImmobile;
+			int directionImmobile;
+			bool estMobile;
+	};
+}
+

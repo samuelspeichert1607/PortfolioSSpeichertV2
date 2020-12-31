@@ -1,0 +1,48 @@
+template <class T>
+File<T>::File()
+{
+	premierNoeud = NULL;
+	deremierNoeud = NULL;
+}
+template <class T>
+File<T>::~File()
+{
+	while (premierNoeud != NULL)
+	{
+		Pop();
+	}
+}
+template <class T>
+void File<T>::Push(T* _contenu)
+{
+	Noeud<T>* nouveau = new Noeud<T>();
+	nouveau->setContenu(_contenu);
+	nouveau->setSuivant(NULL);
+	if (premierNoeud == NULL)
+	{
+		premierNoeud = nouveau;
+		deremierNoeud = nouveau;
+	}
+	else
+	{
+		deremierNoeud->setSuivant(nouveau);
+		deremierNoeud = nouveau;
+	}
+}
+template <class T>
+T* File<T>::Pop()
+{
+	T* temporaire = NULL;
+	if (premierNoeud != NULL)
+	{
+		temporaire = premierNoeud->getContenu();
+		Noeud<T>* noeudTemporaire = premierNoeud;
+		premierNoeud = premierNoeud->getSuivant();
+		delete noeudTemporaire;
+		if (premierNoeud == NULL)
+		{
+			deremierNoeud = NULL;
+		}
+	}
+	return temporaire;
+}

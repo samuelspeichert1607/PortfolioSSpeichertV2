@@ -1,0 +1,54 @@
+#pragma once
+#include "Minion.h"
+#include "Magicien.h"
+#include "Lancier.h"
+#include "Cavalier.h"
+#include "GuerrierLeger.h"
+#include "GuerrierLourd.h"
+#include "Archer.h"
+#include "Barbare.h"
+
+namespace platformer
+{
+	class SpawnerMinion
+	{
+	public:
+		static enum MinionType { magicien, lancier, cavalier, guerrierLeger, guerrierLourd, archer, barbare }; //Les différents types de minion pouvant être crées.
+
+		static Minion * CreateEnnemy(MinionType minion, const float posX, const float posY, RenderWindow* const renderWindow)
+		{
+			if (magicien == minion) //Si le ticket entré en paramètre est un goomba
+			{
+				return new Magicien(true); //On en crée un sur la heap et on le retourne
+			}
+			else if (lancier == minion)
+			{
+				return new Lancier(true);
+			}
+			else if (cavalier == minion)
+			{
+				return new Cavalier(true);
+			}
+			else if (guerrierLeger == minion)
+			{
+				return new GuerrierLeger(true);
+			}
+			else if (guerrierLourd == minion)
+			{
+				return new GuerrierLourd(true);
+			}
+			else if (archer == minion)
+			{
+				return new Archer(true);
+			}
+			else if (barbare == minion)
+			{
+				return new Barbare(true);
+			}
+
+			return nullptr;
+		}
+	private:
+		SpawnerMinion();
+	};
+}

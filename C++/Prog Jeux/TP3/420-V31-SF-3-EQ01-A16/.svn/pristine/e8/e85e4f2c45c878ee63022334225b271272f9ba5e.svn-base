@@ -1,0 +1,19 @@
+#pragma once
+#include <SFML/Graphics.hpp>
+
+using namespace sf;
+
+class Projectile : public Sprite
+{
+	public:
+		Projectile(int speed, int attackPoints, int range);
+		~Projectile();
+		void update();
+
+	private:
+		int speed = 0;
+		int attackPoints = 0;
+		int range = 0;
+		Texture textureProjectile;
+
+};

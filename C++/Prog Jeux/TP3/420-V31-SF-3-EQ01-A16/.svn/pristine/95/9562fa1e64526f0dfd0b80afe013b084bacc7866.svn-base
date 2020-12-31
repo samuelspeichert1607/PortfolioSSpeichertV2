@@ -1,0 +1,57 @@
+#include "GroupeMinion.h"
+
+
+GroupeMinion::GroupeMinion()
+{
+}
+
+
+void GroupeMinion::ajouter(Minion * minionToAdd)
+{
+	groupeDeMinions.ajouter(minionToAdd);
+}
+
+void GroupeMinion::vider()
+{
+	for (int i = 0; i < groupeDeMinions.getNbElements(); i++)
+	{
+		if (typeid(groupeDeMinions.at(i)) == typeid(GroupeMinion))
+		{
+			GroupeMinion* m = (GroupeMinion*)groupeDeMinions.at(i);
+			m->vider();
+		}
+	}
+
+	for (int i = 0; i < groupeDeMinions.getNbElements(); i++)
+	{
+		Minion* temporaire = groupeDeMinions.at(i);
+		groupeDeMinions.retirer(groupeDeMinions.at(i));
+		delete temporaire;
+	}
+
+}
+
+void GroupeMinion::bouger(Liste<Minion>* minionList)
+{
+	for (int i = 0; i < groupeDeMinions.getNbElements(); i++)
+	{
+		groupeDeMinions.at(i)->bouger(minionList);
+	}
+}
+
+//void GroupeMinion::arreter()
+//{
+//	for (int i = 0; i < groupeDeMinions.getNbElements(); i++)
+//	{
+//		groupeDeMinions.at(i)->();
+//	}
+//}
+
+void GroupeMinion::AjouterDestination(Vector2f * positionCible)
+{
+	for (int i = 0; i < groupeDeMinions.getNbElements(); i++)
+	{
+		//groupeDeMinions.at(i)->setPositionCible(positionCible);
+		groupeDeMinions.at(i)->AjouterDestination(positionCible);
+	}
+}

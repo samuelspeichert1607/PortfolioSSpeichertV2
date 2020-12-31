@@ -1,0 +1,82 @@
+#pragma once
+#include <SFML/Graphics.hpp>
+#include <math.h>
+#include "Observateur.h"
+
+using namespace sf;
+
+
+class Minion : public Observateur
+{
+	public:
+		int gotHit(int damage);
+
+		int getHealth();
+
+		int getMaxHealth();
+
+		Minion * clone();
+
+		void convert();
+		
+		void move();
+
+		//Projectile * attack();
+
+		Vector2f getTarget();
+
+		int getRessource();
+
+		int getPortee();
+
+		int getDommages();
+
+		int getVitesse();
+
+		void AjouterDestination(Vector2f destination);
+
+		bool getIsFacingLeft();
+
+		void notifier(Sujet * sujet);
+
+
+
+
+
+	protected :
+		// Points de vie du minion.
+		int pointsDeVie; 
+
+		// Points de vie maximal du minion.
+		int pointsDeVieMax; 
+
+		//Différents types de l'objet.
+		enum TypeObjet { Magichien, Lancier, Cavalier, GuerrierLeger, GuerrierLourd, Archer, Barbare  }; 
+
+		//Si le minion regarde vers la gauche.
+		bool isFacingLeft = true;
+
+		//Si le minion est allié ou ennemi.
+		bool isAlly = true;
+
+		//Vitesse du minion.
+		int speed;
+
+		//Portée du minion.
+		int range;
+
+		//Points d'attaque du minion.
+		int pointsDAttaque;
+
+		//Prix pour enrôler le minion dans l'armée.
+		int cout;
+
+		//Pile utilisée pour l'ordre des ennemis à attaquer.
+		//Pile<Vector2f> ordreAAttaquer
+
+		//Cible actuelle du minion
+		Vector2f target;
+
+		//Temps d'attaque
+		Clock time;
+};

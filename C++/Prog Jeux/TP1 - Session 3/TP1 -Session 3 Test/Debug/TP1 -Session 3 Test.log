@@ -1,0 +1,11 @@
+﻿La génération a démarré 9/26/2016 11:02:07 PM.
+     1>Projet "D:\Cegep Ste-Foy\Programmation de jeux vidéo III\Étape 1\TP1\TP1 - Session 3\TP1 -Session 3 Test\TP1 -Session 3 Test.vcxproj" sur le nœud 3 (Build cible(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\UnitTest\include" /I"C:\Program Files (x86)\Visual Leak Detector\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\TP1 -Session 3 Test.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /FC /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+     1>d:\cegep ste-foy\programmation de jeux vidéo iii\étape 1\tp1\tp1 - session 3\tp1 - session 3\player.h(2): fatal error C1083: Impossible d'ouvrir le fichier include : 'SFML/Graphics.hpp' : No such file or directory
+     1>Génération du projet "D:\Cegep Ste-Foy\Programmation de jeux vidéo III\Étape 1\TP1\TP1 - Session 3\TP1 -Session 3 Test\TP1 -Session 3 Test.vcxproj" terminée (Build cible(s)) -- ÉCHEC.
+
+ÉCHEC de la build.
+
+Temps écoulé 00:00:01.87

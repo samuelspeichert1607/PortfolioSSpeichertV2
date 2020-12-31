@@ -1,0 +1,54 @@
+#pragma once
+#include <SFML/Graphics.hpp>
+
+using namespace sf;
+
+class Player : public Sprite
+{
+public:
+	Player(const float posX, const float posY, RenderWindow* const renderWindow);
+	~Player();
+
+	static bool chargerTextures(const char texturePath[]);
+	void ajustementsVisuels();
+
+	void keyboardMovement();
+	void deplacement(bool direction);
+
+private:
+
+	const enum DIRECTIONS {IMMOBILE = -1, GAUCHE, DROITE, SAUT};
+	const float VITESSE = 6.0f;
+	const int SPEED_ANIMATION = 10;
+
+	const int NBR_NIVEAUX=5;
+	const int NBR_ANIMS_IMMOBILE=11;
+	const int NBR_ANIMS_MOUVEMENT=11;
+	const int NBR_ANIMS_MORT = 12;
+	const int NBR_ANIMS_JUMP = 11;
+	const int NBR_ANIMS_VICTOIRE = 11;
+	const int NBR_ANIMS = 12;
+
+	const float CLAVIER_DROITE = 1.0f;
+
+	static Texture texture;
+	
+
+	IntRect* intRectsImmobile;
+	IntRect* intRectsMouvement;
+	IntRect* intRectsJump;
+	IntRect* intRectsVictoire;
+	IntRect* intRectsMort;
+
+	RenderWindow* renderWindow;
+
+	int animateur;
+	int cadran;
+	
+
+	Vector2f interfaceDeplacement;
+
+	int animateurImmobile;
+	int directionImmobile;
+	bool estMobile;
+};

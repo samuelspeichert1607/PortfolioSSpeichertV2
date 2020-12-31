@@ -1,0 +1,75 @@
+#pragma once
+#ifndef _DEBUG
+	#define NDEBUG 
+#endif
+#include <cassert>
+#include <SFML/Graphics.hpp>
+#include "Constantes.h"
+#include <vector>
+#include "SpawnerMinion.h"
+#include "GroupeMinion.h"
+#include "Spell.h"
+#include "File.h"
+
+using namespace sf;
+using namespace std;
+
+class Game
+{
+	public:
+		Game();
+		~Game();
+		int run();
+		int testTest();
+
+		private:
+
+		bool init();
+		void getInputs();
+		void update();
+		void draw();
+
+		bool testerPrescenceSpell(Vector2i& position);
+		void ajouterSpell(Vector2i position);
+		//void activerSpell(Vector2i position);
+
+
+		static const int NBR_OBJETS = 30;
+	
+	private:
+
+		Sprite background;
+		Texture backgroundT;
+
+		RectangleShape selecteur;
+		Vector2f positionSelecteur = Vector2f(-1, -1);
+		Vector2f tailleSelecteur = Vector2f(-1, -1);
+		enum ObjetsDeJeu{ Radiation_Bleue, Radiation_Verte, Radiation_Rouge };
+		SpellType choixSpell = SpellType::Eclair;
+		
+		Liste<Minion> minionList = Liste<Minion>();
+		Liste<Spell> spellList = Liste<Spell>();
+		vector<Projectile> listeProjectile = vector<Projectile>();
+		//Pile utilisée pour l'ordre des spells.
+		Pile<Spell> ordreDesSpells = Pile<Spell>();
+
+		/// <summary>
+		/// Mist qui détermine ce qu'on déplace
+		/// </summary>
+		GroupeMinion groupeDeMinions;
+		Tour* allyTower;
+
+		File<Minion> minionQueueAlly; //File des minions alliés
+		File<Minion> minionQueueEnnemy; //File des minions ennemis
+
+		RenderWindow mainWin;
+		Event event;
+		Clock allyClock;
+		Clock ennemyClock;
+		Clock timeBeforeEnd;
+
+		Font font;
+		Text commandes;
+		Text commandesSpells;
+		Text issueDeLaPartie;
+};

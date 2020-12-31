@@ -1,0 +1,22 @@
+#pragma once
+#include "Noeud.h"
+//#include "stdafx.h"
+#include <iostream>
+
+using namespace std;
+
+template <class T>
+class Liste
+{
+public:
+	Liste();
+	~Liste();
+	bool Ajouter(T * _contenu);
+	bool Retirer(T * _contenu);
+	void Afficher();
+private:
+	Noeud<T> * premierNoeud; //On a seulement besoin d'un pointeur sur le premier noeud de la liste.
+
+};
+
+#include"Liste.hpp"

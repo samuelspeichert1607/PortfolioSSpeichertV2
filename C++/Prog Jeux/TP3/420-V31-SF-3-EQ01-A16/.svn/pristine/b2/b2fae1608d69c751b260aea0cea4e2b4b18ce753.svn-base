@@ -1,0 +1,27 @@
+#pragma once
+#include <SFML/Graphics.hpp>
+
+using namespace sf;
+
+class Projectile : public RectangleShape
+{
+	public:
+		Projectile(int speed, int attackPoints, int range, float angle, bool isAlly);
+		~Projectile();
+		bool update();
+		int getSpeed();
+		int getAttackPoints();
+		int getRange();
+		float getAngle();
+		bool getIsAlly();
+		float getTotalDisatanceGone();
+
+	private:
+		int speed = 0;
+		int attackPoints = 0;
+		int range = 0;
+		float angle = 0;
+		bool isAlly = false;
+		float totalDistanceGone;//distance parcourue par le projetile
+
+};

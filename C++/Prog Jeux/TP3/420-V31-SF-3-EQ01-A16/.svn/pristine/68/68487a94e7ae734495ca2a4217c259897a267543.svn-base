@@ -1,0 +1,33 @@
+#include "Barbare.h"
+
+Barbare::Barbare(bool isAlly, int id)
+{
+	speed = 3;
+	health = 600;
+	maxHealth = 600;
+	range = 5;
+	attackPoints = 100;
+	cout = 6;
+	minionType = MinionType::_Barbare;
+	this->isAlly = isAlly;
+	this->id = id;
+	if (isAlly)
+	{
+		isFacingLeft = false;
+	}
+	else
+	{
+		isFacingLeft = true;
+	}
+	Minion();
+}
+
+Barbare::~Barbare()
+{
+
+}
+
+void Barbare::beserk()
+{
+	specialAttackTime.restart();
+}

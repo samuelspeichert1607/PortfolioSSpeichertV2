@@ -1,0 +1,178 @@
+#include "Minion.h"
+
+Minion::Minion()
+{
+
+}
+
+Minion::~Minion()
+{
+
+}
+
+bool Minion::ajustementsVisuels()
+{
+	if (minionType == _Tour)
+	{
+		if (!texture.loadFromFile("..\\..\\Sprites\\Tour.png"))
+		{
+			return false;
+		}
+
+	}
+	else if(minionType == _Archer)
+	{
+		if (!texture.loadFromFile("..\\..\\Sprites\\Archer.png"))
+		{
+			return false;
+		}
+
+	}
+
+	setTexture(texture);
+}
+
+int Minion::gotHit(int damage)
+{
+	return 0;
+}
+
+int Minion::getHealth()
+{
+	return 0;
+}
+
+int Minion::getMaxHealth()
+{
+	return 0;
+}
+
+//Minion * Minion::clone()
+//{
+//	//return new Minion();
+//}
+
+void Minion::move()
+{
+	////Une destination nulle pas de mouvement
+	//if (target != nullptr)
+	//{
+	//	//On sauvegarde la position précédente au cas
+	//	positionBackup = new Vector2f(this->getPosition());
+
+	//	//On effectue le déplacement
+	//	move(cos(angle) * speed, sin(angle) * speed);
+
+	//	//Vue la faible vitesse et pour garder les choses simples, s'il y a collision, on annule 
+	//	//tout simplement le mouvement pour ce refresh de frame et on termine la méthode immédiatement
+	//	for (int i = 0; i < souls->size(); i++)
+	//	{
+	//		if (testCollisionSouls((*souls)[i]))
+	//		{
+	//			backup();
+	//			return;
+	//		}
+	//	}
+
+	//	//À PARTIR D'ICI C'EST QU'IL N'Y A PAS EU DE COLLISION
+
+	//	//Avec les float, il faut accepter un seuil de tolérance, quand on arrive à distance de la "vitesse" visé, on considère avoir atteint notre destination
+	//	if ((abs(positionCible->x - getPosition().x) <= speed) && (abs(positionCible->y - getPosition().y) <= VITESSE))
+	//	{
+	//		//On la fixe, pour être certain
+	//		setPosition(*positionCible);
+
+	//		//On arrête de bouger
+	//		arreter();
+	//	}
+
+	//	//Dans tous les cas, pour éviter les leaks on libère le backup
+	//	cleanBackup();
+	//}
+}
+
+Projectile * Minion::attack()
+{
+	return new Projectile(speed, attackPoints, range);
+}
+
+Vector2f Minion::getTarget()
+{
+	return target;
+}
+
+int Minion::getCout()
+{
+	return cout;
+}
+
+int Minion::getRange()
+{
+	return range;
+}
+
+int Minion::getAttackPoints()
+{
+	return attackPoints;
+}
+
+int Minion::getSpeed()
+{
+	return speed;
+}
+
+void Minion::AjouterDestination(Vector2f destination)
+{
+	ordreAAttaquer.Push(&destination);
+}
+
+bool Minion::getIsFacingLeft()
+{
+	return isFacingLeft;
+}
+
+void Minion::notifier(Sujet * sujet)
+{
+	//sujet->notifierTousLesObservateurs();
+}
+
+int Minion::getID()
+{
+	return ID;
+}
+
+
+
+
+////LES OPERATORS!!!
+
+
+bool Minion::operator < (const Minion& minion)
+{
+	return this->ID < minion.ID;
+}
+
+bool Minion::operator >(const Minion& minion)
+{
+	return this->ID > minion.ID;
+}
+
+bool Minion::operator >= (const Minion& minion)
+{
+	return this->ID >= minion.ID;
+}
+
+bool Minion::operator <= (const Minion& minion)
+{
+	return this->ID <= minion.ID;
+}
+
+bool Minion::operator == (const Minion& minion)
+{
+	return this->ID == minion.ID;
+}
+
+bool Minion::operator != (const Minion& minion)
+{
+	return this->ID != minion.ID;
+}

@@ -1,0 +1,30 @@
+#include "Projectile.h"
+
+
+Projectile::Projectile(int _speed, int _attackPoints, int _range, float _angle, bool _isAlly) : speed(_speed), attackPoints(_attackPoints), range(_range),
+angle(_angle), isAlly(_isAlly)
+{
+
+}
+Projectile::~Projectile()
+{
+
+}
+/// <summary>
+/// déplace le projectile et s'il est allé trops loin on retourne vrai pour dire qu'il ne devrais plus exister
+/// </summary>
+/// <returns>vrai si le projevtile est allé au bout de sa portée et ne devrais plus exister, sionon faux</returns>
+//Alex
+bool Projectile::update()
+{
+	setPosition(getPosition().x + cos(angle) * speed, getPosition().y + sin(angle) * speed);
+	totalDistanceGone += speed;
+	if (totalDistanceGone == range)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}

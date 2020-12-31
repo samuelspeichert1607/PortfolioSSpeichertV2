@@ -1,0 +1,15 @@
+#pragma once
+#include <SFML/Graphics.hpp>
+
+using sf::Vector2f;
+using sf::RenderWindow;
+
+
+	
+class IComponant
+{
+	public:  //Tout ce qu'on a ici est aussi dans souls
+		virtual void move() = 0;
+		//virtual void stop() = 0;
+		//virtual void setPositionCible(const Vector2f& positionCible) = 0;
+};

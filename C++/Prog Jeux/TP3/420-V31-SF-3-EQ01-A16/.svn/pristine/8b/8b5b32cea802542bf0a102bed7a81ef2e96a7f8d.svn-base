@@ -1,0 +1,25 @@
+#pragma once
+#include <SFML/Graphics.hpp>
+#include "Minion.h"
+#include "Spell.h"
+
+
+using namespace sf;
+
+class Game
+{
+public:
+	Game();
+	~Game();
+	int run();
+	int testTest();
+
+	void update();
+	void draw();
+
+	const int LARGEUR = 640;
+	const int HAUTEUR = 480;
+
+	vector<Minion*> minionList; //liste des ennemis du niveau.
+	vector<Spell*> spellList; //liste des pièces du niveau.
+};

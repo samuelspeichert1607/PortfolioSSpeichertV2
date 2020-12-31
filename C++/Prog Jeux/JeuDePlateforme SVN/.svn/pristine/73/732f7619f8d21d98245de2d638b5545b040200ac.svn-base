@@ -1,0 +1,24 @@
+#pragma once
+#include "Ennemy.h"
+#include "Goomba.h"
+
+
+//En théorie, on peut mettre un nombre illimité de classes dans des fichiers .h et leur .cpp associés
+//Mais ne faites ça que si les classes sont vraiment très simples et dans une hiérarchie d'héritage
+namespace platformer
+{
+	class UsineDennemy
+	{
+	public:
+		virtual Ennemy * FabriquerEnnemy() = 0;
+	};
+
+	class UsineDeGoomba : public UsineDennemy
+	{
+	public:
+		Ennemy * FabriquerVoiture()
+		{
+		//	return new Goomba();
+		}
+	};
+}

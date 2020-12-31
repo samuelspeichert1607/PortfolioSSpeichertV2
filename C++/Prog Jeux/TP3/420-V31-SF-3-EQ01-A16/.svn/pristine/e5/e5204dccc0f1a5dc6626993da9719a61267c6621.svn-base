@@ -1,0 +1,14 @@
+#pragma once
+#include "Minion.h"
+#include "Sujet.h"
+
+class Tour : public Minion, public Sujet
+{
+public:
+	Tour(bool isAlly);
+	~Tour();
+	void spawn(MinionType type);
+private:
+	Texture textureTour;
+
+};

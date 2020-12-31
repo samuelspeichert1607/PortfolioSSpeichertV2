@@ -1,0 +1,18 @@
+#pragma once
+#include "ObjetDeJeu.h"
+#include <stdlib.h>
+#include <time.h>
+
+	class Radiation : public ObjetDeJeu
+	{
+	public:
+		Radiation(const Vector2f& taille, const Vector2f& position, const Color& couleur, int ID);
+		float getEchelle() const;
+		int getForce() const;
+		void action();
+
+	private:
+		int force;
+		float echelle;
+	};
+

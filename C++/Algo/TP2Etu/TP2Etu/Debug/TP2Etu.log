@@ -1,0 +1,21 @@
+﻿La génération a démarré 12/9/2016 9:12:49 AM.
+     1>Projet "D:\Cegep Ste-Foy\Algoritmes et structures de données II\Étape 2\TP2Etu\TP2Etu\TP2Etu.vcxproj" sur le nœud 2 (Build cible(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Visual Leak Detector\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Cube.cpp
+         Cube.cpp
+     1>d:\cegep ste-foy\algoritmes et structures de données ii\étape 2\tp2etu\tp2etu\cube.cpp(57): warning C4018: '<' : incompatibilité signed/unsigned
+     1>d:\cegep ste-foy\algoritmes et structures de données ii\étape 2\tp2etu\tp2etu\cube.cpp(156): warning C4154: suppression d'une expression de tableau ; conversion en pointeur fournie
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Cegep Ste-Foy\Algoritmes et structures de données II\Étape 2\TP2Etu\Debug\TP2Etu.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files (x86)\Visual Leak Detector\lib\Win32" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Cegep Ste-Foy\Algoritmes et structures de données II\Étape 2\TP2Etu\Debug\TP2Etu.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Cegep Ste-Foy\Algoritmes et structures de données II\Étape 2\TP2Etu\Debug\TP2Etu.lib" /MACHINE:X86 Debug\ConsoleMenu.obj
+         Debug\Cube.obj
+         Debug\File.obj
+         Debug\main.obj
+         Debug\Noeud.obj
+         Debug\Pile.obj
+         Debug\ROB.obj
+         TP2Etu.vcxproj -> D:\Cegep Ste-Foy\Algoritmes et structures de données II\Étape 2\TP2Etu\Debug\TP2Etu.exe
+     1>Génération du projet "D:\Cegep Ste-Foy\Algoritmes et structures de données II\Étape 2\TP2Etu\TP2Etu\TP2Etu.vcxproj" terminée (Build cible(s)).
+
+La génération a réussi.
+
+Temps écoulé 00:00:02.04

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TP1 - Session 3", "TP1 - Session 3\TP1 - Session 3.vcxproj", "{6F1662DC-F85F-4006-9BA0-9D7A6E961BC1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TP1 -Session 3 Test", "TP1 -Session 3 Test\TP1 -Session 3 Test.vcxproj", "{46407297-593F-48A9-BDDB-45A986416706}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F1662DC-F85F-4006-9BA0-9D7A6E961BC1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6F1662DC-F85F-4006-9BA0-9D7A6E961BC1}.Debug|Win32.Build.0 = Debug|Win32
+		{6F1662DC-F85F-4006-9BA0-9D7A6E961BC1}.Release|Win32.ActiveCfg = Release|Win32
+		{6F1662DC-F85F-4006-9BA0-9D7A6E961BC1}.Release|Win32.Build.0 = Release|Win32
+		{46407297-593F-48A9-BDDB-45A986416706}.Debug|Win32.ActiveCfg = Debug|Win32
+		{46407297-593F-48A9-BDDB-45A986416706}.Debug|Win32.Build.0 = Debug|Win32
+		{46407297-593F-48A9-BDDB-45A986416706}.Release|Win32.ActiveCfg = Release|Win32
+		{46407297-593F-48A9-BDDB-45A986416706}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

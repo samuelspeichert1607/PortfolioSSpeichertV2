@@ -1,0 +1,36 @@
+#include "Lancier.h"
+
+Lancier::Lancier(bool isAlly)
+{
+	speed = 4;
+	pointsDeVie = 185;
+	pointsDeVieMax = 185;
+	range = 10;
+	pointsDAttaque = 55;
+	cout = 2;
+	this->isAlly = isAlly;
+	if (isAlly)
+	{
+		isFacingLeft = false;
+	}
+	else
+	{
+		isFacingLeft = true;
+	}
+	Minion();
+}
+
+Lancier::~Lancier()
+{
+
+}
+
+void Lancier::javelot()
+{
+	range += 40;
+	timeSpecialAttack.restart();
+}
+void Lancier::annulerJavelot()
+{
+	range -= 40;
+}

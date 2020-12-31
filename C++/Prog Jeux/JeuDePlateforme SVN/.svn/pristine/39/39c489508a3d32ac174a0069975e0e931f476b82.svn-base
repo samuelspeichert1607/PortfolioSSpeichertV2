@@ -1,0 +1,10 @@
+#include "Diamond.h"
+
+Diamond::Diamond(const float posX, const float posY, RenderWindow* const renderWindow) : Collectible(posX,posY,renderWindow)
+{
+
+}
+
+Diamond::~Diamond()
+{
+}

@@ -1,0 +1,32 @@
+#include "Coin.h"
+
+using namespace platformer;
+
+
+Coin::Coin(const float posX, const float posY, RenderWindow* const renderWindow)
+{
+	setPosition(posX, posY);
+}
+
+Coin::~Coin()
+{
+
+}
+
+bool Coin::chargerTextures(const char texturePath[])
+{
+	if (!texture.loadFromFile(texturePath))
+	{
+		return false;
+	}
+
+	texture.setSmooth(false);
+	return true;
+}
+
+void Coin::ajustementsVisuels()
+{
+	setTexture(texture);
+}
+
+

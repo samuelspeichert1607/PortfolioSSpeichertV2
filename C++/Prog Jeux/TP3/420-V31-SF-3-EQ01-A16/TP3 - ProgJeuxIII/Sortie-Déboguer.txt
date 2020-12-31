@@ -1,0 +1,271 @@
+﻿'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'D:\Cegep Ste-Foy\Programmation de jeux vidéo III\Étape 3\TP3\420-V31-SF-3-EQ01-A16\TP3 - ProgJeuxIII\Debug\TP3 - ProgJeuxIII.exe'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\ntdll.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\kernel32.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Déchargé 'C:\Windows\SysWOW64\kernel32.dll'
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\kernel32.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\KernelBase.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Program Files (x86)\AVG\Av\avghookx.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'D:\Cegep Ste-Foy\Programmation de jeux vidéo III\Étape 3\TP3\420-V31-SF-3-EQ01-A16\TP3 - ProgJeuxIII\Debug\sfml-system-d-2.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'D:\Cegep Ste-Foy\Programmation de jeux vidéo III\Étape 3\TP3\420-V31-SF-3-EQ01-A16\TP3 - ProgJeuxIII\Debug\sfml-graphics-d-2.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'D:\Cegep Ste-Foy\Programmation de jeux vidéo III\Étape 3\TP3\420-V31-SF-3-EQ01-A16\TP3 - ProgJeuxIII\Debug\sfml-window-d-2.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\gdi32.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\gdi32full.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\user32.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\win32u.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\advapi32.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\msvcrt.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\sechost.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\rpcrt4.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\sspicli.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\cryptbase.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\bcryptprimitives.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\msvcp120d.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\msvcr120d.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Program Files (x86)\Visual Leak Detector\bin\Win32\vld_x86.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\winmm.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\opengl32.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Program Files (x86)\Visual Leak Detector\bin\Win32\dbghelp.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\winmmbase.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\cfgmgr32.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\glu32.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\ddraw.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\dciman32.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\imm32.dll'. Les symboles ont été chargés.
+Visual Leak Detector read settings from: C:\Program Files (x86)\Visual Leak Detector\vld.ini
+Visual Leak Detector Version 2.5 installed.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\uxtheme.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\combase.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\ucrtbase.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\msctf.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\oleaut32.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\msvcp_win.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\nvinit.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\version.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\ig75icd32.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\shell32.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\windows.storage.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\powrprof.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\shlwapi.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\kernel.appcore.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\SHCore.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\profapi.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\igdusc32.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\wtsapi32.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\dwmapi.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Déchargé 'C:\Windows\SysWOW64\version.dll'
+'TP3 - ProgJeuxIII.exe' (Win32) : Déchargé 'C:\Windows\SysWOW64\nvinit.dll'
+Le thread 0x3174 s'est arrêté avec le code 0 (0x0).
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\version.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Déchargé 'C:\Windows\SysWOW64\version.dll'
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\version.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Déchargé 'C:\Windows\SysWOW64\version.dll'
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\dinput.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\hid.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\setupapi.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\devobj.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\wintrust.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\msasn1.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\crypt32.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Chargé 'C:\Windows\SysWOW64\version.dll'. Les symboles ont été chargés.
+'TP3 - ProgJeuxIII.exe' (Win32) : Déchargé 'C:\Windows\SysWOW64\version.dll'
+HEAP[TP3 - ProgJeuxIII.exe]: HEAP: Free Heap block 0824F310 modified at 0824F674 after it was freed
+TP3 - ProgJeuxIII.exe a déclenché un point d'arrêt.
+
+HEAP[TP3 - ProgJeuxIII.exe]: HEAP: Free Heap block 0823A768 modified at 0823AE0C after it was freed
+TP3 - ProgJeuxIII.exe a déclenché un point d'arrêt.
+
+HEAP[TP3 - ProgJeuxIII.exe]: HEAP: Free Heap block 08240330 modified at 08240494 after it was freed
+TP3 - ProgJeuxIII.exe a déclenché un point d'arrêt.
+
+Le thread 0x30e0 s'est arrêté avec le code 0 (0x0).
+Le thread 0x1320 s'est arrêté avec le code 0 (0x0).
+Le thread 0x28dc s'est arrêté avec le code 0 (0x0).
+Le thread 0x304c s'est arrêté avec le code 0 (0x0).
+Le thread 0x30b4 s'est arrêté avec le code 0 (0x0).
+Le thread 0x2598 s'est arrêté avec le code 0 (0x0).
+Le thread 0x2c7c s'est arrêté avec le code 0 (0x0).
+Le thread 0x2794 s'est arrêté avec le code 0 (0x0).
+Le thread 0x30f8 s'est arrêté avec le code 0 (0x0).
+Le thread 0x1db8 s'est arrêté avec le code 0 (0x0).
+Le thread 0x2c80 s'est arrêté avec le code 0 (0x0).
+WARNING: Visual Leak Detector detected memory leaks!
+---------- Block 6802 at 0x080E3470: 8 bytes ----------
+  Leak Hash: 0x49583282, Count: 1, Total 8 bytes
+  Call Stack (TID 13480):
+    f:\dd\vctools\crt\crtw32\heap\new.cpp (57): MSVCR120D.dll!operator new()
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\minion.cpp (283): TP3 - ProgJeuxIII.exe!Minion::AjouterDestination() + 0x7 bytes
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\groupeminion.cpp (58): TP3 - ProgJeuxIII.exe!GroupeMinion::AjouterDestination()
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp (174): TP3 - ProgJeuxIII.exe!Game::getInputs() + 0x1D bytes
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp (67): TP3 - ProgJeuxIII.exe!Game::run()
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\main.cpp (8): TP3 - ProgJeuxIII.exe!main() + 0xB bytes
+    f:\dd\vctools\crt\crtw32\dllstuff\crtexe.c (466): TP3 - ProgJeuxIII.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!__RtlUserThreadStart() + 0x2F bytes
+    ntdll.dll!_RtlUserThreadStart() + 0x1B bytes
+  Data:
+    00 80 D1 43    00 00 7C 43                                   ...C..|C ........
+
+
+---------- Block 6748 at 0x0820A7D0: 12 bytes ----------
+  Leak Hash: 0xFC6BBAB2, Count: 1, Total 12 bytes
+  Call Stack (TID 13480):
+    f:\dd\vctools\crt\crtw32\heap\new.cpp (57): MSVCR120D.dll!operator new()
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\pile.hpp (21): TP3 - ProgJeuxIII.exe!Pile<sf::Vector2<float> >::Push() + 0x7 bytes
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\minion.cpp (283): TP3 - ProgJeuxIII.exe!Minion::AjouterDestination()
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\groupeminion.cpp (58): TP3 - ProgJeuxIII.exe!GroupeMinion::AjouterDestination()
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp (174): TP3 - ProgJeuxIII.exe!Game::getInputs() + 0x1D bytes
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp (67): TP3 - ProgJeuxIII.exe!Game::run()
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\main.cpp (8): TP3 - ProgJeuxIII.exe!main() + 0xB bytes
+    f:\dd\vctools\crt\crtw32\dllstuff\crtexe.c (466): TP3 - ProgJeuxIII.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!__RtlUserThreadStart() + 0x2F bytes
+    ntdll.dll!_RtlUserThreadStart() + 0x1B bytes
+  Data:
+    EE FE EE FE    EE FE EE FE    CD CD CD CD                    ........ ........
+
+
+---------- Block 6749 at 0x08234BE8: 8 bytes ----------
+  Leak Hash: 0x49583282, Count: 1, Total 8 bytes
+  Call Stack (TID 13480):
+    f:\dd\vctools\crt\crtw32\heap\new.cpp (57): MSVCR120D.dll!operator new()
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\minion.cpp (283): TP3 - ProgJeuxIII.exe!Minion::AjouterDestination() + 0x7 bytes
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\groupeminion.cpp (58): TP3 - ProgJeuxIII.exe!GroupeMinion::AjouterDestination()
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp (174): TP3 - ProgJeuxIII.exe!Game::getInputs() + 0x1D bytes
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp (67): TP3 - ProgJeuxIII.exe!Game::run()
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\main.cpp (8): TP3 - ProgJeuxIII.exe!main() + 0xB bytes
+    f:\dd\vctools\crt\crtw32\dllstuff\crtexe.c (466): TP3 - ProgJeuxIII.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!__RtlUserThreadStart() + 0x2F bytes
+    ntdll.dll!_RtlUserThreadStart() + 0x1B bytes
+  Data:
+    00 80 A5 43    00 80 95 43                                   ...C...C ........
+
+
+---------- Block 4101 at 0x08234C78: 8 bytes ----------
+  Leak Hash: 0x49583282, Count: 1, Total 8 bytes
+  Call Stack (TID 13480):
+    f:\dd\vctools\crt\crtw32\heap\new.cpp (57): MSVCR120D.dll!operator new()
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\minion.cpp (283): TP3 - ProgJeuxIII.exe!Minion::AjouterDestination() + 0x7 bytes
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\groupeminion.cpp (58): TP3 - ProgJeuxIII.exe!GroupeMinion::AjouterDestination()
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp (174): TP3 - ProgJeuxIII.exe!Game::getInputs() + 0x1D bytes
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp (67): TP3 - ProgJeuxIII.exe!Game::run()
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\main.cpp (8): TP3 - ProgJeuxIII.exe!main() + 0xB bytes
+    f:\dd\vctools\crt\crtw32\dllstuff\crtexe.c (466): TP3 - ProgJeuxIII.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!__RtlUserThreadStart() + 0x2F bytes
+    ntdll.dll!_RtlUserThreadStart() + 0x1B bytes
+  Data:
+    00 80 D6 43    00 80 9F 43                                   ...C...C ........
+
+
+---------- Block 6845 at 0x0823B5F0: 12 bytes ----------
+  Leak Hash: 0xFC6BBAB2, Count: 1, Total 12 bytes
+  Call Stack (TID 13480):
+    f:\dd\vctools\crt\crtw32\heap\new.cpp (57): MSVCR120D.dll!operator new()
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\pile.hpp (21): TP3 - ProgJeuxIII.exe!Pile<sf::Vector2<float> >::Push() + 0x7 bytes
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\minion.cpp (283): TP3 - ProgJeuxIII.exe!Minion::AjouterDestination()
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\groupeminion.cpp (58): TP3 - ProgJeuxIII.exe!GroupeMinion::AjouterDestination()
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp (174): TP3 - ProgJeuxIII.exe!Game::getInputs() + 0x1D bytes
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp (67): TP3 - ProgJeuxIII.exe!Game::run()
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\main.cpp (8): TP3 - ProgJeuxIII.exe!main() + 0xB bytes
+    f:\dd\vctools\crt\crtw32\dllstuff\crtexe.c (466): TP3 - ProgJeuxIII.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!__RtlUserThreadStart() + 0x2F bytes
+    ntdll.dll!_RtlUserThreadStart() + 0x1B bytes
+  Data:
+    70 34 0E 08    D0 BC 24 08    CD CD CD CD                    p4....$. ........
+
+
+---------- Block 6846 at 0x0823C6A0: 8 bytes ----------
+  Leak Hash: 0x49583282, Count: 1, Total 8 bytes
+  Call Stack (TID 13480):
+    f:\dd\vctools\crt\crtw32\heap\new.cpp (57): MSVCR120D.dll!operator new()
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\minion.cpp (283): TP3 - ProgJeuxIII.exe!Minion::AjouterDestination() + 0x7 bytes
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\groupeminion.cpp (58): TP3 - ProgJeuxIII.exe!GroupeMinion::AjouterDestination()
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp (174): TP3 - ProgJeuxIII.exe!Game::getInputs() + 0x1D bytes
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp (67): TP3 - ProgJeuxIII.exe!Game::run()
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\main.cpp (8): TP3 - ProgJeuxIII.exe!main() + 0xB bytes
+    f:\dd\vctools\crt\crtw32\dllstuff\crtexe.c (466): TP3 - ProgJeuxIII.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!__RtlUserThreadStart() + 0x2F bytes
+    ntdll.dll!_RtlUserThreadStart() + 0x1B bytes
+  Data:
+    00 80 DE 43    00 00 68 43                                   ...C..hC ........
+
+
+---------- Block 4100 at 0x082407E0: 12 bytes ----------
+  Leak Hash: 0xFC6BBAB2, Count: 1, Total 12 bytes
+  Call Stack (TID 13480):
+    f:\dd\vctools\crt\crtw32\heap\new.cpp (57): MSVCR120D.dll!operator new()
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\pile.hpp (21): TP3 - ProgJeuxIII.exe!Pile<sf::Vector2<float> >::Push() + 0x7 bytes
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\minion.cpp (283): TP3 - ProgJeuxIII.exe!Minion::AjouterDestination()
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\groupeminion.cpp (58): TP3 - ProgJeuxIII.exe!GroupeMinion::AjouterDestination()
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp (174): TP3 - ProgJeuxIII.exe!Game::getInputs() + 0x1D bytes
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp (67): TP3 - ProgJeuxIII.exe!Game::run()
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\main.cpp (8): TP3 - ProgJeuxIII.exe!main() + 0xB bytes
+    f:\dd\vctools\crt\crtw32\dllstuff\crtexe.c (466): TP3 - ProgJeuxIII.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!__RtlUserThreadStart() + 0x2F bytes
+    ntdll.dll!_RtlUserThreadStart() + 0x1B bytes
+  Data:
+    EE FE EE FE    EE FE EE FE    CD CD CD CD                    ........ ........
+
+
+---------- Block 8067 at 0x08244058: 8 bytes ----------
+  Leak Hash: 0x49583282, Count: 1, Total 8 bytes
+  Call Stack (TID 13480):
+    f:\dd\vctools\crt\crtw32\heap\new.cpp (57): MSVCR120D.dll!operator new()
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\minion.cpp (283): TP3 - ProgJeuxIII.exe!Minion::AjouterDestination() + 0x7 bytes
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\groupeminion.cpp (58): TP3 - ProgJeuxIII.exe!GroupeMinion::AjouterDestination()
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp (174): TP3 - ProgJeuxIII.exe!Game::getInputs() + 0x1D bytes
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp (67): TP3 - ProgJeuxIII.exe!Game::run()
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\main.cpp (8): TP3 - ProgJeuxIII.exe!main() + 0xB bytes
+    f:\dd\vctools\crt\crtw32\dllstuff\crtexe.c (466): TP3 - ProgJeuxIII.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!__RtlUserThreadStart() + 0x2F bytes
+    ntdll.dll!_RtlUserThreadStart() + 0x1B bytes
+  Data:
+    00 00 2F 43    00 80 9B 43                                   ../C...C ........
+
+
+---------- Block 6801 at 0x0824BCD0: 12 bytes ----------
+  Leak Hash: 0xFC6BBAB2, Count: 1, Total 12 bytes
+  Call Stack (TID 13480):
+    f:\dd\vctools\crt\crtw32\heap\new.cpp (57): MSVCR120D.dll!operator new()
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\pile.hpp (21): TP3 - ProgJeuxIII.exe!Pile<sf::Vector2<float> >::Push() + 0x7 bytes
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\minion.cpp (283): TP3 - ProgJeuxIII.exe!Minion::AjouterDestination()
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\groupeminion.cpp (58): TP3 - ProgJeuxIII.exe!GroupeMinion::AjouterDestination()
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp (174): TP3 - ProgJeuxIII.exe!Game::getInputs() + 0x1D bytes
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp (67): TP3 - ProgJeuxIII.exe!Game::run()
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\main.cpp (8): TP3 - ProgJeuxIII.exe!main() + 0xB bytes
+    f:\dd\vctools\crt\crtw32\dllstuff\crtexe.c (466): TP3 - ProgJeuxIII.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!__RtlUserThreadStart() + 0x2F bytes
+    ntdll.dll!_RtlUserThreadStart() + 0x1B bytes
+  Data:
+    E8 4B 23 08    D0 A7 20 08    CD CD CD CD                    .K#..... ........
+
+
+---------- Block 8066 at 0x0824FCC8: 12 bytes ----------
+  Leak Hash: 0xFC6BBAB2, Count: 1, Total 12 bytes
+  Call Stack (TID 13480):
+    f:\dd\vctools\crt\crtw32\heap\new.cpp (57): MSVCR120D.dll!operator new()
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\pile.hpp (21): TP3 - ProgJeuxIII.exe!Pile<sf::Vector2<float> >::Push() + 0x7 bytes
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\minion.cpp (283): TP3 - ProgJeuxIII.exe!Minion::AjouterDestination()
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\groupeminion.cpp (58): TP3 - ProgJeuxIII.exe!GroupeMinion::AjouterDestination()
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp (174): TP3 - ProgJeuxIII.exe!Game::getInputs() + 0x1D bytes
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\game.cpp (67): TP3 - ProgJeuxIII.exe!Game::run()
+    d:\cegep ste-foy\programmation de jeux vidéo iii\étape 3\tp3\420-v31-sf-3-eq01-a16\tp3 - progjeuxiii\tp3 - progjeuxiii\main.cpp (8): TP3 - ProgJeuxIII.exe!main() + 0xB bytes
+    f:\dd\vctools\crt\crtw32\dllstuff\crtexe.c (466): TP3 - ProgJeuxIII.exe!mainCRTStartup()
+    KERNEL32.DLL!BaseThreadInitThunk() + 0x24 bytes
+    ntdll.dll!__RtlUserThreadStart() + 0x2F bytes
+    ntdll.dll!_RtlUserThreadStart() + 0x1B bytes
+  Data:
+    EE FE EE FE    EE FE EE FE    CD CD CD CD                    ........ ........
+
+
+Visual Leak Detector detected 10 memory leaks (460 bytes).
+Largest number used: 11352 bytes.
+Total allocations: 524120 bytes.
+Visual Leak Detector is now exiting.
+Le programme '[9852] TP3 - ProgJeuxIII.exe' s'est arrêté avec le code 0 (0x0).
