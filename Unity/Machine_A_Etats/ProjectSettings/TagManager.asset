@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Background
+  - Terrain
+  - Buildings
+  - Caracters
+  - CustomUI
+  - redHitBox
+  - blueHitBox
+  - redBallHitBox
+  - blueBallHitBox
+  - circleCollider
+  - 
+  - 
+  - redTower
+  - blueTower
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Terrain
+    uniqueID: 3902700395
+    locked: 0
+  - name: Forets
+    uniqueID: 848594403
+    locked: 0
+  - name: Projectiles
+    uniqueID: 1778424149
+    locked: 0
+  - name: Soldats
+    uniqueID: 3532879871
+    locked: 0
+  - name: Tours
+    uniqueID: 2871220071
+    locked: 0
+  - name: Texte
+    uniqueID: 1114213203
+    locked: 0
