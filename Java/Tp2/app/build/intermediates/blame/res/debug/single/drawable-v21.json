@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "D:\\Cegep Ste-Foy\\Programmation Mobile I\\Etape 2\\Tp2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_hide_password.xml",
+        "source": "C:\\Users\\Devilclown1607\\.android\\build-cache\\2f62e2718cc6c1075b408a7db6c30f9695165f1e\\output\\res\\drawable-v21\\avd_hide_password.xml"
+    },
+    {
+        "merged": "D:\\Cegep Ste-Foy\\Programmation Mobile I\\Etape 2\\Tp2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_password_eye.xml",
+        "source": "C:\\Users\\Devilclown1607\\.android\\build-cache\\2f62e2718cc6c1075b408a7db6c30f9695165f1e\\output\\res\\drawable-v21\\design_password_eye.xml"
+    },
+    {
+        "merged": "D:\\Cegep Ste-Foy\\Programmation Mobile I\\Etape 2\\Tp2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
+        "source": "C:\\Users\\Devilclown1607\\.android\\build-cache\\e4bf862fc0aab13812616b23ad6d0c89c4281a5f\\output\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "D:\\Cegep Ste-Foy\\Programmation Mobile I\\Etape 2\\Tp2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\notification_action_background.xml",
+        "source": "C:\\Users\\Devilclown1607\\.android\\build-cache\\e4bf862fc0aab13812616b23ad6d0c89c4281a5f\\output\\res\\drawable-v21\\notification_action_background.xml"
+    },
+    {
+        "merged": "D:\\Cegep Ste-Foy\\Programmation Mobile I\\Etape 2\\Tp2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_show_password.xml",
+        "source": "C:\\Users\\Devilclown1607\\.android\\build-cache\\2f62e2718cc6c1075b408a7db6c30f9695165f1e\\output\\res\\drawable-v21\\avd_show_password.xml"
+    },
+    {
+        "merged": "D:\\Cegep Ste-Foy\\Programmation Mobile I\\Etape 2\\Tp2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_bottom_navigation_item_background.xml",
+        "source": "C:\\Users\\Devilclown1607\\.android\\build-cache\\2f62e2718cc6c1075b408a7db6c30f9695165f1e\\output\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
+    },
+    {
+        "merged": "D:\\Cegep Ste-Foy\\Programmation Mobile I\\Etape 2\\Tp2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\Devilclown1607\\.android\\build-cache\\e4bf862fc0aab13812616b23ad6d0c89c4281a5f\\output\\res\\drawable-v21\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "D:\\Cegep Ste-Foy\\Programmation Mobile I\\Etape 2\\Tp2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\Devilclown1607\\.android\\build-cache\\e4bf862fc0aab13812616b23ad6d0c89c4281a5f\\output\\res\\drawable-v21\\abc_btn_colored_material.xml"
+    }
+]

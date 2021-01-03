@@ -1,0 +1,128 @@
+<android.support.constraint.ConstraintLayout
+    android:id="@+id/rootView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ca.csf.mobile1.tp2.activity.MainActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <EditText
+        android:id="@+id/inputEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:maxLines="1"
+        tools:text="@string/please_write_text_here"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="16dp"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:fabSize="normal"
+        android:onClick="onKeyButtonPress"
+        app:srcCompat="@drawable/ic_vpn_key_black_24dp"
+        android:id="@+id/selectKeyButton"
+        app:layout_constraintTop_toTopOf="@+id/progressBar"
+        app:layout_constraintBottom_toBottomOf="@+id/progressBar"
+        app:layout_constraintVertical_bias="0.5"
+        android:layout_marginRight="0dp"
+        app:layout_constraintRight_toRightOf="@+id/decryptButton" />
+
+    <Button
+        android:id="@+id/decryptButton"
+        android:layout_width="128dp"
+        android:layout_height="48dp"
+        android:onClick="onDecryptButtonPress"
+        android:text="@string/decrypt_text"
+        android:visibility="visible"
+        android:layout_marginRight="0dp"
+        app:layout_constraintRight_toRightOf="@+id/inputEditText"
+        app:layout_constraintTop_toTopOf="@+id/encryptButton"
+        android:layout_marginTop="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/encryptButton"
+        android:layout_marginBottom="0dp" />
+
+    <Button
+        android:id="@+id/encryptButton"
+        android:layout_width="128dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:onClick="onEncryptButtonPress"
+        android:text="@string/crypt_text"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/inputEditText"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/inputEditText" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="22dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="24dp"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="@+id/encryptButton"
+        app:layout_constraintRight_toLeftOf="@+id/selectKeyButton"
+        app:layout_constraintTop_toBottomOf="@+id/encryptButton" />
+
+    <TextView
+        android:id="@+id/messageTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/your_text_here"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/keyInfoText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/progressBar"
+        app:layout_constraintRight_toRightOf="@+id/selectKeyButton"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <TextView
+        android:id="@+id/keyInfoText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:text="@string/text_key"
+        app:layout_constraintLeft_toLeftOf="@+id/messageTextView"
+        app:layout_constraintRight_toLeftOf="@+id/copyButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginBottom="15dp" />
+
+    <ImageButton
+        android:id="@+id/copyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:onClick="onCopyButtonPress"
+        app:layout_constraintBottom_toBottomOf="@+id/keyInfoText"
+        app:layout_constraintRight_toRightOf="@+id/messageTextView"
+        app:layout_constraintTop_toTopOf="@+id/keyInfoText"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="?android:attr/actionModeCopyDrawable" />
+
+</android.support.constraint.ConstraintLayout>
+

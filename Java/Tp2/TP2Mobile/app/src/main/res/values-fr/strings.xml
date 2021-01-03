@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Substitution par chiffrement</string>
+    <string name="clipboard_encrypted_text">Texte encrypyté</string>
+    <string name="text_key">"Clé : "</string>
+    <string name="crypt_text">Encrypter</string>
+    <string name="decrypt_text">Décrypter</string>
+    <string name="please_write_text_here">Veuillez écrire le message ici.</string>
+    <string name="your_text_here">Votre texte sera montré ici.</string>
+    <string name="no_internet">Oups! Vous ne semblez pas connecté à Internet...</string>
+    <string name="cancel">Annuler</string>
+    <string name="title">Substitution par chiffrement</string>
+    <string name="connection_error">Erreur de connexion</string>
+    <string name="activate_wifi">Acvtiver le wifi</string>
+    <string name="invalid_character">Mince! Il y a un caractère invalide.</string>
+</resources>

@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Substitution Cypher</string>
+
+    <string name="text_key">Key :  </string>
+	
+	<string name="clipboard_encrypted_text">Encrypted text</string>
+
+    <string name="crypt_text">Encrypt</string>
+
+    <string name="decrypt_text">Decrypt</string>
+
+    <string name="please_write_text_here">Please write the message here.</string>
+
+    <string name="your_text_here">Your text will be shown here.</string>
+
+    <string name="no_internet">Uh oh! You don\'t seem to be connected to the Internet.</string>
+
+    <string name="connection_error">Connection error</string>
+
+    <string name="activate_wifi">Activate the wifi</string>
+
+    <string name="cancel">Cancel</string>
+
+    <string name="invalid_character">uhOh! There is an invalid character!</string>
+
+    <string name="title">Titre</string>
+
+</resources>

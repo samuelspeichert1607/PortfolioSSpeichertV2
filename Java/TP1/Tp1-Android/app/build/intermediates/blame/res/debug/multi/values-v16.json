@@ -1,0 +1,26 @@
+[
+    {
+        "outputFile": "D:\\Cegep Ste-Foy\\Programmation Mobile I\\Etape 1\\TP1\\Tp1-Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 65,
+                    "endOffset": 116
+                },
+                "from": {
+                    "file": "C:\\Users\\Devilclown1607\\.android\\build-cache\\01d6efa96c64d305654477e64c9cc61315d35824\\output\\res\\values-v16\\values-v16.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 65,
+                        "endOffset": 116
+                    }
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ca.csf.mobile1.tp1.chemical.compound.ChemicalCompoundGroupTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-02-24T19:07:05" hostname="Samuel" time="0.002">
+  <properties/>
+  <testcase name="canComputeWeightFromElementsComposingTheChemicalCompound" classname="ca.csf.mobile1.tp1.chemical.compound.ChemicalCompoundGroupTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

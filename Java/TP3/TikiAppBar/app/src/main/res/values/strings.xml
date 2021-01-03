@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TikiAppBar</string>
+    <string name="bd_name">TikiAppClient</string>
+    <string name="supprimer_commande_main">Delete</string>
+    <string name="supprimer_commande">Delete this order</string>
+    <string name="return_button">return</string>
+    <string name="ingredients_list">This cocktail contains:</string>
+    <string name="confirmation_delete_order">The order as been correctly deleted</string>
+    <string name="cocktail_display">Cocktail: </string>
+    <string name="client_display">Client: </string>
+    <string name="hour_display">Time of order: </string>
+</resources>

@@ -1,0 +1,33 @@
+<android.support.constraint.ConstraintLayout
+    android:id="@+id/rootView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ca.csf.mobile1.tp2.activity.MainActivity">
+
+    <EditText
+        android:id="@+id/inputEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:maxLines="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Tap to input some text"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="78dp" />
+
+</android.support.constraint.ConstraintLayout>

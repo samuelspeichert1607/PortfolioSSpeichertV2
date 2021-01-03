@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Substitution Cypher</string>
+
+    <string name="text_key">Key</string>
+	
+	<string name="clipboard_encrypted_text">Encrypted text</string>
+</resources>

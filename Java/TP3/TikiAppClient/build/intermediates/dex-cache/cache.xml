@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\Devilclown1607\.android\build-cache\85a590a5300e93bf4c9712db4000278e2ab38330\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="152de8da301561dcb0946471697a420d8f7a68c5">
+        <dex dex="D:\Cegep Ste-Foy\Programmation Mobile I\Etape 3\TP3\TikiAppClient\app\build\intermediates\pre-dexed\debug\classes_94c266b940283e86d07af1c1c9af498534bf6f1c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Devilclown1607\.android\build-cache\8dadc053c92fbeec4a91e31a7a25b7cd710b33d5\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e51c2f662bb72419632af5192553c37e33890a99">
+        <dex dex="D:\Cegep Ste-Foy\Programmation Mobile I\Etape 3\TP3\TikiAppClient\app\build\intermediates\pre-dexed\debug\classes_035bcd3cf62fbb472b0e43eecbda46d6f782412b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Devilclown1607\.android\build-cache\bade78b20e01fedbe223e5f59b7684106ab64035\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ea6a989b83d19b1b461281e0475a6cd6514897f8">
+        <dex dex="D:\Cegep Ste-Foy\Programmation Mobile I\Etape 3\TP3\TikiAppClient\app\build\intermediates\pre-dexed\debug\classes_a527729b674c3730375cf9dbc8391e2e77f3aae6.jar" />
+    </item>
+
+</items>

@@ -1,0 +1,11 @@
+Version Core :
+https://gitlab.com/Devilclown1607/TP1-ProgMobile.git
+
+Version Console :
+https://gitlab.com/Devilclown1607/TP1-ProgMobileConsole.git
+
+Version Android :
+https://gitlab.com/Devilclown1607/TP1-ProgMobileAndroid.git
+
+Nom : Samuel Speichert
+Matricule : 1563910

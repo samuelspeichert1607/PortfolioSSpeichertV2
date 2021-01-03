@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TikiAppClient</string>
+    <string name="bd_name">TikiAppClient</string>
+    <string name="enter_name_hint">Write your name here to order</string>
+    <string name="return_button">return</string>
+    <string name="command_button">order</string>
+    <string name="ingredients_list">This cocktail contains:</string>
+    <string name="Empty_name_error">You must enter your name in order to enter an order.</string>
+    <string name="command_registered">Order registered. Ready for NFC.</string>
+</resources>

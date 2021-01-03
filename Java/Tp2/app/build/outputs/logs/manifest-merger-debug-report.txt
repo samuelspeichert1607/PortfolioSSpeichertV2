@@ -1,0 +1,76 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\Cegep Ste-Foy\Programmation Mobile I\Etape 2\Tp2\app\src\main\AndroidManifest.xml:1:1-18:12
+	package
+		ADDED from D:\Cegep Ste-Foy\Programmation Mobile I\Etape 2\Tp2\app\src\main\AndroidManifest.xml:2:11-39
+		INJECTED from D:\Cegep Ste-Foy\Programmation Mobile I\Etape 2\Tp2\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Cegep Ste-Foy\Programmation Mobile I\Etape 2\Tp2\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\Cegep Ste-Foy\Programmation Mobile I\Etape 2\Tp2\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Cegep Ste-Foy\Programmation Mobile I\Etape 2\Tp2\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\Cegep Ste-Foy\Programmation Mobile I\Etape 2\Tp2\app\src\main\AndroidManifest.xml:1:11-69
+	android:versionCode
+		INJECTED from D:\Cegep Ste-Foy\Programmation Mobile I\Etape 2\Tp2\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Cegep Ste-Foy\Programmation Mobile I\Etape 2\Tp2\app\src\main\AndroidManifest.xml
+application
+ADDED from D:\Cegep Ste-Foy\Programmation Mobile I\Etape 2\Tp2\app\src\main\AndroidManifest.xml:4:5-16:19
+MERGED from [com.android.support:design:25.2.0] C:\Users\Devilclown1607\.android\build-cache\2f62e2718cc6c1075b408a7db6c30f9695165f1e\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:25.2.0] C:\Users\Devilclown1607\.android\build-cache\e4bf862fc0aab13812616b23ad6d0c89c4281a5f\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.2.0] C:\Users\Devilclown1607\.android\build-cache\c24348018fbf2bbcd7997a89ed788c826f31556e\output\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:25.2.0] C:\Users\Devilclown1607\.android\build-cache\d9ad9853138d6ee1e26cab0687d7c07ed510e573\output\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:transition:25.2.0] C:\Users\Devilclown1607\.android\build-cache\c3a1032262e5e89721c56fd03c548b0d868dd1a9\output\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:25.2.0] C:\Users\Devilclown1607\.android\build-cache\6364000cda21060cb8ac71364ed29acc8408aca6\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\Devilclown1607\.android\build-cache\82bf9b34fcbeb3212469df34cf1698f4fa00078e\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.2.0] C:\Users\Devilclown1607\.android\build-cache\290a6fd8a2126cd86942ce5341350e526d559551\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\Devilclown1607\.android\build-cache\4f59325feafe385228eae607bebdbb86b996c475\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\Devilclown1607\.android\build-cache\69226f5dd51ad77c80a6e7586c43a97e096e7e93\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.2.0] C:\Users\Devilclown1607\.android\build-cache\7c3f99268535d0c242efa0211d081c23cf89c4ad\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Devilclown1607\.android\build-cache\57adadd84030430c9b9e76dd6a7791fb2b4e23f5\output\AndroidManifest.xml:9:5-20
+	android:label
+		ADDED from D:\Cegep Ste-Foy\Programmation Mobile I\Etape 2\Tp2\app\src\main\AndroidManifest.xml:7:9-41
+	android:supportsRtl
+		ADDED from D:\Cegep Ste-Foy\Programmation Mobile I\Etape 2\Tp2\app\src\main\AndroidManifest.xml:8:9-35
+	android:allowBackup
+		ADDED from D:\Cegep Ste-Foy\Programmation Mobile I\Etape 2\Tp2\app\src\main\AndroidManifest.xml:5:9-35
+	android:icon
+		ADDED from D:\Cegep Ste-Foy\Programmation Mobile I\Etape 2\Tp2\app\src\main\AndroidManifest.xml:6:9-43
+	android:theme
+		ADDED from D:\Cegep Ste-Foy\Programmation Mobile I\Etape 2\Tp2\app\src\main\AndroidManifest.xml:9:9-40
+activity#ca.csf.mobile1.tp2.activity.MainActivity
+ADDED from D:\Cegep Ste-Foy\Programmation Mobile I\Etape 2\Tp2\app\src\main\AndroidManifest.xml:10:9-15:20
+	android:name
+		ADDED from D:\Cegep Ste-Foy\Programmation Mobile I\Etape 2\Tp2\app\src\main\AndroidManifest.xml:10:19-56
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from D:\Cegep Ste-Foy\Programmation Mobile I\Etape 2\Tp2\app\src\main\AndroidManifest.xml:11:13-14:29
+action#android.intent.action.MAIN
+ADDED from D:\Cegep Ste-Foy\Programmation Mobile I\Etape 2\Tp2\app\src\main\AndroidManifest.xml:12:17-68
+	android:name
+		ADDED from D:\Cegep Ste-Foy\Programmation Mobile I\Etape 2\Tp2\app\src\main\AndroidManifest.xml:12:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\Cegep Ste-Foy\Programmation Mobile I\Etape 2\Tp2\app\src\main\AndroidManifest.xml:13:17-76
+	android:name
+		ADDED from D:\Cegep Ste-Foy\Programmation Mobile I\Etape 2\Tp2\app\src\main\AndroidManifest.xml:13:27-74
+uses-sdk
+INJECTED from D:\Cegep Ste-Foy\Programmation Mobile I\Etape 2\Tp2\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:design:25.2.0] C:\Users\Devilclown1607\.android\build-cache\2f62e2718cc6c1075b408a7db6c30f9695165f1e\output\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.2.0] C:\Users\Devilclown1607\.android\build-cache\e4bf862fc0aab13812616b23ad6d0c89c4281a5f\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.2.0] C:\Users\Devilclown1607\.android\build-cache\c24348018fbf2bbcd7997a89ed788c826f31556e\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.2.0] C:\Users\Devilclown1607\.android\build-cache\d9ad9853138d6ee1e26cab0687d7c07ed510e573\output\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:recyclerview-v7:25.2.0] C:\Users\Devilclown1607\.android\build-cache\fd0603fe4362617bacf2a3487279c8d3073d3948\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.2.0] C:\Users\Devilclown1607\.android\build-cache\c3a1032262e5e89721c56fd03c548b0d868dd1a9\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:25.2.0] C:\Users\Devilclown1607\.android\build-cache\6364000cda21060cb8ac71364ed29acc8408aca6\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.2.0] C:\Users\Devilclown1607\.android\build-cache\82bf9b34fcbeb3212469df34cf1698f4fa00078e\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.2.0] C:\Users\Devilclown1607\.android\build-cache\290a6fd8a2126cd86942ce5341350e526d559551\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.2.0] C:\Users\Devilclown1607\.android\build-cache\4f59325feafe385228eae607bebdbb86b996c475\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.2.0] C:\Users\Devilclown1607\.android\build-cache\69226f5dd51ad77c80a6e7586c43a97e096e7e93\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.2.0] C:\Users\Devilclown1607\.android\build-cache\7c3f99268535d0c242efa0211d081c23cf89c4ad\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Devilclown1607\.android\build-cache\57adadd84030430c9b9e76dd6a7791fb2b4e23f5\output\AndroidManifest.xml:5:5-7:41
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:25.2.0] C:\Users\Devilclown1607\.android\build-cache\2f62e2718cc6c1075b408a7db6c30f9695165f1e\output\AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from D:\Cegep Ste-Foy\Programmation Mobile I\Etape 2\Tp2\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Cegep Ste-Foy\Programmation Mobile I\Etape 2\Tp2\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\Cegep Ste-Foy\Programmation Mobile I\Etape 2\Tp2\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Cegep Ste-Foy\Programmation Mobile I\Etape 2\Tp2\app\src\main\AndroidManifest.xml
