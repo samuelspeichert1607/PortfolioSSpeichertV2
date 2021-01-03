@@ -1,0 +1,127 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
+USE `mydb` ;
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Aeroport`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Aeroport` (
+  `Aeroport_id` INT NOT NULL,
+  `Aeroport_ville` VARCHAR(45) NULL,
+  PRIMARY KEY (`Aeroport_id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Vol`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Vol` (
+  `Vol_id` INT NOT NULL,
+  `Vol_heureDepart` VARCHAR(45) NULL,
+  `Vol_duree` VARCHAR(45) NULL,
+  `Vol_pilote` VARCHAR(45) NULL,
+  `Aeroport_AeroportDepart_id` INT NOT NULL,
+  `Aeroport_AeroportArrivee_id` INT NOT NULL,
+  PRIMARY KEY (`Vol_id`, `Aeroport_AeroportDepart_id`, `Aeroport_AeroportArrivee_id`),
+  INDEX `fk_Vol_Aeroport1_idx` (`Aeroport_AeroportDepart_id` ASC),
+  INDEX `fk_Vol_Aeroport2_idx` (`Aeroport_AeroportArrivee_id` ASC),
+  CONSTRAINT `fk_Vol_Aeroport1`
+    FOREIGN KEY (`Aeroport_AeroportDepart_id`)
+    REFERENCES `mydb`.`Aeroport` (`Aeroport_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Vol_Aeroport2`
+    FOREIGN KEY (`Aeroport_AeroportArrivee_id`)
+    REFERENCES `mydb`.`Aeroport` (`Aeroport_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Avion`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Avion` (
+  `Avion_id` INT NOT NULL,
+  `Avion_nbPlace` VARCHAR(45) NULL,
+  PRIMARY KEY (`Avion_id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Siege`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Siege` (
+  `Siege_id` INT NOT NULL,
+  `Avion_Avion_id` INT NOT NULL,
+  PRIMARY KEY (`Siege_id`, `Avion_Avion_id`),
+  INDEX `fk_Siege_Avion1_idx` (`Avion_Avion_id` ASC),
+  CONSTRAINT `fk_Siege_Avion1`
+    FOREIGN KEY (`Avion_Avion_id`)
+    REFERENCES `mydb`.`Avion` (`Avion_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Passager`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Passager` (
+  `Passager_id` INT NOT NULL,
+  `Passager_nom` VARCHAR(45) NULL,
+  `Passager_adresse` VARCHAR(45) NULL,
+  `Passager_Tel` VARCHAR(45) NULL,
+  `Passager_Courriel` VARCHAR(45) NULL,
+  `Passager_nbPoint` VARCHAR(45) NULL,
+  `Siege_Siege_id` INT NOT NULL,
+  `Siege_Avion_Avion_id` INT NOT NULL,
+  PRIMARY KEY (`Passager_id`, `Siege_Siege_id`, `Siege_Avion_Avion_id`),
+  INDEX `fk_Passager_Siege1_idx` (`Siege_Siege_id` ASC, `Siege_Avion_Avion_id` ASC),
+  CONSTRAINT `fk_Passager_Siege1`
+    FOREIGN KEY (`Siege_Siege_id` , `Siege_Avion_Avion_id`)
+    REFERENCES `mydb`.`Siege` (`Siege_id` , `Avion_Avion_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Envolee`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Envolee` (
+  `Envolee_id` INT NOT NULL,
+  `Envolee_date` VARCHAR(45) NULL,
+  `Avion_Avion_id` INT NOT NULL,
+  `Vol_Vol_id` INT NOT NULL,
+  PRIMARY KEY (`Envolee_id`, `Avion_Avion_id`, `Vol_Vol_id`),
+  INDEX `fk_Envolee_Avion1_idx` (`Avion_Avion_id` ASC),
+  INDEX `fk_Envolee_Vol1_idx` (`Vol_Vol_id` ASC),
+  CONSTRAINT `fk_Envolee_Avion1`
+    FOREIGN KEY (`Avion_Avion_id`)
+    REFERENCES `mydb`.`Avion` (`Avion_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Envolee_Vol1`
+    FOREIGN KEY (`Vol_Vol_id`)
+    REFERENCES `mydb`.`Vol` (`Vol_id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
