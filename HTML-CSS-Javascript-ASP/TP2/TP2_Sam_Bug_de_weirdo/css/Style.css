@@ -1,0 +1,90 @@
+﻿body {
+    background-image:url(C:\Users\Jeammy\Documents\Cégep\ProgWeb\Exercices\ExercicesDeStyle\TP1ProgWeb\TP1ProgWeb\images\wallhaven-240051.jpg);
+}
+
+#container{
+    width:1000px;
+    min-height:1000px;
+    margin:auto;
+    border: solid black;
+    padding:inherit;
+    
+}
+
+.clear{
+    clear:both;
+}
+
+#entete{
+    width: 1000px;
+    height:auto;
+   
+    /*border: solid black;*/
+}
+#enteteDroite{
+    float:left;
+    width:70%;
+    height:auto;
+    /*border: solid black;*/
+}
+
+#enteteGauche{
+    float:right;
+    width:30%;
+    height:auto;
+    /*border:solid black;*/
+}
+
+#menuVertical{
+    float:left;
+    width:25%;
+    height:700px;
+    border: solid black;
+    background-color:#808080;
+}
+
+#contenu{
+    float:right;
+    width:73%;
+    min-height:700px;
+    border: solid black;
+    background-color:#ffffff;
+    margin-left:inherit;
+    margin-right:inherit;
+    padding-left:8px;
+}
+
+#piedDePage{
+    width:100%;
+    height:100px;
+    background-color:#b6ff00;
+}
+
+.linkItem{
+    height:25%;
+    text-align: center;
+}
+
+#activemenulink{
+    color: #ffffff;
+}
+
+.linkItem a{
+    display:block;
+    width:100%;
+    background-color: #ff6a00;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.linkItem a:hover{
+    background-color: #ffd800;
+}
+
+.styleparagraphe1 {
+    font: cursive;
+    font-style:italic;
+}
+

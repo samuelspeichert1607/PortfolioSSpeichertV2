@@ -1,0 +1,84 @@
+﻿body {
+}
+
+
+.container{
+    width: 1000px;
+height: 1500px;
+}
+.logo{
+    width:224px;
+    height:200px;
+    background-image: url(http://localhost:5460/img/logo.png);
+    float:left;
+}
+.banner{
+    width:776px;
+    height:200px;
+    background-color:blue;
+    float:right;
+}
+.accueil{
+    width:250px;
+    height:100px;
+    background-image: url(http://localhost:5460/img/menu_buttons/accueil.png);
+    float:left;
+}
+.jeux{
+    width:250px;
+    height:100px;
+    background-image: url(http://localhost:5460/img/menu_buttons/jeux.png);
+    float:left;
+}
+.historique{
+    width:250px;
+    height:100px;
+    background-image: url(http://localhost:5460/img/menu_buttons/historique.png);
+    float:right;
+}
+.contact{
+    width:250px;
+    height:100px;
+    background-image: url(http://localhost:5460/img/menu_buttons/contact.png);
+    float:right;
+}
+.content{
+    width:1000px;
+    height:600px;
+    background-color:yellow;
+    float:left;
+}
+.footer{
+    width:1000px;
+    height:100px;
+    background-color:green;
+    float:left;
+}
+.clear{
+    clear:both;
+}
+h1{  
+    float:center;
+    font-style: bold;
+    font-family:Impact;
+}
+}
+
+h3{ 
+    float:left;
+    font-style: normal;
+}
+}
+
+a:link { 
+    background-color: blue;
+}
+a:hover { 
+    background-color: black;
+}
+a:visited { 
+    background-color: purple;
+}
+a:active { 
+    background-color: yellow;
+}
