@@ -1,0 +1,7 @@
+ofxAssimpModelLoader
+ofxCubeMap
+ofxDatGui-master
+ofxGrafica
+ofxGui
+ofxOpenCv
+ofxPBR
